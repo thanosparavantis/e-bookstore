@@ -112,6 +112,17 @@
   <ItemGroup>
     <None Include="Resources\shop.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\shop_v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin_green.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
