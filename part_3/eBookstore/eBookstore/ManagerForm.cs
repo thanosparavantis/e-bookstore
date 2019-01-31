@@ -24,7 +24,11 @@ namespace eBookstore
 
         private void ManagerForm_Load(object sender, EventArgs e)
         {
-
+            if (!climaState)
+            {
+                climaIncreaseButton.Enabled = false;
+                climaDecreaseButton.Enabled = false;
+            }
         }
 
         private void light1OnButton_Click(object sender, EventArgs e)
@@ -83,7 +87,55 @@ namespace eBookstore
         private void climaButton_Click(object sender, EventArgs e)
         {
             climaState = !climaState;
+            tempratureLabel.Text = climaState ? climaTemprature.ToString() : "00";
+            climaIncreaseButton.Enabled = climaState ? true : false;
+            climaDecreaseButton.Enabled = climaState ? true : false;
             climaButton.Text = climaState ? "On" : "Off";
+        }
+
+        private void light1Button_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to turn on/off the light 1.";
+        }
+
+        private void light1Button_MouseLeave(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "";
+        }
+
+        private void light2Button_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to turn on/off the light 2.";
+        }
+
+        private void light3Button_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to turn on/off the light 3.";
+        }
+
+        private void light4Button_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to turn on/off the light 4.";
+        }
+
+        private void light5Button_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to turn on/off the light 5.";
+        }
+
+        private void climaButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to turn on/off the air condition.";
+        }
+
+        private void climaIncreaseButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to increase temprature.";
+        }
+
+        private void climaDecreaseButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click the button to decrease temprature.";
         }
     }
 }

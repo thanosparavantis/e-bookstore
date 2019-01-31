@@ -72,6 +72,12 @@
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="model\User.cs" />
+    <Compile Include="PrinterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterForm.Designer.cs">
+      <DependentUpon>PrinterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterForm.resx">
+      <DependentUpon>PrinterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pin_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cannon_C#.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

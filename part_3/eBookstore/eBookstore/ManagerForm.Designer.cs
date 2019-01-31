@@ -29,24 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.lightGroupBox = new System.Windows.Forms.GroupBox();
-            this.light1Label = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.light1Button = new System.Windows.Forms.Button();
-            this.light2Button = new System.Windows.Forms.Button();
-            this.light2Label = new System.Windows.Forms.Label();
-            this.light3Button = new System.Windows.Forms.Button();
-            this.light3Label = new System.Windows.Forms.Label();
-            this.light4Button = new System.Windows.Forms.Button();
-            this.light4Label = new System.Windows.Forms.Label();
             this.light5Button = new System.Windows.Forms.Button();
             this.light5Label = new System.Windows.Forms.Label();
+            this.light4Button = new System.Windows.Forms.Button();
+            this.light4Label = new System.Windows.Forms.Label();
+            this.light3Button = new System.Windows.Forms.Button();
+            this.light3Label = new System.Windows.Forms.Label();
+            this.light2Button = new System.Windows.Forms.Button();
+            this.light2Label = new System.Windows.Forms.Label();
+            this.light1Button = new System.Windows.Forms.Button();
+            this.light1Label = new System.Windows.Forms.Label();
             this.light5Indicator = new System.Windows.Forms.PictureBox();
             this.light4Indicator = new System.Windows.Forms.PictureBox();
             this.light3Indicator = new System.Windows.Forms.PictureBox();
@@ -54,12 +48,17 @@
             this.light1Indicator = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.climaGroupBox = new System.Windows.Forms.GroupBox();
-            this.tempratureLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.climaButton = new System.Windows.Forms.Button();
             this.climaDecreaseButton = new System.Windows.Forms.Button();
             this.climaIncreaseButton = new System.Windows.Forms.Button();
-            this.menuStrip.SuspendLayout();
+            this.climaButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tempratureLabel = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abaoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip.SuspendLayout();
             this.lightGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.light5Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light4Indicator)).BeginInit();
@@ -68,48 +67,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.light1Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.climaGroupBox.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1251, 24);
-            this.menuStrip.TabIndex = 1;
-            this.menuStrip.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
-            this.toolStripMenuItem1.Text = "Options";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // statusStrip
             // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mouseHoverToolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 588);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1251, 22);
@@ -130,42 +94,92 @@
             this.lightGroupBox.Controls.Add(this.light1Label);
             this.lightGroupBox.Location = new System.Drawing.Point(1041, 40);
             this.lightGroupBox.Name = "lightGroupBox";
-            this.lightGroupBox.Size = new System.Drawing.Size(200, 164);
+            this.lightGroupBox.Size = new System.Drawing.Size(200, 181);
             this.lightGroupBox.TabIndex = 3;
             this.lightGroupBox.TabStop = false;
             this.lightGroupBox.Text = "Lights";
             // 
-            // light1Label
+            // light5Button
             // 
-            this.light1Label.AutoSize = true;
-            this.light1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light1Label.Location = new System.Drawing.Point(7, 20);
-            this.light1Label.Name = "light1Label";
-            this.light1Label.Size = new System.Drawing.Size(46, 16);
-            this.light1Label.TabIndex = 0;
-            this.light1Label.Text = "Light 1";
+            this.light5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light5Button.Location = new System.Drawing.Point(6, 142);
+            this.light5Button.Name = "light5Button";
+            this.light5Button.Size = new System.Drawing.Size(91, 31);
+            this.light5Button.TabIndex = 13;
+            this.light5Button.Text = "Off";
+            this.light5Button.UseVisualStyleBackColor = true;
+            this.light5Button.Click += new System.EventHandler(this.light5Button_Click);
+            this.light5Button.MouseEnter += new System.EventHandler(this.light5Button_MouseEnter);
+            this.light5Button.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
             // 
-            // light1Button
+            // light5Label
             // 
-            this.light1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light1Button.Location = new System.Drawing.Point(6, 39);
-            this.light1Button.Name = "light1Button";
-            this.light1Button.Size = new System.Drawing.Size(91, 23);
-            this.light1Button.TabIndex = 1;
-            this.light1Button.Text = "Off";
-            this.light1Button.UseVisualStyleBackColor = true;
-            this.light1Button.Click += new System.EventHandler(this.light1OnButton_Click);
+            this.light5Label.AutoSize = true;
+            this.light5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light5Label.Location = new System.Drawing.Point(7, 123);
+            this.light5Label.Name = "light5Label";
+            this.light5Label.Size = new System.Drawing.Size(46, 16);
+            this.light5Label.TabIndex = 12;
+            this.light5Label.Text = "Light 5";
+            // 
+            // light4Button
+            // 
+            this.light4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light4Button.Location = new System.Drawing.Point(102, 90);
+            this.light4Button.Name = "light4Button";
+            this.light4Button.Size = new System.Drawing.Size(91, 31);
+            this.light4Button.TabIndex = 10;
+            this.light4Button.Text = "Off";
+            this.light4Button.UseVisualStyleBackColor = true;
+            this.light4Button.Click += new System.EventHandler(this.light4Button_Click);
+            this.light4Button.MouseEnter += new System.EventHandler(this.light4Button_MouseEnter);
+            this.light4Button.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
+            // 
+            // light4Label
+            // 
+            this.light4Label.AutoSize = true;
+            this.light4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light4Label.Location = new System.Drawing.Point(103, 71);
+            this.light4Label.Name = "light4Label";
+            this.light4Label.Size = new System.Drawing.Size(46, 16);
+            this.light4Label.TabIndex = 9;
+            this.light4Label.Text = "Light 4";
+            // 
+            // light3Button
+            // 
+            this.light3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light3Button.Location = new System.Drawing.Point(6, 90);
+            this.light3Button.Name = "light3Button";
+            this.light3Button.Size = new System.Drawing.Size(91, 31);
+            this.light3Button.TabIndex = 7;
+            this.light3Button.Text = "Off";
+            this.light3Button.UseVisualStyleBackColor = true;
+            this.light3Button.Click += new System.EventHandler(this.light3Button_Click);
+            this.light3Button.MouseEnter += new System.EventHandler(this.light3Button_MouseEnter);
+            this.light3Button.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
+            // 
+            // light3Label
+            // 
+            this.light3Label.AutoSize = true;
+            this.light3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light3Label.Location = new System.Drawing.Point(7, 71);
+            this.light3Label.Name = "light3Label";
+            this.light3Label.Size = new System.Drawing.Size(46, 16);
+            this.light3Label.TabIndex = 6;
+            this.light3Label.Text = "Light 3";
             // 
             // light2Button
             // 
             this.light2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.light2Button.Location = new System.Drawing.Point(102, 39);
             this.light2Button.Name = "light2Button";
-            this.light2Button.Size = new System.Drawing.Size(91, 23);
+            this.light2Button.Size = new System.Drawing.Size(91, 31);
             this.light2Button.TabIndex = 4;
             this.light2Button.Text = "Off";
             this.light2Button.UseVisualStyleBackColor = true;
             this.light2Button.Click += new System.EventHandler(this.light2Button_Click);
+            this.light2Button.MouseEnter += new System.EventHandler(this.light2Button_MouseEnter);
+            this.light2Button.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
             // 
             // light2Label
             // 
@@ -177,68 +191,28 @@
             this.light2Label.TabIndex = 3;
             this.light2Label.Text = "Light 2";
             // 
-            // light3Button
+            // light1Button
             // 
-            this.light3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light3Button.Location = new System.Drawing.Point(6, 84);
-            this.light3Button.Name = "light3Button";
-            this.light3Button.Size = new System.Drawing.Size(91, 23);
-            this.light3Button.TabIndex = 7;
-            this.light3Button.Text = "Off";
-            this.light3Button.UseVisualStyleBackColor = true;
-            this.light3Button.Click += new System.EventHandler(this.light3Button_Click);
+            this.light1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light1Button.Location = new System.Drawing.Point(6, 39);
+            this.light1Button.Name = "light1Button";
+            this.light1Button.Size = new System.Drawing.Size(91, 31);
+            this.light1Button.TabIndex = 1;
+            this.light1Button.Text = "Off";
+            this.light1Button.UseVisualStyleBackColor = true;
+            this.light1Button.Click += new System.EventHandler(this.light1OnButton_Click);
+            this.light1Button.MouseEnter += new System.EventHandler(this.light1Button_MouseEnter);
+            this.light1Button.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
             // 
-            // light3Label
+            // light1Label
             // 
-            this.light3Label.AutoSize = true;
-            this.light3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light3Label.Location = new System.Drawing.Point(7, 65);
-            this.light3Label.Name = "light3Label";
-            this.light3Label.Size = new System.Drawing.Size(46, 16);
-            this.light3Label.TabIndex = 6;
-            this.light3Label.Text = "Light 3";
-            // 
-            // light4Button
-            // 
-            this.light4Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light4Button.Location = new System.Drawing.Point(102, 84);
-            this.light4Button.Name = "light4Button";
-            this.light4Button.Size = new System.Drawing.Size(91, 23);
-            this.light4Button.TabIndex = 10;
-            this.light4Button.Text = "Off";
-            this.light4Button.UseVisualStyleBackColor = true;
-            this.light4Button.Click += new System.EventHandler(this.light4Button_Click);
-            // 
-            // light4Label
-            // 
-            this.light4Label.AutoSize = true;
-            this.light4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light4Label.Location = new System.Drawing.Point(103, 65);
-            this.light4Label.Name = "light4Label";
-            this.light4Label.Size = new System.Drawing.Size(46, 16);
-            this.light4Label.TabIndex = 9;
-            this.light4Label.Text = "Light 4";
-            // 
-            // light5Button
-            // 
-            this.light5Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light5Button.Location = new System.Drawing.Point(6, 129);
-            this.light5Button.Name = "light5Button";
-            this.light5Button.Size = new System.Drawing.Size(91, 23);
-            this.light5Button.TabIndex = 13;
-            this.light5Button.Text = "Off";
-            this.light5Button.UseVisualStyleBackColor = true;
-            this.light5Button.Click += new System.EventHandler(this.light5Button_Click);
-            // 
-            // light5Label
-            // 
-            this.light5Label.AutoSize = true;
-            this.light5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.light5Label.Location = new System.Drawing.Point(7, 110);
-            this.light5Label.Name = "light5Label";
-            this.light5Label.Size = new System.Drawing.Size(46, 16);
-            this.light5Label.TabIndex = 12;
-            this.light5Label.Text = "Light 5";
+            this.light1Label.AutoSize = true;
+            this.light1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.light1Label.Location = new System.Drawing.Point(7, 20);
+            this.light1Label.Name = "light1Label";
+            this.light1Label.Size = new System.Drawing.Size(46, 16);
+            this.light1Label.TabIndex = 0;
+            this.light1Label.Text = "Light 1";
             // 
             // light5Indicator
             // 
@@ -307,23 +281,51 @@
             this.climaGroupBox.Controls.Add(this.climaButton);
             this.climaGroupBox.Controls.Add(this.label1);
             this.climaGroupBox.Controls.Add(this.tempratureLabel);
-            this.climaGroupBox.Location = new System.Drawing.Point(1041, 210);
+            this.climaGroupBox.Location = new System.Drawing.Point(1041, 227);
             this.climaGroupBox.Name = "climaGroupBox";
-            this.climaGroupBox.Size = new System.Drawing.Size(200, 138);
+            this.climaGroupBox.Size = new System.Drawing.Size(200, 151);
             this.climaGroupBox.TabIndex = 9;
             this.climaGroupBox.TabStop = false;
             this.climaGroupBox.Text = "Clima";
             // 
-            // tempratureLabel
+            // climaDecreaseButton
             // 
-            this.tempratureLabel.Font = new System.Drawing.Font("OCR A Extended", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tempratureLabel.Location = new System.Drawing.Point(49, 32);
-            this.tempratureLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.tempratureLabel.Name = "tempratureLabel";
-            this.tempratureLabel.Size = new System.Drawing.Size(110, 38);
-            this.tempratureLabel.TabIndex = 1;
-            this.tempratureLabel.Text = "18";
-            this.tempratureLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.climaDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.climaDecreaseButton.Location = new System.Drawing.Point(102, 110);
+            this.climaDecreaseButton.Name = "climaDecreaseButton";
+            this.climaDecreaseButton.Size = new System.Drawing.Size(91, 31);
+            this.climaDecreaseButton.TabIndex = 17;
+            this.climaDecreaseButton.Text = "-";
+            this.climaDecreaseButton.UseVisualStyleBackColor = true;
+            this.climaDecreaseButton.Click += new System.EventHandler(this.climaDecreaseButton_Click);
+            this.climaDecreaseButton.MouseEnter += new System.EventHandler(this.climaDecreaseButton_MouseEnter);
+            this.climaDecreaseButton.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
+            // 
+            // climaIncreaseButton
+            // 
+            this.climaIncreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.climaIncreaseButton.Location = new System.Drawing.Point(6, 110);
+            this.climaIncreaseButton.Name = "climaIncreaseButton";
+            this.climaIncreaseButton.Size = new System.Drawing.Size(91, 31);
+            this.climaIncreaseButton.TabIndex = 16;
+            this.climaIncreaseButton.Text = "+";
+            this.climaIncreaseButton.UseVisualStyleBackColor = true;
+            this.climaIncreaseButton.Click += new System.EventHandler(this.climaIncreaseButton_Click);
+            this.climaIncreaseButton.MouseEnter += new System.EventHandler(this.climaIncreaseButton_MouseEnter);
+            this.climaIncreaseButton.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
+            // 
+            // climaButton
+            // 
+            this.climaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.climaButton.Location = new System.Drawing.Point(6, 73);
+            this.climaButton.Name = "climaButton";
+            this.climaButton.Size = new System.Drawing.Size(187, 31);
+            this.climaButton.TabIndex = 14;
+            this.climaButton.Text = "Off";
+            this.climaButton.UseVisualStyleBackColor = true;
+            this.climaButton.Click += new System.EventHandler(this.climaButton_Click);
+            this.climaButton.MouseEnter += new System.EventHandler(this.climaButton_MouseEnter);
+            this.climaButton.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
             // 
             // label1
             // 
@@ -335,38 +337,52 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Temprature";
             // 
-            // climaButton
+            // tempratureLabel
             // 
-            this.climaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.climaButton.Location = new System.Drawing.Point(6, 73);
-            this.climaButton.Name = "climaButton";
-            this.climaButton.Size = new System.Drawing.Size(187, 23);
-            this.climaButton.TabIndex = 14;
-            this.climaButton.Text = "Off";
-            this.climaButton.UseVisualStyleBackColor = true;
-            this.climaButton.Click += new System.EventHandler(this.climaButton_Click);
+            this.tempratureLabel.Font = new System.Drawing.Font("OCR A Extended", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempratureLabel.Location = new System.Drawing.Point(49, 32);
+            this.tempratureLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.tempratureLabel.Name = "tempratureLabel";
+            this.tempratureLabel.Size = new System.Drawing.Size(110, 38);
+            this.tempratureLabel.TabIndex = 1;
+            this.tempratureLabel.Text = "00";
+            this.tempratureLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // climaDecreaseButton
+            // menuStrip1
             // 
-            this.climaDecreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.climaDecreaseButton.Location = new System.Drawing.Point(102, 102);
-            this.climaDecreaseButton.Name = "climaDecreaseButton";
-            this.climaDecreaseButton.Size = new System.Drawing.Size(91, 23);
-            this.climaDecreaseButton.TabIndex = 17;
-            this.climaDecreaseButton.Text = "-";
-            this.climaDecreaseButton.UseVisualStyleBackColor = true;
-            this.climaDecreaseButton.Click += new System.EventHandler(this.climaDecreaseButton_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem,
+            this.abaoutToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1251, 24);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // climaIncreaseButton
+            // optionsToolStripMenuItem
             // 
-            this.climaIncreaseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.climaIncreaseButton.Location = new System.Drawing.Point(6, 102);
-            this.climaIncreaseButton.Name = "climaIncreaseButton";
-            this.climaIncreaseButton.Size = new System.Drawing.Size(91, 23);
-            this.climaIncreaseButton.TabIndex = 16;
-            this.climaIncreaseButton.Text = "+";
-            this.climaIncreaseButton.UseVisualStyleBackColor = true;
-            this.climaIncreaseButton.Click += new System.EventHandler(this.climaIncreaseButton_Click);
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "Options";
+            // 
+            // abaoutToolStripMenuItem
+            // 
+            this.abaoutToolStripMenuItem.Name = "abaoutToolStripMenuItem";
+            this.abaoutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.abaoutToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // mouseHoverToolStripStatusLabel
+            // 
+            this.mouseHoverToolStripStatusLabel.Name = "mouseHoverToolStripStatusLabel";
+            this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.mouseHoverToolStripStatusLabel.Text = "toolStripStatusLabel1";
             // 
             // ManagerForm
             // 
@@ -381,14 +397,15 @@
             this.Controls.Add(this.light1Indicator);
             this.Controls.Add(this.lightGroupBox);
             this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.menuStrip);
-            this.MainMenuStrip = this.menuStrip;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ManagerForm";
             this.Text = "Manager";
             this.Load += new System.EventHandler(this.ManagerForm_Load);
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.lightGroupBox.ResumeLayout(false);
             this.lightGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.light5Indicator)).EndInit();
@@ -399,6 +416,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.climaGroupBox.ResumeLayout(false);
             this.climaGroupBox.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,11 +426,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.GroupBox lightGroupBox;
         private System.Windows.Forms.Button light5Button;
@@ -424,7 +438,6 @@
         private System.Windows.Forms.Label light2Label;
         private System.Windows.Forms.Button light1Button;
         private System.Windows.Forms.Label light1Label;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox light1Indicator;
         private System.Windows.Forms.PictureBox light2Indicator;
         private System.Windows.Forms.PictureBox light3Indicator;
@@ -436,5 +449,10 @@
         private System.Windows.Forms.Button climaDecreaseButton;
         private System.Windows.Forms.Button climaIncreaseButton;
         private System.Windows.Forms.Button climaButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abaoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel mouseHoverToolStripStatusLabel;
     }
 }

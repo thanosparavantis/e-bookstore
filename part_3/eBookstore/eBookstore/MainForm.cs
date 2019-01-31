@@ -17,6 +17,8 @@ namespace eBookstore
     {
 
         UserList userList = new UserList();
+        private PrinterForm printerForm;
+        private ManagerForm managerForm;
 
         public MainForm()
         {
@@ -36,8 +38,9 @@ namespace eBookstore
             {
                 if(user.Role.Equals("administrator"))
                 {
-                    ManagerForm managerForm = new ManagerForm();
-                    managerForm.Show();
+                    if (managerForm == null)
+                        managerForm = new ManagerForm();
+                    managerForm?.Show();
                 } else if (user.Role.Equals("customer"))
                 {
                     CustomerForm customerForm = new CustomerForm();
@@ -48,6 +51,13 @@ namespace eBookstore
             {
                 //Error
             }
+        }
+
+        private void printerButton_Click(object sender, EventArgs e)
+        {
+            if (printerForm == null)
+                printerForm = new PrinterForm();
+            printerForm?.Show();
         }
     }
 }

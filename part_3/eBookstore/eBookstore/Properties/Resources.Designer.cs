@@ -63,6 +63,16 @@ namespace eBookstore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cannon_C_ {
+            get {
+                object obj = ResourceManager.GetObject("cannon_C#", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ebookstore_logo_v2 {
             get {
                 object obj = ResourceManager.GetObject("ebookstore_logo_v2", resourceCulture);
