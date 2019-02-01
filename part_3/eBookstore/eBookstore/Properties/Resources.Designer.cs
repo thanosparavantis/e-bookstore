@@ -83,6 +83,16 @@ namespace eBookstore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nfc {
+            get {
+                object obj = ResourceManager.GetObject("nfc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pin_green {
             get {
                 object obj = ResourceManager.GetObject("pin_green", resourceCulture);
