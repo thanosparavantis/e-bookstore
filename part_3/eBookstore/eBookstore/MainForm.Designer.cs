@@ -147,6 +147,7 @@
             this.coffeShopButton.TabIndex = 1;
             this.coffeShopButton.Text = "Coffee Shop";
             this.coffeShopButton.UseVisualStyleBackColor = true;
+            this.coffeShopButton.Click += new System.EventHandler(this.coffeShopButton_Click);
             // 
             // printerButton
             // 

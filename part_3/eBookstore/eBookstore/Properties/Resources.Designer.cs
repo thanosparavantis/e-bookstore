@@ -73,6 +73,26 @@ namespace eBookstore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap choco_price {
+            get {
+                object obj = ResourceManager.GetObject("choco_price", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_price {
+            get {
+                object obj = ResourceManager.GetObject("coffee_price", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ebookstore_logo_v2 {
             get {
                 object obj = ResourceManager.GetObject("ebookstore_logo_v2", resourceCulture);
@@ -86,6 +106,16 @@ namespace eBookstore.Properties {
         internal static System.Drawing.Bitmap nfc {
             get {
                 object obj = ResourceManager.GetObject("nfc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pancakes_price {
+            get {
+                object obj = ResourceManager.GetObject("pancakes_price", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

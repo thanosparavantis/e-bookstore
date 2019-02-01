@@ -19,6 +19,7 @@ namespace eBookstore
         UserList userList = new UserList();
         private PrinterForm printerForm;
         private ManagerForm managerForm;
+        private CoffeeForm coffeeForm;
 
         public MainForm()
         {
@@ -58,6 +59,13 @@ namespace eBookstore
             if (printerForm == null)
                 printerForm = new PrinterForm();
             printerForm?.Show();
+        }
+
+        private void coffeShopButton_Click(object sender, EventArgs e)
+        {
+            if (coffeeForm == null)
+                coffeeForm = new CoffeeForm();
+            coffeeForm?.Show();
         }
     }
 }

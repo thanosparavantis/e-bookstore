@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoffeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoffeeForm.Designer.cs">
+      <DependentUpon>CoffeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="controller\LoginController.cs" />
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CoffeeForm.resx">
+      <DependentUpon>CoffeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +144,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cannon_C#.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nfc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nfc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choco-price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee_price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choco_price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pancakes_price.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
