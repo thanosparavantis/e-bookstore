@@ -37,37 +37,38 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.item1Increase = new System.Windows.Forms.Button();
             this.item1Decrease = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.item1TextBox = new System.Windows.Forms.TextBox();
+            this.item2TextBox = new System.Windows.Forms.TextBox();
             this.item2Decrease = new System.Windows.Forms.Button();
             this.item2Increase = new System.Windows.Forms.Button();
             this.item2Order = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.item3TextBox = new System.Windows.Forms.TextBox();
             this.item3Decrease = new System.Windows.Forms.Button();
             this.item3Increase = new System.Windows.Forms.Button();
             this.item3Order = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.itemOrderDecrease = new System.Windows.Forms.Button();
+            this.itemOrderIncrease = new System.Windows.Forms.Button();
+            this.removeItemButton = new System.Windows.Forms.Button();
+            this.orderListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.totalCost = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.nfcPayButton = new System.Windows.Forms.PictureBox();
+            this.totalCostLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nfcPayButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // item1Order
@@ -78,6 +79,7 @@
             this.item1Order.TabIndex = 0;
             this.item1Order.Text = "Order";
             this.item1Order.UseVisualStyleBackColor = true;
+            this.item1Order.Click += new System.EventHandler(this.item1Order_Click);
             // 
             // toolStrip1
             // 
@@ -102,6 +104,8 @@
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -126,6 +130,7 @@
             this.item1Increase.TabIndex = 7;
             this.item1Increase.Text = "+";
             this.item1Increase.UseVisualStyleBackColor = true;
+            this.item1Increase.Click += new System.EventHandler(this.item1Increase_Click);
             // 
             // item1Decrease
             // 
@@ -135,25 +140,27 @@
             this.item1Decrease.TabIndex = 8;
             this.item1Decrease.Text = "-";
             this.item1Decrease.UseVisualStyleBackColor = true;
+            this.item1Decrease.Click += new System.EventHandler(this.item1Decrease_Click);
             // 
-            // textBox1
+            // item1TextBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(243, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(74, 20);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Text = "1";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.item1TextBox.Enabled = false;
+            this.item1TextBox.Location = new System.Drawing.Point(243, 63);
+            this.item1TextBox.Name = "item1TextBox";
+            this.item1TextBox.Size = new System.Drawing.Size(74, 20);
+            this.item1TextBox.TabIndex = 9;
+            this.item1TextBox.Text = "1";
+            this.item1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // item2TextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(243, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 20);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "1";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.item2TextBox.Enabled = false;
+            this.item2TextBox.Location = new System.Drawing.Point(243, 161);
+            this.item2TextBox.Name = "item2TextBox";
+            this.item2TextBox.Size = new System.Drawing.Size(74, 20);
+            this.item2TextBox.TabIndex = 13;
+            this.item2TextBox.Text = "1";
+            this.item2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // item2Decrease
             // 
@@ -163,6 +170,7 @@
             this.item2Decrease.TabIndex = 12;
             this.item2Decrease.Text = "-";
             this.item2Decrease.UseVisualStyleBackColor = true;
+            this.item2Decrease.Click += new System.EventHandler(this.item2Decrease_Click);
             // 
             // item2Increase
             // 
@@ -172,6 +180,7 @@
             this.item2Increase.TabIndex = 11;
             this.item2Increase.Text = "+";
             this.item2Increase.UseVisualStyleBackColor = true;
+            this.item2Increase.Click += new System.EventHandler(this.item2Increase_Click);
             // 
             // item2Order
             // 
@@ -181,15 +190,17 @@
             this.item2Order.TabIndex = 10;
             this.item2Order.Text = "Order";
             this.item2Order.UseVisualStyleBackColor = true;
+            this.item2Order.Click += new System.EventHandler(this.item2Order_Click);
             // 
-            // textBox3
+            // item3TextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 258);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(74, 20);
-            this.textBox3.TabIndex = 17;
-            this.textBox3.Text = "1";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.item3TextBox.Enabled = false;
+            this.item3TextBox.Location = new System.Drawing.Point(243, 258);
+            this.item3TextBox.Name = "item3TextBox";
+            this.item3TextBox.Size = new System.Drawing.Size(74, 20);
+            this.item3TextBox.TabIndex = 17;
+            this.item3TextBox.Text = "1";
+            this.item3TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // item3Decrease
             // 
@@ -199,6 +210,7 @@
             this.item3Decrease.TabIndex = 16;
             this.item3Decrease.Text = "-";
             this.item3Decrease.UseVisualStyleBackColor = true;
+            this.item3Decrease.Click += new System.EventHandler(this.item3Decrease_Click);
             // 
             // item3Increase
             // 
@@ -208,6 +220,7 @@
             this.item3Increase.TabIndex = 15;
             this.item3Increase.Text = "+";
             this.item3Increase.UseVisualStyleBackColor = true;
+            this.item3Increase.Click += new System.EventHandler(this.item3Increase_Click);
             // 
             // item3Order
             // 
@@ -217,13 +230,14 @@
             this.item3Order.TabIndex = 14;
             this.item3Order.Text = "Order";
             this.item3Order.UseVisualStyleBackColor = true;
+            this.item3Order.Click += new System.EventHandler(this.item3Order_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button12);
-            this.groupBox1.Controls.Add(this.button11);
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.itemOrderDecrease);
+            this.groupBox1.Controls.Add(this.itemOrderIncrease);
+            this.groupBox1.Controls.Add(this.removeItemButton);
+            this.groupBox1.Controls.Add(this.orderListView);
             this.groupBox1.Location = new System.Drawing.Point(414, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(251, 273);
@@ -231,19 +245,50 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order";
             // 
-            // listView1
+            // itemOrderDecrease
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.itemOrderDecrease.Location = new System.Drawing.Point(88, 244);
+            this.itemOrderDecrease.Name = "itemOrderDecrease";
+            this.itemOrderDecrease.Size = new System.Drawing.Size(75, 23);
+            this.itemOrderDecrease.TabIndex = 21;
+            this.itemOrderDecrease.Text = "-";
+            this.itemOrderDecrease.UseVisualStyleBackColor = true;
+            this.itemOrderDecrease.Click += new System.EventHandler(this.itemOrderDecrease_Click);
+            // 
+            // itemOrderIncrease
+            // 
+            this.itemOrderIncrease.Location = new System.Drawing.Point(7, 244);
+            this.itemOrderIncrease.Name = "itemOrderIncrease";
+            this.itemOrderIncrease.Size = new System.Drawing.Size(75, 23);
+            this.itemOrderIncrease.TabIndex = 20;
+            this.itemOrderIncrease.Text = "+";
+            this.itemOrderIncrease.UseVisualStyleBackColor = true;
+            this.itemOrderIncrease.Click += new System.EventHandler(this.itemOrderIncrease_Click);
+            // 
+            // removeItemButton
+            // 
+            this.removeItemButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.removeItemButton.Location = new System.Drawing.Point(169, 244);
+            this.removeItemButton.Name = "removeItemButton";
+            this.removeItemButton.Size = new System.Drawing.Size(75, 23);
+            this.removeItemButton.TabIndex = 19;
+            this.removeItemButton.Text = "Remove";
+            this.removeItemButton.UseVisualStyleBackColor = true;
+            this.removeItemButton.Click += new System.EventHandler(this.removeItemButton_Click);
+            // 
+            // orderListView
+            // 
+            this.orderListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(7, 19);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(237, 219);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.orderListView.FullRowSelect = true;
+            this.orderListView.GridLines = true;
+            this.orderListView.Location = new System.Drawing.Point(7, 19);
+            this.orderListView.Name = "orderListView";
+            this.orderListView.Size = new System.Drawing.Size(237, 219);
+            this.orderListView.TabIndex = 0;
+            this.orderListView.UseCompatibleStateImageBehavior = false;
+            this.orderListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -255,39 +300,11 @@
             this.columnHeader2.Text = "Quantity";
             this.columnHeader2.Width = 77;
             // 
-            // button10
-            // 
-            this.button10.ForeColor = System.Drawing.Color.DarkRed;
-            this.button10.Location = new System.Drawing.Point(169, 244);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 19;
-            this.button10.Text = "Remove";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(7, 244);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 20;
-            this.button11.Text = "+";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(88, 244);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 21;
-            this.button12.Text = "-";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Controls.Add(this.totalCost);
+            this.groupBox2.Controls.Add(this.nfcPayButton);
+            this.groupBox2.Controls.Add(this.totalCostLabel);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(671, 35);
             this.groupBox2.Name = "groupBox2";
@@ -295,27 +312,6 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(54, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Total cost:";
-            // 
-            // totalCost
-            // 
-            this.totalCost.Font = new System.Drawing.Font("OCR A Extended", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCost.Location = new System.Drawing.Point(50, 39);
-            this.totalCost.Margin = new System.Windows.Forms.Padding(0);
-            this.totalCost.Name = "totalCost";
-            this.totalCost.Size = new System.Drawing.Size(99, 38);
-            this.totalCost.TabIndex = 2;
-            this.totalCost.Text = "0";
-            this.totalCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -326,6 +322,37 @@
             this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 5;
             this.label2.Text = "euro";
+            // 
+            // nfcPayButton
+            // 
+            this.nfcPayButton.Image = ((System.Drawing.Image)(resources.GetObject("nfcPayButton.Image")));
+            this.nfcPayButton.Location = new System.Drawing.Point(6, 108);
+            this.nfcPayButton.Name = "nfcPayButton";
+            this.nfcPayButton.Size = new System.Drawing.Size(188, 158);
+            this.nfcPayButton.TabIndex = 4;
+            this.nfcPayButton.TabStop = false;
+            this.nfcPayButton.Click += new System.EventHandler(this.nfcPayButton_Click);
+            // 
+            // totalCostLabel
+            // 
+            this.totalCostLabel.Font = new System.Drawing.Font("Arial Narrow", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.totalCostLabel.Location = new System.Drawing.Point(50, 39);
+            this.totalCostLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.totalCostLabel.Name = "totalCostLabel";
+            this.totalCostLabel.Size = new System.Drawing.Size(99, 38);
+            this.totalCostLabel.TabIndex = 2;
+            this.totalCostLabel.Text = "0.0";
+            this.totalCostLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.Location = new System.Drawing.Point(54, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Total cost:";
             // 
             // pictureBox4
             // 
@@ -354,14 +381,11 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // exitToolStripMenuItem
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 108);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 158);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // CoffeeForm
             // 
@@ -373,21 +397,23 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.item3TextBox);
             this.Controls.Add(this.item3Decrease);
             this.Controls.Add(this.item3Increase);
             this.Controls.Add(this.item3Order);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.item2TextBox);
             this.Controls.Add(this.item2Decrease);
             this.Controls.Add(this.item2Increase);
             this.Controls.Add(this.item2Order);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.item1TextBox);
             this.Controls.Add(this.item1Decrease);
             this.Controls.Add(this.item1Increase);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.item1Order);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CoffeeForm";
             this.Text = "Coffee Shop";
             this.menuStrip1.ResumeLayout(false);
@@ -395,10 +421,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nfcPayButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,29 +440,30 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button item1Increase;
         private System.Windows.Forms.Button item1Decrease;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox item1TextBox;
+        private System.Windows.Forms.TextBox item2TextBox;
         private System.Windows.Forms.Button item2Decrease;
         private System.Windows.Forms.Button item2Increase;
         private System.Windows.Forms.Button item2Order;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox item3TextBox;
         private System.Windows.Forms.Button item3Decrease;
         private System.Windows.Forms.Button item3Increase;
         private System.Windows.Forms.Button item3Order;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button itemOrderDecrease;
+        private System.Windows.Forms.Button itemOrderIncrease;
+        private System.Windows.Forms.Button removeItemButton;
+        private System.Windows.Forms.ListView orderListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label totalCost;
+        private System.Windows.Forms.PictureBox nfcPayButton;
+        private System.Windows.Forms.Label totalCostLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
