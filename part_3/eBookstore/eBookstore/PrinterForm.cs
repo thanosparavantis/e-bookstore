@@ -46,14 +46,26 @@ namespace eBookstore
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string msg = (printOption.Checked) ? "copies" : "scanned pages";    
-            MessageBox.Show("Your blank and white " + msg +" are ready!");
+            string msg = (printOption.Checked) ? "copies" : "scanned pages";
+            string msg2 = "";
+            if (usbOption.Checked)
+                msg2 = "Also will be saved as digital files in your USB stick.";
+            else if (emailOption.Checked)
+                msg2 = "Also will be sent as digital files to your email.";
+
+            MessageBox.Show("Your blank and white " + msg +" are ready! " + msg2);
         }
 
         private void ColorButton_Click(object sender, EventArgs e)
         {
             string msg = (printOption.Checked) ? "copies" : "scanned pages";
-            MessageBox.Show("Your colored " + msg + " are ready!");
+            string msg2 = "";
+            if (usbOption.Checked)
+                msg2 = "Also will be saved as digital files in your USB stick.";
+            else if (emailOption.Checked)
+                msg2 = "Also will be sent as digital files to your email.";
+
+            MessageBox.Show("Your colored " + msg + " are ready! " + msg2);
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -77,6 +89,81 @@ namespace eBookstore
             numberOfCopiesLabel.Text = "1";
             printOption.Checked = true;
             noneOption.Checked = true;
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void clearToolStripLabel(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "";
+        }
+
+        private void powerButton_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "Turn on/off the machine.";
+        }
+
+        private void resetButton_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "Reset settings.";
+        }
+
+        private void increaceButton_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "Increase number of pages.";
+        }
+
+        private void decreaseButton_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "Decrease number of pages.";
+        }
+
+        private void blackWhiteButton_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "Create black and white copies/scans.";
+        }
+
+        private void ColorButton_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "Create colored copies/scans.";
+
+        }
+
+        private void CancelButton_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripLabel.Text = "Stop the current proccess.";
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Printer/Scanner \np16036 - Ioannidis Panagiotis \np16112 Paravantis Athanasios", "About");
+        }
+
+        private void PrinterForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.E && e.Control)
+                this.Hide();
+
+            if (e.KeyCode == Keys.Add && e.Control)
+                increaceButton.PerformClick();
+
+            if (e.KeyCode == Keys.Subtract && e.Control)
+                decreaseButton.PerformClick();
+
+            if (e.KeyCode == Keys.B && e.Control)
+                blackWhiteButton.PerformClick();
+
+            if (e.KeyCode == Keys.C && e.Control)
+                ColorButton.PerformClick();
+
+            if (e.KeyCode == Keys.R && e.Control)
+                resetButton.PerformClick();
+
+            if (e.KeyCode == Keys.O && e.Control)
+                powerButton.PerformClick();
         }
     }
 }

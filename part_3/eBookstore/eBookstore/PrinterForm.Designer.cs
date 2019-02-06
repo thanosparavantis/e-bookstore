@@ -50,8 +50,11 @@
             this.usbOption = new System.Windows.Forms.RadioButton();
             this.noneOption = new System.Windows.Forms.RadioButton();
             this.emailOption = new System.Windows.Forms.RadioButton();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel = new System.Windows.Forms.ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.modeGroupBox.SuspendLayout();
             this.saveGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +83,8 @@
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.closeToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -95,10 +100,13 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 237);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(676, 25);
@@ -116,6 +124,8 @@
             this.powerButton.Text = "Off";
             this.powerButton.UseVisualStyleBackColor = true;
             this.powerButton.Click += new System.EventHandler(this.powerButton_Click);
+            this.powerButton.MouseEnter += new System.EventHandler(this.powerButton_MouseEnter);
+            this.powerButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // resetButton
             // 
@@ -128,6 +138,8 @@
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            this.resetButton.MouseEnter += new System.EventHandler(this.resetButton_MouseEnter);
+            this.resetButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // increaceButton
             // 
@@ -140,6 +152,8 @@
             this.increaceButton.Text = "+";
             this.increaceButton.UseVisualStyleBackColor = true;
             this.increaceButton.Click += new System.EventHandler(this.button3_Click);
+            this.increaceButton.MouseEnter += new System.EventHandler(this.increaceButton_MouseEnter);
+            this.increaceButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // decreaseButton
             // 
@@ -152,6 +166,8 @@
             this.decreaseButton.Text = "-";
             this.decreaseButton.UseVisualStyleBackColor = true;
             this.decreaseButton.Click += new System.EventHandler(this.button4_Click);
+            this.decreaseButton.MouseEnter += new System.EventHandler(this.decreaseButton_MouseEnter);
+            this.decreaseButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // blackWhiteButton
             // 
@@ -164,6 +180,8 @@
             this.blackWhiteButton.Text = "B/W";
             this.blackWhiteButton.UseVisualStyleBackColor = true;
             this.blackWhiteButton.Click += new System.EventHandler(this.button5_Click);
+            this.blackWhiteButton.MouseEnter += new System.EventHandler(this.blackWhiteButton_MouseEnter);
+            this.blackWhiteButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // ColorButton
             // 
@@ -177,6 +195,8 @@
             this.ColorButton.Text = "Color";
             this.ColorButton.UseVisualStyleBackColor = true;
             this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
+            this.ColorButton.MouseEnter += new System.EventHandler(this.ColorButton_MouseEnter);
+            this.ColorButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // CancelButton
             // 
@@ -189,14 +209,16 @@
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.MouseEnter += new System.EventHandler(this.CancelButton_MouseEnter);
+            this.CancelButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(167, 65);
+            this.label1.Location = new System.Drawing.Point(167, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 10;
@@ -205,10 +227,10 @@
             // numberOfCopiesLabel
             // 
             this.numberOfCopiesLabel.AutoSize = true;
-            this.numberOfCopiesLabel.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.numberOfCopiesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.numberOfCopiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.numberOfCopiesLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.numberOfCopiesLabel.Location = new System.Drawing.Point(298, 62);
+            this.numberOfCopiesLabel.Location = new System.Drawing.Point(298, 57);
             this.numberOfCopiesLabel.Name = "numberOfCopiesLabel";
             this.numberOfCopiesLabel.Size = new System.Drawing.Size(19, 20);
             this.numberOfCopiesLabel.TabIndex = 11;
@@ -216,11 +238,11 @@
             // 
             // modeGroupBox
             // 
-            this.modeGroupBox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.modeGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.modeGroupBox.Controls.Add(this.ScanOption);
             this.modeGroupBox.Controls.Add(this.printOption);
             this.modeGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.modeGroupBox.Location = new System.Drawing.Point(170, 92);
+            this.modeGroupBox.Location = new System.Drawing.Point(170, 87);
             this.modeGroupBox.Name = "modeGroupBox";
             this.modeGroupBox.Size = new System.Drawing.Size(200, 50);
             this.modeGroupBox.TabIndex = 13;
@@ -251,12 +273,12 @@
             // 
             // saveGroupBox
             // 
-            this.saveGroupBox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.saveGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.saveGroupBox.Controls.Add(this.usbOption);
             this.saveGroupBox.Controls.Add(this.noneOption);
             this.saveGroupBox.Controls.Add(this.emailOption);
             this.saveGroupBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.saveGroupBox.Location = new System.Drawing.Point(170, 154);
+            this.saveGroupBox.Location = new System.Drawing.Point(170, 149);
             this.saveGroupBox.Name = "saveGroupBox";
             this.saveGroupBox.Size = new System.Drawing.Size(200, 50);
             this.saveGroupBox.TabIndex = 14;
@@ -295,12 +317,25 @@
             this.emailOption.Text = "Email";
             this.emailOption.UseVisualStyleBackColor = true;
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // toolStripLabel
+            // 
+            this.toolStripLabel.Name = "toolStripLabel";
+            this.toolStripLabel.Size = new System.Drawing.Size(10, 22);
+            this.toolStripLabel.Text = ".";
+            // 
             // PrinterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 262);
-            this.ControlBox = false;
             this.Controls.Add(this.saveGroupBox);
             this.Controls.Add(this.modeGroupBox);
             this.Controls.Add(this.numberOfCopiesLabel);
@@ -315,15 +350,20 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PrinterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Printer";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrinterForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.modeGroupBox.ResumeLayout(false);
             this.modeGroupBox.PerformLayout();
             this.saveGroupBox.ResumeLayout(false);
@@ -357,5 +397,7 @@
         private System.Windows.Forms.RadioButton noneOption;
         private System.Windows.Forms.RadioButton emailOption;
         private System.Windows.Forms.RadioButton usbOption;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel;
     }
 }
