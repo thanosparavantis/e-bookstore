@@ -31,7 +31,7 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.signInGroupBox = new System.Windows.Forms.GroupBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             // signInGroupBox
             // 
             this.signInGroupBox.Controls.Add(this.passwordTextBox);
-            this.signInGroupBox.Controls.Add(this.label2);
+            this.signInGroupBox.Controls.Add(this.passwordLabel);
             this.signInGroupBox.Controls.Add(this.usernameTextBox);
             this.signInGroupBox.Controls.Add(this.usernameLabel);
             this.signInGroupBox.Controls.Add(this.loginButton);
@@ -86,15 +86,15 @@
             this.passwordTextBox.Size = new System.Drawing.Size(250, 24);
             this.passwordTextBox.TabIndex = 7;
             // 
-            // label2
+            // passwordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label2.Location = new System.Drawing.Point(6, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Password";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.passwordLabel.Location = new System.Drawing.Point(6, 68);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(75, 18);
+            this.passwordLabel.TabIndex = 6;
+            this.passwordLabel.Text = "Password";
             // 
             // usernameTextBox
             // 
@@ -197,6 +197,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -259,7 +260,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label usernameLabel;
     }

@@ -19,6 +19,7 @@ namespace eBookstore
         UserList userList = new UserList();
         private PrinterForm printerForm;
         private ManagerForm managerForm;
+        private CustomerForm customerForm;
         private CoffeeForm coffeeForm;
 
         public MainForm()
@@ -41,16 +42,33 @@ namespace eBookstore
                 {
                     if (managerForm == null)
                         managerForm = new ManagerForm();
-                    managerForm?.Show();
+
+                    usernameTextBox.Clear();
+                    passwordTextBox.Clear();
+
+                    this.Hide();
+                    managerForm?.ShowDialog();
+                    this.Show(); ;
                 } else if (user.Role.Equals("customer"))
                 {
-                    CustomerForm customerForm = new CustomerForm();
-                    customerForm.Show();
+                    if (customerForm == null)
+                        customerForm = new CustomerForm();
+
+                    usernameTextBox.Clear();
+                    passwordTextBox.Clear();
+
+                    this.Hide();
+                    customerForm?.ShowDialog();
+                    this.Show();
                 }
+                usernameLabel.ForeColor = SystemColors.ControlText;
+                passwordLabel.ForeColor = SystemColors.ControlText;
             }
             else
             {
-                //Error
+                usernameLabel.ForeColor = Color.Red;
+                passwordLabel.ForeColor = Color.Red;
+                MessageBox.Show("Usernane or password are wrong! Try again!");
             }
         }
 
@@ -58,14 +76,23 @@ namespace eBookstore
         {
             if (printerForm == null)
                 printerForm = new PrinterForm();
-            printerForm?.Show();
+            this.Hide();
+            printerForm?.ShowDialog();
+            this.Show();
         }
 
         private void coffeShopButton_Click(object sender, EventArgs e)
         {
             if (coffeeForm == null)
                 coffeeForm = new CoffeeForm();
-            coffeeForm?.Show();
+            this.Hide();
+            coffeeForm?.ShowDialog();
+            this.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("eBookStore - UI/UX 2018-19 \np16036 - Ioannidis Panagiotis \np16112 Paravantis Athanasios", "About");
         }
     }
 }
