@@ -190,5 +190,45 @@ namespace eBookstore
                 MessageBox.Show("Your order will be ready soon! Thanks a lot!");
             }   
         }
+
+        private void increaseItemMouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to decrease the amount of this product!";
+        }
+        private void decreaseItemMouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to increase the amount of this product!";
+        }
+
+        private void clearToolStripLabel(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "";
+
+        }
+
+        private void itemOrder_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to add this product in your order list!";
+        }
+
+        private void itemOrderIncrease_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to increase the amount of the selected product!";
+        }
+
+        private void itemOrderDecrease_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to decrease the amount of the selected product!";
+        }
+
+        private void removeItemButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to remove the selected product!";
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Coffee shop \np16036 - Ioannidis Panagiotis \np16112 Paravantis Athanasios", "About");
+        }
     }
 }

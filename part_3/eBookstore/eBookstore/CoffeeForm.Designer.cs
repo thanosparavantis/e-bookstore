@@ -31,8 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoffeeForm));
             this.item1Order = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.item1Increase = new System.Windows.Forms.Button();
@@ -61,7 +63,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,15 +82,25 @@
             this.item1Order.Text = "Order";
             this.item1Order.UseVisualStyleBackColor = true;
             this.item1Order.Click += new System.EventHandler(this.item1Order_Click);
+            this.item1Order.MouseEnter += new System.EventHandler(this.itemOrder_MouseEnter);
+            this.item1Order.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mouseHoverToolStripStatusLabel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 318);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(882, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // mouseHoverToolStripStatusLabel
+            // 
+            this.mouseHoverToolStripStatusLabel.Name = "mouseHoverToolStripStatusLabel";
+            this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(10, 22);
+            this.mouseHoverToolStripStatusLabel.Text = ".";
             // 
             // menuStrip1
             // 
@@ -110,6 +122,12 @@
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
@@ -121,6 +139,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // item1Increase
             // 
@@ -131,6 +150,8 @@
             this.item1Increase.Text = "+";
             this.item1Increase.UseVisualStyleBackColor = true;
             this.item1Increase.Click += new System.EventHandler(this.item1Increase_Click);
+            this.item1Increase.MouseEnter += new System.EventHandler(this.increaseItemMouseEnter);
+            this.item1Increase.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // item1Decrease
             // 
@@ -141,6 +162,8 @@
             this.item1Decrease.Text = "-";
             this.item1Decrease.UseVisualStyleBackColor = true;
             this.item1Decrease.Click += new System.EventHandler(this.item1Decrease_Click);
+            this.item1Decrease.MouseEnter += new System.EventHandler(this.decreaseItemMouseEnter);
+            this.item1Decrease.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // item1TextBox
             // 
@@ -171,6 +194,8 @@
             this.item2Decrease.Text = "-";
             this.item2Decrease.UseVisualStyleBackColor = true;
             this.item2Decrease.Click += new System.EventHandler(this.item2Decrease_Click);
+            this.item2Decrease.MouseEnter += new System.EventHandler(this.decreaseItemMouseEnter);
+            this.item2Decrease.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // item2Increase
             // 
@@ -181,6 +206,8 @@
             this.item2Increase.Text = "+";
             this.item2Increase.UseVisualStyleBackColor = true;
             this.item2Increase.Click += new System.EventHandler(this.item2Increase_Click);
+            this.item2Increase.MouseEnter += new System.EventHandler(this.increaseItemMouseEnter);
+            this.item2Increase.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // item2Order
             // 
@@ -191,6 +218,8 @@
             this.item2Order.Text = "Order";
             this.item2Order.UseVisualStyleBackColor = true;
             this.item2Order.Click += new System.EventHandler(this.item2Order_Click);
+            this.item2Order.MouseEnter += new System.EventHandler(this.itemOrder_MouseEnter);
+            this.item2Order.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // item3TextBox
             // 
@@ -211,6 +240,8 @@
             this.item3Decrease.Text = "-";
             this.item3Decrease.UseVisualStyleBackColor = true;
             this.item3Decrease.Click += new System.EventHandler(this.item3Decrease_Click);
+            this.item3Decrease.MouseEnter += new System.EventHandler(this.decreaseItemMouseEnter);
+            this.item3Decrease.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // item3Increase
             // 
@@ -221,6 +252,8 @@
             this.item3Increase.Text = "+";
             this.item3Increase.UseVisualStyleBackColor = true;
             this.item3Increase.Click += new System.EventHandler(this.item3Increase_Click);
+            this.item3Increase.MouseEnter += new System.EventHandler(this.increaseItemMouseEnter);
+            this.item3Increase.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // item3Order
             // 
@@ -231,6 +264,8 @@
             this.item3Order.Text = "Order";
             this.item3Order.UseVisualStyleBackColor = true;
             this.item3Order.Click += new System.EventHandler(this.item3Order_Click);
+            this.item3Order.MouseEnter += new System.EventHandler(this.itemOrder_MouseEnter);
+            this.item3Order.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // groupBox1
             // 
@@ -254,6 +289,8 @@
             this.itemOrderDecrease.Text = "-";
             this.itemOrderDecrease.UseVisualStyleBackColor = true;
             this.itemOrderDecrease.Click += new System.EventHandler(this.itemOrderDecrease_Click);
+            this.itemOrderDecrease.MouseEnter += new System.EventHandler(this.itemOrderDecrease_MouseEnter);
+            this.itemOrderDecrease.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // itemOrderIncrease
             // 
@@ -264,6 +301,8 @@
             this.itemOrderIncrease.Text = "+";
             this.itemOrderIncrease.UseVisualStyleBackColor = true;
             this.itemOrderIncrease.Click += new System.EventHandler(this.itemOrderIncrease_Click);
+            this.itemOrderIncrease.MouseEnter += new System.EventHandler(this.itemOrderIncrease_MouseEnter);
+            this.itemOrderIncrease.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // removeItemButton
             // 
@@ -275,6 +314,8 @@
             this.removeItemButton.Text = "Remove";
             this.removeItemButton.UseVisualStyleBackColor = true;
             this.removeItemButton.Click += new System.EventHandler(this.removeItemButton_Click);
+            this.removeItemButton.MouseEnter += new System.EventHandler(this.removeItemButton_MouseEnter);
+            this.removeItemButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // orderListView
             // 
@@ -381,12 +422,6 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
             // CoffeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,11 +446,15 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.item1Order);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CoffeeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coffee Shop";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -465,5 +504,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripLabel mouseHoverToolStripStatusLabel;
     }
 }
