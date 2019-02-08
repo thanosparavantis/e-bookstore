@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.lightGroupBox = new System.Windows.Forms.GroupBox();
             this.light5Button = new System.Windows.Forms.Button();
             this.light5Label = new System.Windows.Forms.Label();
@@ -57,7 +59,8 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abaoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip.SuspendLayout();
             this.lightGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.light5Indicator)).BeginInit();
@@ -79,6 +82,12 @@
             this.statusStrip.Size = new System.Drawing.Size(1251, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "statusStrip1";
+            // 
+            // mouseHoverToolStripStatusLabel
+            // 
+            this.mouseHoverToolStripStatusLabel.Name = "mouseHoverToolStripStatusLabel";
+            this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
+            this.mouseHoverToolStripStatusLabel.Text = "toolStripStatusLabel1";
             // 
             // lightGroupBox
             // 
@@ -107,6 +116,7 @@
             this.light5Button.Size = new System.Drawing.Size(91, 31);
             this.light5Button.TabIndex = 13;
             this.light5Button.Text = "Off";
+            this.toolTip.SetToolTip(this.light5Button, "Turn on/off  light5");
             this.light5Button.UseVisualStyleBackColor = true;
             this.light5Button.Click += new System.EventHandler(this.light5Button_Click);
             this.light5Button.MouseEnter += new System.EventHandler(this.light5Button_MouseEnter);
@@ -130,6 +140,7 @@
             this.light4Button.Size = new System.Drawing.Size(91, 31);
             this.light4Button.TabIndex = 10;
             this.light4Button.Text = "Off";
+            this.toolTip.SetToolTip(this.light4Button, "Turn on/off  light4");
             this.light4Button.UseVisualStyleBackColor = true;
             this.light4Button.Click += new System.EventHandler(this.light4Button_Click);
             this.light4Button.MouseEnter += new System.EventHandler(this.light4Button_MouseEnter);
@@ -153,6 +164,7 @@
             this.light3Button.Size = new System.Drawing.Size(91, 31);
             this.light3Button.TabIndex = 7;
             this.light3Button.Text = "Off";
+            this.toolTip.SetToolTip(this.light3Button, "Turn on/off  light3");
             this.light3Button.UseVisualStyleBackColor = true;
             this.light3Button.Click += new System.EventHandler(this.light3Button_Click);
             this.light3Button.MouseEnter += new System.EventHandler(this.light3Button_MouseEnter);
@@ -176,6 +188,7 @@
             this.light2Button.Size = new System.Drawing.Size(91, 31);
             this.light2Button.TabIndex = 4;
             this.light2Button.Text = "Off";
+            this.toolTip.SetToolTip(this.light2Button, "Turn on/off  light2");
             this.light2Button.UseVisualStyleBackColor = true;
             this.light2Button.Click += new System.EventHandler(this.light2Button_Click);
             this.light2Button.MouseEnter += new System.EventHandler(this.light2Button_MouseEnter);
@@ -199,6 +212,7 @@
             this.light1Button.Size = new System.Drawing.Size(91, 31);
             this.light1Button.TabIndex = 1;
             this.light1Button.Text = "Off";
+            this.toolTip.SetToolTip(this.light1Button, "Turn on/off  light1");
             this.light1Button.UseVisualStyleBackColor = true;
             this.light1Button.Click += new System.EventHandler(this.light1OnButton_Click);
             this.light1Button.MouseEnter += new System.EventHandler(this.light1Button_MouseEnter);
@@ -296,6 +310,7 @@
             this.climaDecreaseButton.Size = new System.Drawing.Size(91, 31);
             this.climaDecreaseButton.TabIndex = 17;
             this.climaDecreaseButton.Text = "-";
+            this.toolTip.SetToolTip(this.climaDecreaseButton, "Decrease temprature");
             this.climaDecreaseButton.UseVisualStyleBackColor = true;
             this.climaDecreaseButton.Click += new System.EventHandler(this.climaDecreaseButton_Click);
             this.climaDecreaseButton.MouseEnter += new System.EventHandler(this.climaDecreaseButton_MouseEnter);
@@ -309,6 +324,7 @@
             this.climaIncreaseButton.Size = new System.Drawing.Size(91, 31);
             this.climaIncreaseButton.TabIndex = 16;
             this.climaIncreaseButton.Text = "+";
+            this.toolTip.SetToolTip(this.climaIncreaseButton, "Increase temprature");
             this.climaIncreaseButton.UseVisualStyleBackColor = true;
             this.climaIncreaseButton.Click += new System.EventHandler(this.climaIncreaseButton_Click);
             this.climaIncreaseButton.MouseEnter += new System.EventHandler(this.climaIncreaseButton_MouseEnter);
@@ -322,6 +338,7 @@
             this.climaButton.Size = new System.Drawing.Size(187, 31);
             this.climaButton.TabIndex = 14;
             this.climaButton.Text = "Off";
+            this.toolTip.SetToolTip(this.climaButton, "Turn on/off  clima");
             this.climaButton.UseVisualStyleBackColor = true;
             this.climaButton.Click += new System.EventHandler(this.climaButton_Click);
             this.climaButton.MouseEnter += new System.EventHandler(this.climaButton_MouseEnter);
@@ -362,6 +379,8 @@
             // 
             // optionsToolStripMenuItem
             // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logOutToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
@@ -369,6 +388,7 @@
             // abaoutToolStripMenuItem
             // 
             this.abaoutToolStripMenuItem.Name = "abaoutToolStripMenuItem";
+            this.abaoutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.abaoutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.abaoutToolStripMenuItem.Text = "Help";
             // 
@@ -378,11 +398,20 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // mouseHoverToolStripStatusLabel
+            // logOutToolStripMenuItem
             // 
-            this.mouseHoverToolStripStatusLabel.Name = "mouseHoverToolStripStatusLabel";
-            this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(118, 17);
-            this.mouseHoverToolStripStatusLabel.Text = "toolStripStatusLabel1";
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutomaticDelay = 1000;
+            this.toolTip.AutoPopDelay = 10000;
+            this.toolTip.InitialDelay = 1000;
+            this.toolTip.ReshowDelay = 500;
             // 
             // ManagerForm
             // 
@@ -400,10 +429,12 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "ManagerForm";
             this.Text = "Manager";
             this.Load += new System.EventHandler(this.ManagerForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ManagerForm_KeyDown);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.lightGroupBox.ResumeLayout(false);
@@ -454,5 +485,7 @@
         private System.Windows.Forms.ToolStripMenuItem abaoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel mouseHoverToolStripStatusLabel;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }

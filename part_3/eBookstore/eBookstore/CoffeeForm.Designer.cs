@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoffeeForm));
             this.item1Order = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -63,6 +64,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -80,6 +82,7 @@
             this.item1Order.Size = new System.Drawing.Size(83, 77);
             this.item1Order.TabIndex = 0;
             this.item1Order.Text = "Order";
+            this.toolTip.SetToolTip(this.item1Order, "Add item to the list");
             this.item1Order.UseVisualStyleBackColor = true;
             this.item1Order.Click += new System.EventHandler(this.item1Order_Click);
             this.item1Order.MouseEnter += new System.EventHandler(this.itemOrder_MouseEnter);
@@ -125,8 +128,10 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Close";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -148,6 +153,7 @@
             this.item1Increase.Size = new System.Drawing.Size(75, 23);
             this.item1Increase.TabIndex = 7;
             this.item1Increase.Text = "+";
+            this.toolTip.SetToolTip(this.item1Increase, "Increase amount");
             this.item1Increase.UseVisualStyleBackColor = true;
             this.item1Increase.Click += new System.EventHandler(this.item1Increase_Click);
             this.item1Increase.MouseEnter += new System.EventHandler(this.increaseItemMouseEnter);
@@ -160,6 +166,7 @@
             this.item1Decrease.Size = new System.Drawing.Size(75, 23);
             this.item1Decrease.TabIndex = 8;
             this.item1Decrease.Text = "-";
+            this.toolTip.SetToolTip(this.item1Decrease, "Decrease amount");
             this.item1Decrease.UseVisualStyleBackColor = true;
             this.item1Decrease.Click += new System.EventHandler(this.item1Decrease_Click);
             this.item1Decrease.MouseEnter += new System.EventHandler(this.decreaseItemMouseEnter);
@@ -192,6 +199,7 @@
             this.item2Decrease.Size = new System.Drawing.Size(75, 23);
             this.item2Decrease.TabIndex = 12;
             this.item2Decrease.Text = "-";
+            this.toolTip.SetToolTip(this.item2Decrease, "Decrease amount");
             this.item2Decrease.UseVisualStyleBackColor = true;
             this.item2Decrease.Click += new System.EventHandler(this.item2Decrease_Click);
             this.item2Decrease.MouseEnter += new System.EventHandler(this.decreaseItemMouseEnter);
@@ -204,6 +212,7 @@
             this.item2Increase.Size = new System.Drawing.Size(75, 23);
             this.item2Increase.TabIndex = 11;
             this.item2Increase.Text = "+";
+            this.toolTip.SetToolTip(this.item2Increase, "Increase amount");
             this.item2Increase.UseVisualStyleBackColor = true;
             this.item2Increase.Click += new System.EventHandler(this.item2Increase_Click);
             this.item2Increase.MouseEnter += new System.EventHandler(this.increaseItemMouseEnter);
@@ -216,6 +225,7 @@
             this.item2Order.Size = new System.Drawing.Size(83, 77);
             this.item2Order.TabIndex = 10;
             this.item2Order.Text = "Order";
+            this.toolTip.SetToolTip(this.item2Order, "Add item to the list");
             this.item2Order.UseVisualStyleBackColor = true;
             this.item2Order.Click += new System.EventHandler(this.item2Order_Click);
             this.item2Order.MouseEnter += new System.EventHandler(this.itemOrder_MouseEnter);
@@ -238,6 +248,7 @@
             this.item3Decrease.Size = new System.Drawing.Size(75, 23);
             this.item3Decrease.TabIndex = 16;
             this.item3Decrease.Text = "-";
+            this.toolTip.SetToolTip(this.item3Decrease, "Decrease amount");
             this.item3Decrease.UseVisualStyleBackColor = true;
             this.item3Decrease.Click += new System.EventHandler(this.item3Decrease_Click);
             this.item3Decrease.MouseEnter += new System.EventHandler(this.decreaseItemMouseEnter);
@@ -250,6 +261,7 @@
             this.item3Increase.Size = new System.Drawing.Size(75, 23);
             this.item3Increase.TabIndex = 15;
             this.item3Increase.Text = "+";
+            this.toolTip.SetToolTip(this.item3Increase, "Increase amount");
             this.item3Increase.UseVisualStyleBackColor = true;
             this.item3Increase.Click += new System.EventHandler(this.item3Increase_Click);
             this.item3Increase.MouseEnter += new System.EventHandler(this.increaseItemMouseEnter);
@@ -262,6 +274,7 @@
             this.item3Order.Size = new System.Drawing.Size(83, 77);
             this.item3Order.TabIndex = 14;
             this.item3Order.Text = "Order";
+            this.toolTip.SetToolTip(this.item3Order, "Add item to the list");
             this.item3Order.UseVisualStyleBackColor = true;
             this.item3Order.Click += new System.EventHandler(this.item3Order_Click);
             this.item3Order.MouseEnter += new System.EventHandler(this.itemOrder_MouseEnter);
@@ -287,6 +300,7 @@
             this.itemOrderDecrease.Size = new System.Drawing.Size(75, 23);
             this.itemOrderDecrease.TabIndex = 21;
             this.itemOrderDecrease.Text = "-";
+            this.toolTip.SetToolTip(this.itemOrderDecrease, "Decrease amount of the selected item");
             this.itemOrderDecrease.UseVisualStyleBackColor = true;
             this.itemOrderDecrease.Click += new System.EventHandler(this.itemOrderDecrease_Click);
             this.itemOrderDecrease.MouseEnter += new System.EventHandler(this.itemOrderDecrease_MouseEnter);
@@ -299,6 +313,7 @@
             this.itemOrderIncrease.Size = new System.Drawing.Size(75, 23);
             this.itemOrderIncrease.TabIndex = 20;
             this.itemOrderIncrease.Text = "+";
+            this.toolTip.SetToolTip(this.itemOrderIncrease, "Increase amount of the selected ittem");
             this.itemOrderIncrease.UseVisualStyleBackColor = true;
             this.itemOrderIncrease.Click += new System.EventHandler(this.itemOrderIncrease_Click);
             this.itemOrderIncrease.MouseEnter += new System.EventHandler(this.itemOrderIncrease_MouseEnter);
@@ -312,6 +327,7 @@
             this.removeItemButton.Size = new System.Drawing.Size(75, 23);
             this.removeItemButton.TabIndex = 19;
             this.removeItemButton.Text = "Remove";
+            this.toolTip.SetToolTip(this.removeItemButton, "Remove selected item");
             this.removeItemButton.UseVisualStyleBackColor = true;
             this.removeItemButton.Click += new System.EventHandler(this.removeItemButton_Click);
             this.removeItemButton.MouseEnter += new System.EventHandler(this.removeItemButton_MouseEnter);
@@ -372,6 +388,7 @@
             this.nfcPayButton.Size = new System.Drawing.Size(188, 158);
             this.nfcPayButton.TabIndex = 4;
             this.nfcPayButton.TabStop = false;
+            this.toolTip.SetToolTip(this.nfcPayButton, "Touch credit card");
             this.nfcPayButton.Click += new System.EventHandler(this.nfcPayButton_Click);
             // 
             // totalCostLabel
@@ -422,6 +439,13 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
+            // toolTip
+            // 
+            this.toolTip.AutomaticDelay = 1000;
+            this.toolTip.AutoPopDelay = 10000;
+            this.toolTip.InitialDelay = 1000;
+            this.toolTip.ReshowDelay = 500;
+            // 
             // CoffeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,12 +471,13 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.item1Order);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "CoffeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coffee Shop";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CoffeeForm_KeyDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -505,5 +530,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel mouseHoverToolStripStatusLabel;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

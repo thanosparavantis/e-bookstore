@@ -139,7 +139,7 @@ namespace eBookstore
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Printer/Scanner \np16036 - Ioannidis Panagiotis \np16112 Paravantis Athanasios", "About");
+            MessageBox.Show("Printer/Scanner \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
         }
 
         private void PrinterForm_KeyDown(object sender, KeyEventArgs e)
@@ -164,6 +164,9 @@ namespace eBookstore
 
             if (e.KeyCode == Keys.O && e.Control)
                 powerButton.PerformClick();
+
+            // if (e.KeyCode == Keys.H && e.Control)
+            // Open help
         }
     }
 }

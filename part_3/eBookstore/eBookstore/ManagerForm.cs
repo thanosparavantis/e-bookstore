@@ -137,5 +137,19 @@ namespace eBookstore
         {
             mouseHoverToolStripStatusLabel.Text = "Click the button to decrease temprature.";
         }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void ManagerForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.E && e.Control)
+                this.Hide();
+
+            // if (e.KeyCode == Keys.H && e.Control)
+            // Open help
+        }
     }
 }

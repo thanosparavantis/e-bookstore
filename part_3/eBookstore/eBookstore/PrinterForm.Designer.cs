@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.powerButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
             this.increaceButton = new System.Windows.Forms.Button();
@@ -50,8 +53,7 @@
             this.usbOption = new System.Windows.Forms.RadioButton();
             this.noneOption = new System.Windows.Forms.RadioButton();
             this.emailOption = new System.Windows.Forms.RadioButton();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -89,6 +91,15 @@
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
+            this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
@@ -113,6 +124,12 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripLabel
+            // 
+            this.toolStripLabel.Name = "toolStripLabel";
+            this.toolStripLabel.Size = new System.Drawing.Size(10, 22);
+            this.toolStripLabel.Text = ".";
+            // 
             // powerButton
             // 
             this.powerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
@@ -122,6 +139,7 @@
             this.powerButton.Size = new System.Drawing.Size(48, 50);
             this.powerButton.TabIndex = 3;
             this.powerButton.Text = "Off";
+            this.toolTip.SetToolTip(this.powerButton, "Turn on/off");
             this.powerButton.UseVisualStyleBackColor = true;
             this.powerButton.Click += new System.EventHandler(this.powerButton_Click);
             this.powerButton.MouseEnter += new System.EventHandler(this.powerButton_MouseEnter);
@@ -136,6 +154,7 @@
             this.resetButton.Size = new System.Drawing.Size(48, 50);
             this.resetButton.TabIndex = 4;
             this.resetButton.Text = "Reset";
+            this.toolTip.SetToolTip(this.resetButton, "Reset settings");
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             this.resetButton.MouseEnter += new System.EventHandler(this.resetButton_MouseEnter);
@@ -150,6 +169,7 @@
             this.increaceButton.Size = new System.Drawing.Size(48, 50);
             this.increaceButton.TabIndex = 5;
             this.increaceButton.Text = "+";
+            this.toolTip.SetToolTip(this.increaceButton, "Increase number of pages");
             this.increaceButton.UseVisualStyleBackColor = true;
             this.increaceButton.Click += new System.EventHandler(this.button3_Click);
             this.increaceButton.MouseEnter += new System.EventHandler(this.increaceButton_MouseEnter);
@@ -164,6 +184,7 @@
             this.decreaseButton.Size = new System.Drawing.Size(48, 50);
             this.decreaseButton.TabIndex = 6;
             this.decreaseButton.Text = "-";
+            this.toolTip.SetToolTip(this.decreaseButton, "Decrease number of pages");
             this.decreaseButton.UseVisualStyleBackColor = true;
             this.decreaseButton.Click += new System.EventHandler(this.button4_Click);
             this.decreaseButton.MouseEnter += new System.EventHandler(this.decreaseButton_MouseEnter);
@@ -178,6 +199,7 @@
             this.blackWhiteButton.Size = new System.Drawing.Size(48, 50);
             this.blackWhiteButton.TabIndex = 7;
             this.blackWhiteButton.Text = "B/W";
+            this.toolTip.SetToolTip(this.blackWhiteButton, "Create black n white copies/scans");
             this.blackWhiteButton.UseVisualStyleBackColor = true;
             this.blackWhiteButton.Click += new System.EventHandler(this.button5_Click);
             this.blackWhiteButton.MouseEnter += new System.EventHandler(this.blackWhiteButton_MouseEnter);
@@ -193,6 +215,7 @@
             this.ColorButton.Size = new System.Drawing.Size(48, 50);
             this.ColorButton.TabIndex = 8;
             this.ColorButton.Text = "Color";
+            this.toolTip.SetToolTip(this.ColorButton, "Create colored copies/scans");
             this.ColorButton.UseVisualStyleBackColor = true;
             this.ColorButton.Click += new System.EventHandler(this.ColorButton_Click);
             this.ColorButton.MouseEnter += new System.EventHandler(this.ColorButton_MouseEnter);
@@ -207,6 +230,7 @@
             this.CancelButton.Size = new System.Drawing.Size(48, 50);
             this.CancelButton.TabIndex = 9;
             this.CancelButton.Text = "Cancel";
+            this.toolTip.SetToolTip(this.CancelButton, "Cancel the current proccess");
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             this.CancelButton.MouseEnter += new System.EventHandler(this.CancelButton_MouseEnter);
@@ -317,19 +341,12 @@
             this.emailOption.Text = "Email";
             this.emailOption.UseVisualStyleBackColor = true;
             // 
-            // closeToolStripMenuItem
+            // toolTip
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.closeToolStripMenuItem.Text = "Close";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            // 
-            // toolStripLabel
-            // 
-            this.toolStripLabel.Name = "toolStripLabel";
-            this.toolStripLabel.Size = new System.Drawing.Size(10, 22);
-            this.toolStripLabel.Text = ".";
+            this.toolTip.AutomaticDelay = 1000;
+            this.toolTip.AutoPopDelay = 10000;
+            this.toolTip.InitialDelay = 1000;
+            this.toolTip.ReshowDelay = 500;
             // 
             // PrinterForm
             // 
@@ -354,7 +371,6 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "PrinterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Printer";
@@ -399,5 +415,6 @@
         private System.Windows.Forms.RadioButton usbOption;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

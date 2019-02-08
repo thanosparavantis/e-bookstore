@@ -193,11 +193,11 @@ namespace eBookstore
 
         private void increaseItemMouseEnter(object sender, EventArgs e)
         {
-            mouseHoverToolStripStatusLabel.Text = "Click to decrease the amount of this product!";
+            mouseHoverToolStripStatusLabel.Text = "Click to increase the amount of this product!";
         }
         private void decreaseItemMouseEnter(object sender, EventArgs e)
         {
-            mouseHoverToolStripStatusLabel.Text = "Click to increase the amount of this product!";
+            mouseHoverToolStripStatusLabel.Text = "Click to decrease the amount of this product!";
         }
 
         private void clearToolStripLabel(object sender, EventArgs e)
@@ -228,7 +228,31 @@ namespace eBookstore
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coffee shop \np16036 - Ioannidis Panagiotis \np16112 Paravantis Athanasios", "About");
+            MessageBox.Show("Coffee shop \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
+        }
+
+        private void CoffeeForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.E && e.Control)
+                this.Hide();
+
+            if (e.KeyCode == Keys.Add && e.Control)
+                itemOrderIncrease.PerformClick();
+
+            if (e.KeyCode == Keys.Subtract && e.Control)
+                itemOrderDecrease.PerformClick();
+
+            if (e.KeyCode == Keys.R && e.Control)
+                removeItemButton.PerformClick();
+
+            // if (e.KeyCode == Keys.H && e.Control)
+            // Open help
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

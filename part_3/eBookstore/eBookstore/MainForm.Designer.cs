@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.loginButton = new System.Windows.Forms.Button();
             this.signInGroupBox = new System.Windows.Forms.GroupBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
@@ -45,9 +46,12 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.signInGroupBox.SuspendLayout();
             this.utilsGroupBox.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,8 +63,11 @@
             this.loginButton.Size = new System.Drawing.Size(122, 50);
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Login";
+            this.toolTip.SetToolTip(this.loginButton, "Click to login");
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.loginButton.MouseEnter += new System.EventHandler(this.loginButton_MouseEnter);
+            this.loginButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // signInGroupBox
             // 
@@ -124,8 +131,11 @@
             this.exitButton.Size = new System.Drawing.Size(122, 50);
             this.exitButton.TabIndex = 3;
             this.exitButton.Text = "Exit";
+            this.toolTip.SetToolTip(this.exitButton, "Click to exit");
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.MouseEnter += new System.EventHandler(this.exitButton_MouseEnter);
+            this.exitButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // utilsGroupBox
             // 
@@ -146,8 +156,11 @@
             this.coffeShopButton.Size = new System.Drawing.Size(122, 50);
             this.coffeShopButton.TabIndex = 1;
             this.coffeShopButton.Text = "Coffee Shop";
+            this.toolTip.SetToolTip(this.coffeShopButton, "Click to open coffe shop");
             this.coffeShopButton.UseVisualStyleBackColor = true;
             this.coffeShopButton.Click += new System.EventHandler(this.coffeShopButton_Click);
+            this.coffeShopButton.MouseEnter += new System.EventHandler(this.coffeShopButton_MouseEnter);
+            this.coffeShopButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // printerButton
             // 
@@ -157,8 +170,11 @@
             this.printerButton.Size = new System.Drawing.Size(122, 50);
             this.printerButton.TabIndex = 2;
             this.printerButton.Text = "Printer/Scanner";
+            this.toolTip.SetToolTip(this.printerButton, "Click to use printer/scanner");
             this.printerButton.UseVisualStyleBackColor = true;
             this.printerButton.Click += new System.EventHandler(this.printerButton_Click);
+            this.printerButton.MouseEnter += new System.EventHandler(this.printerButton_MouseEnter);
+            this.printerButton.MouseLeave += new System.EventHandler(this.clearToolStripLabel);
             // 
             // menuStrip
             // 
@@ -183,8 +199,10 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -201,6 +219,8 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mouseHoverToolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 302);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1160, 22);
@@ -217,6 +237,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // mouseHoverToolStripStatusLabel
+            // 
+            this.mouseHoverToolStripStatusLabel.Name = "mouseHoverToolStripStatusLabel";
+            this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(10, 17);
+            this.mouseHoverToolStripStatusLabel.Text = ".";
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutomaticDelay = 1000;
+            this.toolTip.AutoPopDelay = 10000;
+            this.toolTip.InitialDelay = 1000;
+            this.toolTip.ReshowDelay = 500;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,11 +265,14 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "eBookstore";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.signInGroupBox.ResumeLayout(false);
             this.signInGroupBox.PerformLayout();
             this.utilsGroupBox.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,6 +299,8 @@
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.ToolStripStatusLabel mouseHoverToolStripStatusLabel;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

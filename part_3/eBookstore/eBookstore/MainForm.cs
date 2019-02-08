@@ -92,7 +92,46 @@ namespace eBookstore
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("eBookStore - UI/UX 2018-19 \np16036 - Ioannidis Panagiotis \np16112 Paravantis Athanasios", "About");
+            MessageBox.Show("eBookStore - UI/UX 2018-19 \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
+        }
+
+        private void clearToolStripLabel(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "";
+        }
+
+        private void loginButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Type your username/password and login!";
+        }
+
+        private void exitButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Exit the application!";
+        }
+
+        private void coffeShopButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to order your coffee and more!!!";
+        }
+
+        private void printerButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Click to print/scan your documents or books!";
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.E && e.Control)
+                Application.Exit();
+
+           // if (e.KeyCode == Keys.H && e.Control)
+                // Open help  
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
