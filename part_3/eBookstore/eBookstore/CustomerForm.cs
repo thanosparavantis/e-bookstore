@@ -1,4 +1,6 @@
-﻿using System;
+﻿using eBookstore.data;
+using eBookstore.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,26 @@ namespace eBookstore
 {
     public partial class CustomerForm : Form
     {
+        private BookList bookList;
+
         public CustomerForm()
         {
             InitializeComponent();
+        }
+
+        private void CustomerForm_Load(object sender, EventArgs e)
+        {
+            this.InitializeBookData();
+        }
+
+        private void InitializeBookData()
+        {
+            this.bookList = new BookList();
+
+            foreach (Book book in this.bookList.Data)
+            {
+                bookBindingSource.Add(book);
+            }
         }
     }
 }
