@@ -172,5 +172,17 @@
   <ItemGroup>
     <None Include="Resources\pancakes_price.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
