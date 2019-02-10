@@ -148,6 +148,30 @@ namespace eBookstore
             if (e.KeyCode == Keys.E && e.Control)
                 this.Hide();
 
+            if ((e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1) && e.Control)
+                light1Button.PerformClick();
+
+            if ((e.KeyCode == Keys.D2 || e.KeyCode == Keys.NumPad2) && e.Control)
+                light2Button.PerformClick();
+
+            if ((e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3) && e.Control)
+                light3Button.PerformClick();
+
+            if ((e.KeyCode == Keys.D4 || e.KeyCode == Keys.NumPad4) && e.Control)
+                light4Button.PerformClick();
+
+            if ((e.KeyCode == Keys.D5 || e.KeyCode == Keys.NumPad5) && e.Control)
+                light5Button.PerformClick();
+
+            if (e.KeyCode == Keys.O && e.Control)
+                climaButton.PerformClick();
+
+            if (e.KeyCode == Keys.Add && e.Control)
+                climaIncreaseButton.PerformClick();
+
+            if (e.KeyCode == Keys.Subtract && e.Control)
+                climaDecreaseButton.PerformClick();
+
             // if (e.KeyCode == Keys.H && e.Control)
             // Open help
         }

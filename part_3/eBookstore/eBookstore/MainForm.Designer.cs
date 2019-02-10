@@ -45,8 +45,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.signInGroupBox.SuspendLayout();
             this.utilsGroupBox.SuspendLayout();
@@ -200,7 +200,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -227,6 +227,12 @@
             this.statusStrip.TabIndex = 6;
             this.statusStrip.Text = "statusStrip";
             // 
+            // mouseHoverToolStripStatusLabel
+            // 
+            this.mouseHoverToolStripStatusLabel.Name = "mouseHoverToolStripStatusLabel";
+            this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(10, 17);
+            this.mouseHoverToolStripStatusLabel.Text = ".";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::eBookstore.Properties.Resources.ebookstore_logo_v2;
@@ -236,12 +242,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // mouseHoverToolStripStatusLabel
-            // 
-            this.mouseHoverToolStripStatusLabel.Name = "mouseHoverToolStripStatusLabel";
-            this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(10, 17);
-            this.mouseHoverToolStripStatusLabel.Text = ".";
             // 
             // toolTip
             // 
@@ -261,6 +261,7 @@
             this.Controls.Add(this.signInGroupBox);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

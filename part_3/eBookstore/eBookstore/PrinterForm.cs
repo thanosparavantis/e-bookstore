@@ -165,6 +165,9 @@ namespace eBookstore
             if (e.KeyCode == Keys.O && e.Control)
                 powerButton.PerformClick();
 
+            if (e.KeyCode == Keys.C && e.Control && e.Shift)
+                CancelButton.PerformClick();
+
             // if (e.KeyCode == Keys.H && e.Control)
             // Open help
         }
