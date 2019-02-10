@@ -11,6 +11,7 @@ namespace eBookstore
     {
         private BookList _bookList;
         private User _user;
+        private BookDetailForm _bookDetailForm;
 
         public CustomerForm(User user)
         {
@@ -87,6 +88,19 @@ namespace eBookstore
             {
                 string bookTitle = (string)this.bookDataGridView[1, e.RowIndex].Value;
                 this.UpdateBookLabelsForTitle(bookTitle);
+            }
+        }
+
+        private void bookDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (this._bookDetailForm == null)
+            {
+                this._bookDetailForm = new BookDetailForm();
+                this._bookDetailForm.Visible = true;
+            }
+            else
+            {
+                this._bookDetailForm.Focus();
             }
         }
     }

@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookDetailForm.Designer.cs">
+      <DependentUpon>BookDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CoffeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BookDetailForm.resx">
+      <DependentUpon>BookDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CoffeeForm.resx">
       <DependentUpon>CoffeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,7 +122,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\eBookstore.model.Book.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
