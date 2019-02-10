@@ -52,7 +52,7 @@ namespace eBookstore
                 } else if (user.Role.Equals("customer"))
                 {
                     if (customerForm == null)
-                        customerForm = new CustomerForm();
+                        customerForm = new CustomerForm(user);
 
                     usernameTextBox.Clear();
                     passwordTextBox.Clear();

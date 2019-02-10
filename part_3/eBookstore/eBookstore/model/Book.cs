@@ -11,15 +11,21 @@ namespace eBookstore.model
     {
         public Image Cover { get; set; }
 
-        public String Title { get; set; }
+        public string Title { get; set; }
 
-        public String Summary { get; set; }
+        public string Summary { get; set; }
 
-        public String Author { get; set; }
+        public string Category { get; set; }
 
-        public String Publisher { get; set; }
+        public string Author { get; set; }
 
-        public DateTime PublishedDate { get; set; }
+        public int Pages { get; set; }
+
+        public string Publisher { get; set; }
+
+        public int YearPublished { get; set; }
+
+        public string ISBN { get; set; }
 
         public double BasePrice { get; set; }
 

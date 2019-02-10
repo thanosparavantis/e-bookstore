@@ -184,5 +184,26 @@
   <ItemGroup>
     <None Include="Resources\book_3.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_10.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

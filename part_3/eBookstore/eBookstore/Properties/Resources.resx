@@ -157,4 +157,25 @@
   <data name="book_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="book_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
