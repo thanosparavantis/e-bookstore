@@ -35,5 +35,22 @@ namespace eBookstore.model
         {
             get { return this.BasePrice - (this.BasePrice * (this.Discount / 100)); }
         }
+
+        public bool Matches(string text)
+        {
+            return this.StringsMatch(this.Title, text)
+                || this.StringsMatch(this.Summary, text)
+                || this.StringsMatch(this.Category, text)
+                || this.StringsMatch(this.Author, text)
+                || this.StringsMatch(this.Publisher, text);
+        }
+
+        public bool StringsMatch(string key, string value)
+        {
+            key = key.ToLower().Trim();
+            value = value.ToLower().Trim();
+
+            return key.Contains(value);
+        }
     }
 }

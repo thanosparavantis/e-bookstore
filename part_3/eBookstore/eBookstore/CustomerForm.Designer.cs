@@ -43,6 +43,7 @@
             this.booksLabel = new System.Windows.Forms.Label();
             this.bookDataGridView = new System.Windows.Forms.DataGridView();
             this.userLabel = new System.Windows.Forms.Label();
+            this.booksToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.summaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +58,7 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenuStrip.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
@@ -103,6 +105,8 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.booksToolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 539);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(684, 22);
@@ -147,9 +151,12 @@
             // searchTextBox
             // 
             this.searchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchTextBox.Location = new System.Drawing.Point(142, 12);
+            this.searchTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.searchTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.searchTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.searchTextBox.Location = new System.Drawing.Point(142, 10);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(403, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(403, 25);
             this.searchTextBox.TabIndex = 1;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
@@ -157,9 +164,10 @@
             // 
             this.booksLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.booksLabel.AutoSize = true;
-            this.booksLabel.Location = new System.Drawing.Point(3, 16);
+            this.booksLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.booksLabel.Location = new System.Drawing.Point(3, 14);
             this.booksLabel.Name = "booksLabel";
-            this.booksLabel.Size = new System.Drawing.Size(133, 13);
+            this.booksLabel.Size = new System.Drawing.Size(133, 17);
             this.booksLabel.TabIndex = 0;
             this.booksLabel.Text = "number of books";
             this.booksLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,13 +183,14 @@
             this.bookDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.bookDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bookDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.bookDataGridView.ColumnHeadersHeight = 30;
             this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.coverDataGridViewImageColumn,
@@ -199,9 +208,9 @@
             this.bookDataGridView.DataSource = this.bookBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
@@ -212,21 +221,31 @@
             this.bookDataGridView.Name = "bookDataGridView";
             this.bookDataGridView.ReadOnly = true;
             this.bookDataGridView.RowHeadersVisible = false;
+            this.bookDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.bookDataGridView.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(10);
             this.bookDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bookDataGridView.Size = new System.Drawing.Size(684, 470);
             this.bookDataGridView.TabIndex = 4;
+            this.bookDataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellMouseEnter);
             // 
             // userLabel
             // 
             this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.userLabel.AutoSize = true;
-            this.userLabel.Location = new System.Drawing.Point(551, 16);
+            this.userLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.userLabel.Location = new System.Drawing.Point(551, 14);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(130, 13);
+            this.userLabel.Size = new System.Drawing.Size(130, 17);
             this.userLabel.TabIndex = 2;
             this.userLabel.Text = "username (role)";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // booksToolStripStatusLabel
+            // 
+            this.booksToolStripStatusLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.booksToolStripStatusLabel.Name = "booksToolStripStatusLabel";
+            this.booksToolStripStatusLabel.Size = new System.Drawing.Size(109, 17);
+            this.booksToolStripStatusLabel.Text = "number of books";
             // 
             // coverDataGridViewImageColumn
             // 
@@ -235,7 +254,7 @@
             this.coverDataGridViewImageColumn.HeaderText = "Εξώφυλλο";
             this.coverDataGridViewImageColumn.Name = "coverDataGridViewImageColumn";
             this.coverDataGridViewImageColumn.ReadOnly = true;
-            this.coverDataGridViewImageColumn.Width = 62;
+            this.coverDataGridViewImageColumn.Width = 74;
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -354,6 +373,8 @@
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -391,5 +412,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label userLabel;
+        private System.Windows.Forms.ToolStripStatusLabel booksToolStripStatusLabel;
     }
 }
