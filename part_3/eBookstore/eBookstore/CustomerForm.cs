@@ -1,15 +1,8 @@
 ﻿using eBookstore.data;
 using eBookstore.model;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eBookstore
@@ -30,7 +23,7 @@ namespace eBookstore
         {
             this._bookList = new BookList();
             this.UpdateBookData();
-            this.UpdateBooksLabels();
+            this.UpdateBookLabels();
             this.UpdateUserLabel();
             this.SetupSearchBox();
         }
@@ -40,7 +33,7 @@ namespace eBookstore
             bookBindingSource.DataSource = this._bookList.Data;
         }
 
-        private void UpdateBooksLabels()
+        private void UpdateBookLabels()
         {
             int amount = this.bookBindingSource.Count;
             string suffix = amount > 1 ? "Βιβλία" : "Βιβλίο";
@@ -81,14 +74,14 @@ namespace eBookstore
                         select book;
 
             this.bookBindingSource.DataSource = query.Count() > 0 ? query : null;
-            this.UpdateBooksLabels();
+            this.UpdateBookLabels();
         }
 
         private void bookDataGridView_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1)
             {
-                this.UpdateBooksLabels();
+                this.UpdateBookLabels();
             }
             else
             {
