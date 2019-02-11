@@ -43,6 +43,7 @@
             this.Name = "ShoppingCartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Καλάθι Αγορών";
+            this.Load += new System.EventHandler(this.ShoppingCartForm_Load);
             this.ResumeLayout(false);
 
         }

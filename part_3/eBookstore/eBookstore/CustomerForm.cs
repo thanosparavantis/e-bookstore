@@ -11,6 +11,7 @@ namespace eBookstore
     {
         private BookList _bookList;
         private User _user;
+        private ShoppingCart _shoppingCart;
         private BookDetailForm _bookDetailForm;
         private ShoppingCartForm _shoppingCartForm;
 
@@ -24,6 +25,7 @@ namespace eBookstore
         private void CustomerForm_Load(object sender, EventArgs e)
         {
             this._bookList = new BookList();
+            this._shoppingCart = new ShoppingCart();
             this.UpdateBookData();
             this.UpdateBookLabels();
             this.UpdateUserLabel();
@@ -103,7 +105,7 @@ namespace eBookstore
             Book book = this._bookList.GetBookByTitle(bookTitle);
 
             this._bookDetailForm?.Close();
-            this._bookDetailForm = new BookDetailForm(book);
+            this._bookDetailForm = new BookDetailForm(book, this._shoppingCart);
             this._bookDetailForm.Visible = true;
         }
 
@@ -116,7 +118,7 @@ namespace eBookstore
         {
             if (this._shoppingCartForm == null || this._shoppingCartForm.IsDisposed)
             {
-                this._shoppingCartForm = new ShoppingCartForm();
+                this._shoppingCartForm = new ShoppingCartForm(this._shoppingCart);
                 this._shoppingCartForm.Visible = true;
             }
             else

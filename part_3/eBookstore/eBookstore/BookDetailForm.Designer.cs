@@ -55,7 +55,7 @@
             this.basePriceLabel = new System.Windows.Forms.Label();
             this.discountLabel = new System.Windows.Forms.Label();
             this.priceLabel = new System.Windows.Forms.Label();
-            this.addToCartButton = new System.Windows.Forms.Button();
+            this.shoppingCartButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
@@ -501,23 +501,24 @@
             this.priceLabel.Text = "(book price)";
             this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // addToCartButton
+            // shoppingCartButton
             // 
-            this.addToCartButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.addToCartButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addToCartButton.ForeColor = System.Drawing.Color.Blue;
-            this.addToCartButton.Location = new System.Drawing.Point(3, 708);
-            this.addToCartButton.Name = "addToCartButton";
-            this.addToCartButton.Size = new System.Drawing.Size(478, 50);
-            this.addToCartButton.TabIndex = 1;
-            this.addToCartButton.Text = "Προσθήκη στο καλάθι";
-            this.addToCartButton.UseVisualStyleBackColor = true;
+            this.shoppingCartButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.shoppingCartButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shoppingCartButton.ForeColor = System.Drawing.Color.Blue;
+            this.shoppingCartButton.Location = new System.Drawing.Point(3, 708);
+            this.shoppingCartButton.Name = "shoppingCartButton";
+            this.shoppingCartButton.Size = new System.Drawing.Size(478, 50);
+            this.shoppingCartButton.TabIndex = 1;
+            this.shoppingCartButton.Text = "Προσθήκη στο καλάθι";
+            this.shoppingCartButton.UseVisualStyleBackColor = true;
+            this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.addToCartButton, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.shoppingCartButton, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
@@ -595,7 +596,7 @@
         private System.Windows.Forms.Label yearPublishedLabel;
         private System.Windows.Forms.Label ISBNTextLabel;
         private System.Windows.Forms.Label ISBNLabel;
-        private System.Windows.Forms.Button addToCartButton;
+        private System.Windows.Forms.Button shoppingCartButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
     }
 }

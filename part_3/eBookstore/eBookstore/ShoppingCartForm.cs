@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eBookstore.data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace eBookstore
 {
     public partial class ShoppingCartForm : Form
     {
-        public ShoppingCartForm()
+        private ShoppingCart _shoppingCart;
+
+        public ShoppingCartForm(ShoppingCart shoppingCart)
         {
+            this._shoppingCart = shoppingCart;
+
             InitializeComponent();
+        }
+
+        private void ShoppingCartForm_Load(object sender, EventArgs e)
+        {
         }
     }
 }

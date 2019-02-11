@@ -27,5 +27,14 @@ namespace eBookstore.data
 
             this._items.Add(shoppingCartItem);
         }
+
+        public bool IsInShoppingCart(Book book)
+        {
+            var query = from Book targetBook in this._items
+                        where targetBook.Equals(book)
+                        select targetBook;
+
+            return query.Count() > 0;
+        }
     }
 }
