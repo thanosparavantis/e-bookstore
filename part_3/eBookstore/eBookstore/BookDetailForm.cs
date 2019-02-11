@@ -38,16 +38,5 @@ namespace eBookstore
             this.discountLabel.Text = this._book.Discount.ToString();
             this.priceLabel.Text = this._book.Price.ToString();
         }
-
-        private void BookDetailForm_Leave(object sender, EventArgs e)
-        {
-            MessageBox.Show("Now");
-        }
-
-        private void BookDetailForm_Deactivate(object sender, EventArgs e)
-        {
-            MessageBox.Show("Now");
-
-        }
     }
 }
