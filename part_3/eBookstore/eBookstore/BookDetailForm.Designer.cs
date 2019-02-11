@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.coverPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,15 +57,14 @@
             this.priceLabel = new System.Windows.Forms.Label();
             this.addToCartButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.coverPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -95,6 +95,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(478, 494);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // coverPictureBox
+            // 
+            this.coverPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.coverPictureBox.Location = new System.Drawing.Point(139, 8);
+            this.coverPictureBox.Name = "coverPictureBox";
+            this.coverPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.coverPictureBox.TabIndex = 0;
+            this.coverPictureBox.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -452,7 +462,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.basePriceLabel.AutoSize = true;
-            this.basePriceLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.basePriceLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.basePriceLabel.Location = new System.Drawing.Point(0, 30);
             this.basePriceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.basePriceLabel.Name = "basePriceLabel";
@@ -467,7 +477,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.discountLabel.AutoSize = true;
-            this.discountLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.discountLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discountLabel.Location = new System.Drawing.Point(153, 30);
             this.discountLabel.Margin = new System.Windows.Forms.Padding(0);
             this.discountLabel.Name = "discountLabel";
@@ -482,7 +492,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.priceLabel.AutoSize = true;
-            this.priceLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.priceLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel.Location = new System.Drawing.Point(307, 30);
             this.priceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.priceLabel.Name = "priceLabel";
@@ -518,16 +528,6 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(484, 761);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
-            // coverPictureBox
-            // 
-            this.coverPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.coverPictureBox.Location = new System.Drawing.Point(139, 8);
-            this.coverPictureBox.Name = "coverPictureBox";
-            this.coverPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.coverPictureBox.TabIndex = 0;
-            this.coverPictureBox.TabStop = false;
-            // 
             // BookDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +537,7 @@
             this.Controls.Add(this.tableLayoutPanel7);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(500, 800);
             this.MinimizeBox = false;
@@ -545,8 +546,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "(book title)";
             this.Load += new System.EventHandler(this.BookDetailForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BookDetailForm_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -559,7 +562,6 @@
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

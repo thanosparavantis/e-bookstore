@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Globalization;
 
 namespace eBookstore.model
 {
@@ -24,11 +25,35 @@ namespace eBookstore.model
 
         public double BasePrice { get; set; }
 
+        public string BasePriceText
+        {
+            get
+            {
+                return this.BasePrice.ToString("C", new CultureInfo("en-FR"));
+            }
+        }
+
         public double Discount { get; set; }
+
+        public string DiscountText
+        {
+            get
+            {
+                return this.Discount > 0 ? string.Format("{0}%", this.Discount) : "-";
+            }
+        }
 
         public double Price
         {
             get { return this.BasePrice - (this.BasePrice * (this.Discount / 100)); }
+        }
+
+        public string PriceText
+        {
+            get
+            {
+                return this.Price.ToString("C", new CultureInfo("en-FR"));
+            }
         }
 
         public bool Matches(string text)

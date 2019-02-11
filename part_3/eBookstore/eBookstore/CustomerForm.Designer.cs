@@ -45,19 +45,15 @@
             this.userLabel = new System.Windows.Forms.Label();
             this.bookDataGridView = new System.Windows.Forms.DataGridView();
             this.shoppingCartButton = new System.Windows.Forms.Button();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.discountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.basePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.summaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.discountTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearPublishedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -226,16 +222,12 @@
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.coverDataGridViewImageColumn,
             this.titleDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.discountDataGridViewTextBoxColumn,
-            this.basePriceDataGridViewTextBoxColumn,
             this.summaryDataGridViewTextBoxColumn,
+            this.discountTextDataGridViewTextBoxColumn,
             this.categoryDataGridViewTextBoxColumn,
             this.authorDataGridViewTextBoxColumn,
-            this.pagesDataGridViewTextBoxColumn,
             this.publisherDataGridViewTextBoxColumn,
-            this.yearPublishedDataGridViewTextBoxColumn,
-            this.iSBNDataGridViewTextBoxColumn});
+            this.yearPublishedDataGridViewTextBoxColumn});
             this.bookDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bookDataGridView.DataSource = this.bookBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -275,10 +267,15 @@
             this.shoppingCartButton.UseVisualStyleBackColor = true;
             this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(eBookstore.model.Book);
+            // 
             // coverDataGridViewImageColumn
             // 
             this.coverDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.coverDataGridViewImageColumn.DataPropertyName = "Cover";
+            this.coverDataGridViewImageColumn.Frozen = true;
             this.coverDataGridViewImageColumn.HeaderText = "Εξώφυλλο";
             this.coverDataGridViewImageColumn.Name = "coverDataGridViewImageColumn";
             this.coverDataGridViewImageColumn.ReadOnly = true;
@@ -287,102 +284,67 @@
             // titleDataGridViewTextBoxColumn
             // 
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.Frozen = true;
             this.titleDataGridViewTextBoxColumn.HeaderText = "Τίτλος";
             this.titleDataGridViewTextBoxColumn.MinimumWidth = 200;
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
             this.titleDataGridViewTextBoxColumn.ReadOnly = true;
             this.titleDataGridViewTextBoxColumn.Width = 200;
             // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Τελική Τιμή";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // discountDataGridViewTextBoxColumn
-            // 
-            this.discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
-            this.discountDataGridViewTextBoxColumn.HeaderText = "Έκτπωση";
-            this.discountDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
-            this.discountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // basePriceDataGridViewTextBoxColumn
-            // 
-            this.basePriceDataGridViewTextBoxColumn.DataPropertyName = "BasePrice";
-            this.basePriceDataGridViewTextBoxColumn.HeaderText = "Αρχική Τιμή";
-            this.basePriceDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.basePriceDataGridViewTextBoxColumn.Name = "basePriceDataGridViewTextBoxColumn";
-            this.basePriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // summaryDataGridViewTextBoxColumn
             // 
             this.summaryDataGridViewTextBoxColumn.DataPropertyName = "Summary";
+            this.summaryDataGridViewTextBoxColumn.Frozen = true;
             this.summaryDataGridViewTextBoxColumn.HeaderText = "Περίληψη";
-            this.summaryDataGridViewTextBoxColumn.MinimumWidth = 500;
+            this.summaryDataGridViewTextBoxColumn.MinimumWidth = 400;
             this.summaryDataGridViewTextBoxColumn.Name = "summaryDataGridViewTextBoxColumn";
             this.summaryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.summaryDataGridViewTextBoxColumn.Visible = false;
-            this.summaryDataGridViewTextBoxColumn.Width = 500;
+            this.summaryDataGridViewTextBoxColumn.Width = 400;
+            // 
+            // discountTextDataGridViewTextBoxColumn
+            // 
+            this.discountTextDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.discountTextDataGridViewTextBoxColumn.DataPropertyName = "DiscountText";
+            this.discountTextDataGridViewTextBoxColumn.HeaderText = "Έκπτωση";
+            this.discountTextDataGridViewTextBoxColumn.Name = "discountTextDataGridViewTextBoxColumn";
+            this.discountTextDataGridViewTextBoxColumn.ReadOnly = true;
+            this.discountTextDataGridViewTextBoxColumn.Width = 86;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
+            this.categoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
             this.categoryDataGridViewTextBoxColumn.HeaderText = "Κατηγορία";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 150;
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryDataGridViewTextBoxColumn.Width = 150;
+            this.categoryDataGridViewTextBoxColumn.Width = 96;
             // 
             // authorDataGridViewTextBoxColumn
             // 
+            this.authorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
             this.authorDataGridViewTextBoxColumn.HeaderText = "Συγγραφέας";
-            this.authorDataGridViewTextBoxColumn.MinimumWidth = 200;
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
             this.authorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.authorDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // pagesDataGridViewTextBoxColumn
-            // 
-            this.pagesDataGridViewTextBoxColumn.DataPropertyName = "Pages";
-            this.pagesDataGridViewTextBoxColumn.HeaderText = "Σελίδες";
-            this.pagesDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.pagesDataGridViewTextBoxColumn.Name = "pagesDataGridViewTextBoxColumn";
-            this.pagesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.authorDataGridViewTextBoxColumn.Width = 106;
             // 
             // publisherDataGridViewTextBoxColumn
             // 
+            this.publisherDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.publisherDataGridViewTextBoxColumn.DataPropertyName = "Publisher";
             this.publisherDataGridViewTextBoxColumn.HeaderText = "Εκδότης";
-            this.publisherDataGridViewTextBoxColumn.MinimumWidth = 150;
             this.publisherDataGridViewTextBoxColumn.Name = "publisherDataGridViewTextBoxColumn";
             this.publisherDataGridViewTextBoxColumn.ReadOnly = true;
-            this.publisherDataGridViewTextBoxColumn.Width = 150;
+            this.publisherDataGridViewTextBoxColumn.Width = 82;
             // 
             // yearPublishedDataGridViewTextBoxColumn
             // 
+            this.yearPublishedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.yearPublishedDataGridViewTextBoxColumn.DataPropertyName = "YearPublished";
             this.yearPublishedDataGridViewTextBoxColumn.HeaderText = "Έτος Έκδοσης";
-            this.yearPublishedDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.yearPublishedDataGridViewTextBoxColumn.Name = "yearPublishedDataGridViewTextBoxColumn";
             this.yearPublishedDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iSBNDataGridViewTextBoxColumn
-            // 
-            this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
-            this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
-            this.iSBNDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
-            this.iSBNDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iSBNDataGridViewTextBoxColumn.Visible = false;
-            this.iSBNDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(eBookstore.model.Book);
+            this.yearPublishedDataGridViewTextBoxColumn.Width = 114;
             // 
             // CustomerForm
             // 
@@ -429,18 +391,14 @@
         private System.Windows.Forms.BindingSource bookBindingSource;
         private System.Windows.Forms.Label userLabel;
         private System.Windows.Forms.ToolStripStatusLabel booksToolStripStatusLabel;
+        private System.Windows.Forms.Button shoppingCartButton;
         private System.Windows.Forms.DataGridViewImageColumn coverDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn basePriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn summaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn discountTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pagesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn publisherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn yearPublishedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iSBNDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button shoppingCartButton;
     }
 }

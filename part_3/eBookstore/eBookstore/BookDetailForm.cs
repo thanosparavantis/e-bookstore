@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,9 +35,24 @@ namespace eBookstore
             this.categoryLabel.Text = this._book.Category;
             this.pagesLabel.Text = this._book.Pages.ToString();
             this.yearPublishedLabel.Text = this._book.YearPublished.ToString();
-            this.basePriceLabel.Text = this._book.BasePrice.ToString();
-            this.discountLabel.Text = this._book.Discount.ToString();
-            this.priceLabel.Text = this._book.Price.ToString();
+            this.basePriceLabel.Text = this._book.BasePriceText;
+            this.discountLabel.Text = this._book.DiscountText;
+            this.priceLabel.Text = this._book.PriceText;
+
+            if (this._book.Discount > 0)
+            {
+                this.basePriceLabel.Font = new Font(this.basePriceLabel.Font, FontStyle.Strikeout);
+                this.discountLabel.Font = new Font(this.discountLabel.Font, FontStyle.Bold);
+                this.discountLabel.ForeColor = Color.Firebrick;
+            }
+        }
+
+        private void BookDetailForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }
