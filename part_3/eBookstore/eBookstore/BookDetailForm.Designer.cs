@@ -504,13 +504,13 @@
             // shoppingCartButton
             // 
             this.shoppingCartButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.shoppingCartButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shoppingCartButton.ForeColor = System.Drawing.Color.Blue;
+            this.shoppingCartButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shoppingCartButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.shoppingCartButton.Location = new System.Drawing.Point(3, 708);
             this.shoppingCartButton.Name = "shoppingCartButton";
             this.shoppingCartButton.Size = new System.Drawing.Size(478, 50);
             this.shoppingCartButton.TabIndex = 1;
-            this.shoppingCartButton.Text = "Προσθήκη στο καλάθι";
+            this.shoppingCartButton.Text = "(shopping cart status)";
             this.shoppingCartButton.UseVisualStyleBackColor = true;
             this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 

@@ -3,6 +3,7 @@ using eBookstore.model;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static eBookstore.CustomerForm;
 
 namespace eBookstore
 {
@@ -124,12 +125,40 @@ namespace eBookstore
 
         private void UpdateShoppingCartButton()
         {
-            //
+            if (this._shoppingCart.Contains(this._book))
+            {
+                this.shoppingCartButton.Text = "Αφαίρεση από το καλάθι αγορών";
+                this.shoppingCartButton.ForeColor = Color.Firebrick;
+            }
+            else
+            {
+                this.shoppingCartButton.Text = "Προσθήκη στο καλάθι αγορών";
+                this.shoppingCartButton.ForeColor = Color.DarkGreen;
+            }
         }
 
         private void shoppingCartButton_Click(object sender, EventArgs e)
         {
-            // add or remove
+            if (this._shoppingCart.Contains(this._book))
+            {
+                this._shoppingCart.RemoveBook(this._book);
+
+                MessageBox.Show(
+                    "Το βιβλίο αφαιρέθηκε από το καλάθι αγορών σας.",
+                    this._book.Title,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            else
+            {
+                this._shoppingCart.AddBook(this._book);
+
+                MessageBox.Show(
+                    "Το βιβλίο προστέθηκε στο καλάθι αγορών σας.",
+                    this._book.Title,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
 
             this.UpdateShoppingCartButton();
         }

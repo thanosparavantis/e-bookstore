@@ -1,5 +1,6 @@
 ﻿using eBookstore.model;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,7 +8,7 @@ namespace eBookstore.data
 {
     class BookList
     {
-        public ArrayList Data { get; set;  }
+        public List<Book> Data { get; set;  }
 
         public AutoCompleteStringCollection AutoCompleteTerms { get; set; }
 
@@ -20,7 +21,7 @@ namespace eBookstore.data
 
         private void InitializeBooks()
         {
-            this.Data = new ArrayList();
+            this.Data = new List<Book>();
 
             this.Data.Add(new Book()
             {

@@ -1,9 +1,11 @@
 ﻿using eBookstore.data;
 using eBookstore.model;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using static eBookstore.data.ShoppingCart;
 
 namespace eBookstore
 {
@@ -25,11 +27,13 @@ namespace eBookstore
         private void CustomerForm_Load(object sender, EventArgs e)
         {
             this._bookList = new BookList();
-            this._shoppingCart = new ShoppingCart();
+            this._shoppingCart = new ShoppingCart(
+                new ShoppingCartUpdateEvent(OnShoppingCartUpdate));
             this.UpdateBookData();
             this.UpdateBookLabels();
             this.UpdateUserLabel();
-            this.SetupSearchBox();
+            this.UpdateSearchBox();
+            this.UpdateShoppingCartButton();
         }
 
         private void UpdateBookData()
@@ -60,7 +64,7 @@ namespace eBookstore
             this.userLabel.Text = $"{username} ({role})";
         }
 
-        private void SetupSearchBox()
+        private void UpdateSearchBox()
         {
             this.searchTextBox.AutoCompleteCustomSource = this._bookList.AutoCompleteTerms;
         }
@@ -77,7 +81,9 @@ namespace eBookstore
                         where book.Matches(text)
                         select book;
 
-            this.bookBindingSource.DataSource = query.Count() > 0 ? query : null;
+            List<Book> result = query.ToList();
+
+            this.bookBindingSource.DataSource = query.Count() > 0 ? result : null;
             this.UpdateBookLabels();
         }
 
@@ -125,6 +131,19 @@ namespace eBookstore
             {
                 this._shoppingCartForm.Focus();
             }
+        }
+
+        private void UpdateShoppingCartButton()
+        {
+            int itemAmount = this._shoppingCart.Count();
+            string text = $"({itemAmount}) Καλάθι Αγορών";
+            string textEmpty = "Καλάθι Αγορών";
+            this.shoppingCartButton.Text = itemAmount > 0 ? text : textEmpty;
+        }
+
+        public void OnShoppingCartUpdate()
+        {
+            this.UpdateShoppingCartButton();
         }
     }
 }

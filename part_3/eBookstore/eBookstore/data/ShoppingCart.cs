@@ -10,14 +10,18 @@ namespace eBookstore.data
 {
     public sealed class ShoppingCart
     {
-        private List<ShoppingCartItem> _items;
+        public delegate void ShoppingCartUpdateEvent();
+        private ShoppingCartUpdateEvent _shoppingCartUpdateEvent;
 
-        public ShoppingCart()
+        public List<ShoppingCartItem> Items { get; set; }
+
+        public ShoppingCart(ShoppingCartUpdateEvent shoppingCartUpdateEvent)
         {
-            this._items = new List<ShoppingCartItem>();
+            this._shoppingCartUpdateEvent = shoppingCartUpdateEvent;
+            this.Items = new List<ShoppingCartItem>();
         }
 
-        public void AddBook(Book book, int amount)
+        public void AddBook(Book book, int amount = 1)
         {
             ShoppingCartItem shoppingCartItem = new ShoppingCartItem()
             {
@@ -25,14 +29,32 @@ namespace eBookstore.data
                 Amount = amount
             };
 
-            this._items.Add(shoppingCartItem);
+            this.Items.Add(shoppingCartItem);
+
+            this._shoppingCartUpdateEvent();
         }
 
-        public bool IsInShoppingCart(Book book)
+        public void RemoveBook(Book book)
         {
-            var query = from Book targetBook in this._items
-                        where targetBook.Equals(book)
-                        select targetBook;
+            var query = from ShoppingCartItem item in this.Items
+                        where !item.Book.Equals(book)
+                        select item;
+
+            this.Items = query.ToList();
+
+            this._shoppingCartUpdateEvent();
+        }
+
+        public int Count()
+        {
+            return this.Items.Count();
+        }
+
+        public bool Contains(Book book)
+        {
+            var query = from ShoppingCartItem item in this.Items
+                        where item.Book.Equals(book)
+                        select item;
 
             return query.Count() > 0;
         }
