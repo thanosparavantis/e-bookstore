@@ -12,6 +12,7 @@ namespace eBookstore
         private BookList _bookList;
         private User _user;
         private BookDetailForm _bookDetailForm;
+        private ShoppingCartForm _shoppingCartForm;
 
         public CustomerForm(User user)
         {
@@ -109,6 +110,19 @@ namespace eBookstore
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void shoppingCartButton_Click(object sender, EventArgs e)
+        {
+            if (this._shoppingCartForm == null || this._shoppingCartForm.IsDisposed)
+            {
+                this._shoppingCartForm = new ShoppingCartForm();
+                this._shoppingCartForm.Visible = true;
+            }
+            else
+            {
+                this._shoppingCartForm.Focus();
+            }
         }
     }
 }

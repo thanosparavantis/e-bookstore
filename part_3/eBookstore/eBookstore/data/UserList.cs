@@ -4,7 +4,7 @@ using eBookstore.model;
 
 namespace eBookstore.data
 {
-    public class UserList
+    public sealed class UserList
     {
         private List<User> _userDataList = new List<User>();
 
