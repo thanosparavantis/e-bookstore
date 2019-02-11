@@ -7,11 +7,18 @@ namespace eBookstore.data
 {
     class BookList
     {
-        public ArrayList Data { get; }
+        public ArrayList Data { get; set;  }
 
-        public AutoCompleteStringCollection AutoCompleteTerms { get; }
+        public AutoCompleteStringCollection AutoCompleteTerms { get; set; }
 
         public BookList()
+        {
+            this.InitializeBooks();
+
+            this.InitializeAutoCompleteTerms();
+        }
+
+        private void InitializeBooks()
         {
             this.Data = new ArrayList();
 
@@ -139,7 +146,7 @@ namespace eBookstore.data
             {
                 Cover = Properties.Resources.book_9,
                 Title = "ΜΜΕ",
-                Summary = "Συχνά λέγεται ότι ζούμε την \"επανάσταση της πληροφορίας\". Πράγματι, τα τελευταία χρόνια υπήρξαν πολύ σημαντικές εξελίξεις στα μέσα μαζικής ενημέρωσης. Χάρη στην καλωδιακή, τη δορυφορική και την ψηφιακή τεχνολογία είναι πια εφικτή η πρόσβαση σε κάθε είδους πληροφορία. Το βιβλίο αυτό πραγματεύεται διάφορα θέματα που σχετίζονται με τα ΜΜΕ: - Ποιοι κατέχουν τα ΜΜΕ και κατά πόσο τα χρησιμοποιούν για την εξυπηρέτηση των δικών τους συμφερόντων; - Πώς μπορεί να διασφαλιστεί ο πλουραλισμός και η αντικειμενικότητα της πληροφόρησης; - Θα πρέπει να χρησιμοποιούνται τα ΜΜΕ για προπαγανδιστικούς σκοπούς; - Σε ποιο βαθμό οι χορηγοί των διαφόρων εκπομπών μπορούν να επέμβουν στη διαμόρφωση του ραδιοτηλεοπτικού προγράμματος; - Πώς γίνεται η αξιολόγηση των ειδήσεων που τελικά θα προβληθούν από τα ΜΜΕ; Σήμερα τα ΜΜΕ, έχουν σημαντικό κοινωνικό ρόλο. Διαμορφώνουν την κοινή γνώμη, προβάλλουν πρότυπα και συμπεριφορές. Επομένως, η υιοθέτηση κριτικής στάσης απέναντι σε αυτά είναι απαραίτητη.",
+                Summary = "Συχνά λέγεται ότι ζούμε την \"επανάσταση της πληροφορίας\". Πράγματι, τα τελευταία χρόνια υπήρξαν πολύ σημαντικές εξελίξεις στα μέσα μαζικής ενημέρωσης. Χάρη στην καλωδιακή, τη δορυφορική και την ψηφιακή τεχνολογία είναι πια εφικτή η πρόσβαση σε κάθε είδους πληροφορία.",
                 Category = "Δίκαιο",
                 Author = "Petley Julian",
                 Pages = 64,
@@ -154,7 +161,7 @@ namespace eBookstore.data
             {
                 Cover = Properties.Resources.book_10,
                 Title = "Τα ροκ ημερολόγια",
-                Summary = "Τα Ροκ Ημερολόγια θα μπορούσαν να εκληφθούν ως ένας τόμος \"προφορικής ιστορίας\" και συλλογή φωτογραφικών τεκμηρίων, που παρέχει στον σημερινό αναγνώστη σημαντικές πληροφορίες για τις νεανικές υποκουλτούρες στην Ελλάδα, στις αρχές της δεκαετίας του 80'.Φρικιά, μεταλλάδες, χούλιγκανς, πανκιά, ντισκόβιοι-καρεκλάδες, νιουγουεηβάδες. [...] (Από το οπισθόφυλλο)",
+                Summary = "Τα Ροκ Ημερολόγια θα μπορούσαν να εκληφθούν ως ένας τόμος \"προφορικής ιστορίας\" και συλλογή φωτογραφικών τεκμηρίων, που παρέχει στον σημερινό αναγνώστη σημαντικές πληροφορίες για τις νεανικές υποκουλτούρες στην Ελλάδα, στις αρχές της δεκαετίας του 80'.Φρικιά, μεταλλάδες, χούλιγκανς, πανκιά, ντισκόβιοι-καρεκλάδες, νιουγουεηβάδες.",
                 Category = "Μουσική",
                 Author = "Τουρκοβασίλης Γιώργος",
                 Pages = 192,
@@ -164,17 +171,32 @@ namespace eBookstore.data
                 BasePrice = 8.16,
                 Discount = 0.0
             });
+        }
 
+        private void InitializeAutoCompleteTerms()
+        {
             this.AutoCompleteTerms = new AutoCompleteStringCollection();
 
             var titles = from Book book in this.Data select book.Title;
             var categories = from Book book in this.Data select book.Category;
             var authors = from Book book in this.Data select book.Author;
             var publishers = from Book book in this.Data select book.Publisher;
+
             this.AutoCompleteTerms.AddRange(titles.ToArray());
             this.AutoCompleteTerms.AddRange(categories.ToArray());
             this.AutoCompleteTerms.AddRange(authors.ToArray());
             this.AutoCompleteTerms.AddRange(publishers.ToArray());
+        }
+
+        public Book GetBookByTitle(string title)
+        {
+            var query = from Book book in this.Data
+                        where book.Title.Equals(title)
+                        select book;
+
+            Book result = query.First();
+
+            return result;
         }
     }
 }

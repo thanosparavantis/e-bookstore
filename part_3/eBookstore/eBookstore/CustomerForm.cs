@@ -93,15 +93,22 @@ namespace eBookstore
 
         private void bookDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (this._bookDetailForm == null)
+            if (e.RowIndex == -1)
             {
-                this._bookDetailForm = new BookDetailForm();
-                this._bookDetailForm.Visible = true;
+                return;
             }
-            else
-            {
-                this._bookDetailForm.Focus();
-            }
+
+            string bookTitle = (string)this.bookDataGridView[1, e.RowIndex].Value;
+            Book book = this._bookList.GetBookByTitle(bookTitle);
+
+            this._bookDetailForm?.Close();
+            this._bookDetailForm = new BookDetailForm(book);
+            this._bookDetailForm.Visible = true;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

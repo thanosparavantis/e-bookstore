@@ -2,7 +2,7 @@
 
 namespace eBookstore.model
 {
-    class Book
+    public class Book
     {
         public Image Cover { get; set; }
 

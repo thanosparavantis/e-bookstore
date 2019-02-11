@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.booksToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.booksLabel = new System.Windows.Forms.Label();
-            this.bookDataGridView = new System.Windows.Forms.DataGridView();
             this.userLabel = new System.Windows.Forms.Label();
-            this.booksToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.bookDataGridView = new System.Windows.Forms.DataGridView();
             this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,8 +88,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -113,6 +114,13 @@
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
+            // 
+            // booksToolStripStatusLabel
+            // 
+            this.booksToolStripStatusLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.booksToolStripStatusLabel.Name = "booksToolStripStatusLabel";
+            this.booksToolStripStatusLabel.Size = new System.Drawing.Size(72, 17);
+            this.booksToolStripStatusLabel.Text = "(book info)";
             // 
             // tableLayoutPanel1
             // 
@@ -169,8 +177,20 @@
             this.booksLabel.Name = "booksLabel";
             this.booksLabel.Size = new System.Drawing.Size(133, 17);
             this.booksLabel.TabIndex = 0;
-            this.booksLabel.Text = "number of books";
+            this.booksLabel.Text = "(book info)";
             this.booksLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // userLabel
+            // 
+            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.userLabel.AutoSize = true;
+            this.userLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.userLabel.Location = new System.Drawing.Point(551, 14);
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(130, 17);
+            this.userLabel.TabIndex = 2;
+            this.userLabel.Text = "(user details)";
+            this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bookDataGridView
             // 
@@ -183,13 +203,13 @@
             this.bookDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.bookDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bookDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.bookDataGridView.ColumnHeadersHeight = 30;
             this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -205,15 +225,16 @@
             this.publisherDataGridViewTextBoxColumn,
             this.yearPublishedDataGridViewTextBoxColumn,
             this.iSBNDataGridViewTextBoxColumn});
+            this.bookDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bookDataGridView.DataSource = this.bookBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.bookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bookDataGridView.Location = new System.Drawing.Point(0, 45);
             this.bookDataGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -228,25 +249,6 @@
             this.bookDataGridView.TabIndex = 4;
             this.bookDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookDataGridView_CellMouseDoubleClick);
             this.bookDataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellMouseEnter);
-            // 
-            // userLabel
-            // 
-            this.userLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.userLabel.AutoSize = true;
-            this.userLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.userLabel.Location = new System.Drawing.Point(551, 14);
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(130, 17);
-            this.userLabel.TabIndex = 2;
-            this.userLabel.Text = "username (role)";
-            this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // booksToolStripStatusLabel
-            // 
-            this.booksToolStripStatusLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.booksToolStripStatusLabel.Name = "booksToolStripStatusLabel";
-            this.booksToolStripStatusLabel.Size = new System.Drawing.Size(109, 17);
-            this.booksToolStripStatusLabel.Text = "number of books";
             // 
             // coverDataGridViewImageColumn
             // 
