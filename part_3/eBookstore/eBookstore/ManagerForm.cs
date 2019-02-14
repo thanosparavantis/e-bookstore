@@ -14,6 +14,10 @@ namespace eBookstore
     {
         private bool[] lightStates = { false,  false, false, false, false };
 
+        private System.Media.SoundPlayer player;
+        private bool musicPlayerState = false;
+        private int musicTrack = 1;
+
         private int climaTemprature = 18;
         private bool climaState = false;
 
@@ -24,6 +28,9 @@ namespace eBookstore
 
         private void ManagerForm_Load(object sender, EventArgs e)
         {
+            player = new System.Media.SoundPlayer();
+            player.SoundLocation = "./study_music_" + musicTrack +".wav";
+
             if (!climaState)
             {
                 climaIncreaseButton.Enabled = false;
@@ -174,6 +181,44 @@ namespace eBookstore
 
             // if (e.KeyCode == Keys.H && e.Control)
             // Open help
+        }
+
+        private void playStopButton_Click(object sender, EventArgs e)
+        {
+            if (!musicPlayerState)
+            {
+                player.PlayLooping();
+                songTitlteLabel.Text = "study_music_" + musicTrack;
+                playStopButton.Text = "Stop";
+                playStopButton.ForeColor = Color.DarkRed;
+            }
+            else
+            {
+                player.Stop();
+                songTitlteLabel.Text = "study_music_" + musicTrack;
+                playStopButton.Text = "Play";
+                playStopButton.ForeColor = Color.LimeGreen;
+            }
+
+            musicPlayerState = !musicPlayerState;
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            musicTrack = (musicTrack == 3) ? 1 : ++musicTrack;
+            player.Stop();
+            player.SoundLocation = "./study_music_" + musicTrack + ".wav";
+            songTitlteLabel.Text = "study_music_" + musicTrack;
+            player.PlayLooping();
+        }
+
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            musicTrack = (musicTrack == 1) ? 3 : --musicTrack;
+            player.Stop();
+            player.SoundLocation = "./study_music_" + musicTrack + ".wav";
+            songTitlteLabel.Text = "study_music_" + musicTrack;
+            player.PlayLooping();
         }
     }
 }

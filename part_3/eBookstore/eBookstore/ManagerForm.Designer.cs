@@ -43,12 +43,6 @@
             this.light2Label = new System.Windows.Forms.Label();
             this.light1Button = new System.Windows.Forms.Button();
             this.light1Label = new System.Windows.Forms.Label();
-            this.light5Indicator = new System.Windows.Forms.PictureBox();
-            this.light4Indicator = new System.Windows.Forms.PictureBox();
-            this.light3Indicator = new System.Windows.Forms.PictureBox();
-            this.light2Indicator = new System.Windows.Forms.PictureBox();
-            this.light1Indicator = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.climaGroupBox = new System.Windows.Forms.GroupBox();
             this.climaDecreaseButton = new System.Windows.Forms.Button();
             this.climaIncreaseButton = new System.Windows.Forms.Button();
@@ -57,20 +51,34 @@
             this.tempratureLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abaoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.previousButton = new System.Windows.Forms.Button();
+            this.playStopButton = new System.Windows.Forms.Button();
+            this.songTitlteLabel = new System.Windows.Forms.Label();
+            this.light5Indicator = new System.Windows.Forms.PictureBox();
+            this.light4Indicator = new System.Windows.Forms.PictureBox();
+            this.light3Indicator = new System.Windows.Forms.PictureBox();
+            this.light2Indicator = new System.Windows.Forms.PictureBox();
+            this.light1Indicator = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.statusStrip.SuspendLayout();
             this.lightGroupBox.SuspendLayout();
+            this.climaGroupBox.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.light5Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light4Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light3Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light2Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light1Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.climaGroupBox.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -228,65 +236,6 @@
             this.light1Label.TabIndex = 0;
             this.light1Label.Text = "Light 1";
             // 
-            // light5Indicator
-            // 
-            this.light5Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light5Indicator.Image")));
-            this.light5Indicator.Location = new System.Drawing.Point(694, 406);
-            this.light5Indicator.Name = "light5Indicator";
-            this.light5Indicator.Size = new System.Drawing.Size(16, 16);
-            this.light5Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.light5Indicator.TabIndex = 8;
-            this.light5Indicator.TabStop = false;
-            // 
-            // light4Indicator
-            // 
-            this.light4Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light4Indicator.Image")));
-            this.light4Indicator.Location = new System.Drawing.Point(449, 406);
-            this.light4Indicator.Name = "light4Indicator";
-            this.light4Indicator.Size = new System.Drawing.Size(16, 16);
-            this.light4Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.light4Indicator.TabIndex = 7;
-            this.light4Indicator.TabStop = false;
-            // 
-            // light3Indicator
-            // 
-            this.light3Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light3Indicator.Image")));
-            this.light3Indicator.Location = new System.Drawing.Point(228, 406);
-            this.light3Indicator.Name = "light3Indicator";
-            this.light3Indicator.Size = new System.Drawing.Size(16, 16);
-            this.light3Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.light3Indicator.TabIndex = 6;
-            this.light3Indicator.TabStop = false;
-            // 
-            // light2Indicator
-            // 
-            this.light2Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light2Indicator.Image")));
-            this.light2Indicator.Location = new System.Drawing.Point(449, 188);
-            this.light2Indicator.Name = "light2Indicator";
-            this.light2Indicator.Size = new System.Drawing.Size(16, 16);
-            this.light2Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.light2Indicator.TabIndex = 5;
-            this.light2Indicator.TabStop = false;
-            // 
-            // light1Indicator
-            // 
-            this.light1Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light1Indicator.Image")));
-            this.light1Indicator.Location = new System.Drawing.Point(228, 188);
-            this.light1Indicator.Name = "light1Indicator";
-            this.light1Indicator.Size = new System.Drawing.Size(16, 16);
-            this.light1Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.light1Indicator.TabIndex = 4;
-            this.light1Indicator.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::eBookstore.Properties.Resources.shop_v2;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1022, 532);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // climaGroupBox
             // 
             this.climaGroupBox.BackColor = System.Drawing.SystemColors.Control;
@@ -385,6 +334,14 @@
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
             // abaoutToolStripMenuItem
             // 
             this.abaoutToolStripMenuItem.Name = "abaoutToolStripMenuItem";
@@ -398,14 +355,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.logOutToolStripMenuItem.Text = "Log out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
             // toolTip
             // 
             this.toolTip.AutomaticDelay = 1000;
@@ -413,11 +362,150 @@
             this.toolTip.InitialDelay = 1000;
             this.toolTip.ReshowDelay = 500;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox1.Controls.Add(this.nextButton);
+            this.groupBox1.Controls.Add(this.previousButton);
+            this.groupBox1.Controls.Add(this.playStopButton);
+            this.groupBox1.Location = new System.Drawing.Point(1041, 384);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 127);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Music Player";
+            // 
+            // nextButton
+            // 
+            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.nextButton.Location = new System.Drawing.Point(102, 87);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(91, 31);
+            this.nextButton.TabIndex = 17;
+            this.nextButton.Text = "Next";
+            this.toolTip.SetToolTip(this.nextButton, "Next song");
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // previousButton
+            // 
+            this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.previousButton.Location = new System.Drawing.Point(6, 87);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(91, 31);
+            this.previousButton.TabIndex = 16;
+            this.previousButton.Text = "Previous";
+            this.toolTip.SetToolTip(this.previousButton, "Previous song");
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            // 
+            // playStopButton
+            // 
+            this.playStopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.playStopButton.ForeColor = System.Drawing.Color.LimeGreen;
+            this.playStopButton.Location = new System.Drawing.Point(7, 54);
+            this.playStopButton.Name = "playStopButton";
+            this.playStopButton.Size = new System.Drawing.Size(187, 31);
+            this.playStopButton.TabIndex = 14;
+            this.playStopButton.Text = "Play";
+            this.toolTip.SetToolTip(this.playStopButton, "Play / Stop");
+            this.playStopButton.UseVisualStyleBackColor = true;
+            this.playStopButton.Click += new System.EventHandler(this.playStopButton_Click);
+            // 
+            // songTitlteLabel
+            // 
+            this.songTitlteLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.songTitlteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.songTitlteLabel.Location = new System.Drawing.Point(3, 0);
+            this.songTitlteLabel.Name = "songTitlteLabel";
+            this.songTitlteLabel.Size = new System.Drawing.Size(181, 26);
+            this.songTitlteLabel.TabIndex = 2;
+            this.songTitlteLabel.Text = "---";
+            this.songTitlteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // light5Indicator
+            // 
+            this.light5Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light5Indicator.Image")));
+            this.light5Indicator.Location = new System.Drawing.Point(694, 406);
+            this.light5Indicator.Name = "light5Indicator";
+            this.light5Indicator.Size = new System.Drawing.Size(16, 16);
+            this.light5Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.light5Indicator.TabIndex = 8;
+            this.light5Indicator.TabStop = false;
+            // 
+            // light4Indicator
+            // 
+            this.light4Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light4Indicator.Image")));
+            this.light4Indicator.Location = new System.Drawing.Point(449, 406);
+            this.light4Indicator.Name = "light4Indicator";
+            this.light4Indicator.Size = new System.Drawing.Size(16, 16);
+            this.light4Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.light4Indicator.TabIndex = 7;
+            this.light4Indicator.TabStop = false;
+            // 
+            // light3Indicator
+            // 
+            this.light3Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light3Indicator.Image")));
+            this.light3Indicator.Location = new System.Drawing.Point(228, 406);
+            this.light3Indicator.Name = "light3Indicator";
+            this.light3Indicator.Size = new System.Drawing.Size(16, 16);
+            this.light3Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.light3Indicator.TabIndex = 6;
+            this.light3Indicator.TabStop = false;
+            // 
+            // light2Indicator
+            // 
+            this.light2Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light2Indicator.Image")));
+            this.light2Indicator.Location = new System.Drawing.Point(449, 188);
+            this.light2Indicator.Name = "light2Indicator";
+            this.light2Indicator.Size = new System.Drawing.Size(16, 16);
+            this.light2Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.light2Indicator.TabIndex = 5;
+            this.light2Indicator.TabStop = false;
+            // 
+            // light1Indicator
+            // 
+            this.light1Indicator.Image = ((System.Drawing.Image)(resources.GetObject("light1Indicator.Image")));
+            this.light1Indicator.Location = new System.Drawing.Point(228, 188);
+            this.light1Indicator.Name = "light1Indicator";
+            this.light1Indicator.Size = new System.Drawing.Size(16, 16);
+            this.light1Indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.light1Indicator.TabIndex = 4;
+            this.light1Indicator.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::eBookstore.Properties.Resources.shop_v2;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1022, 532);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.songTitlteLabel, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 22);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(187, 26);
+            this.tableLayoutPanel1.TabIndex = 18;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 610);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.climaGroupBox);
             this.Controls.Add(this.light5Indicator);
             this.Controls.Add(this.light4Indicator);
@@ -439,16 +527,18 @@
             this.statusStrip.PerformLayout();
             this.lightGroupBox.ResumeLayout(false);
             this.lightGroupBox.PerformLayout();
+            this.climaGroupBox.ResumeLayout(false);
+            this.climaGroupBox.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.light5Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light4Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light3Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light2Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light1Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.climaGroupBox.ResumeLayout(false);
-            this.climaGroupBox.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,5 +577,11 @@
         private System.Windows.Forms.ToolStripStatusLabel mouseHoverToolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button previousButton;
+        private System.Windows.Forms.Button playStopButton;
+        private System.Windows.Forms.Label songTitlteLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
