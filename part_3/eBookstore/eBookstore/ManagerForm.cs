@@ -30,6 +30,7 @@ namespace eBookstore
         {
             player = new System.Media.SoundPlayer();
             player.SoundLocation = "./study_music_" + musicTrack +".wav";
+            nextButton.Enabled = previousButton.Enabled = false;
 
             if (!climaState)
             {
@@ -190,6 +191,8 @@ namespace eBookstore
                 player.PlayLooping();
                 songTitlteLabel.Text = "study_music_" + musicTrack;
                 playStopButton.Text = "Stop";
+                songTitlteLabel.Text = "study_music_" + musicTrack;
+                nextButton.Enabled = previousButton.Enabled = true;
                 playStopButton.ForeColor = Color.DarkRed;
             }
             else
@@ -197,6 +200,8 @@ namespace eBookstore
                 player.Stop();
                 songTitlteLabel.Text = "study_music_" + musicTrack;
                 playStopButton.Text = "Play";
+                songTitlteLabel.Text = "---";
+                nextButton.Enabled = previousButton.Enabled = false;
                 playStopButton.ForeColor = Color.LimeGreen;
             }
 
