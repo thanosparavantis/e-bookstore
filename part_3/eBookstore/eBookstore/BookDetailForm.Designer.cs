@@ -79,7 +79,8 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.RowCount = 6;
@@ -93,13 +94,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(478, 494);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(484, 494);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // coverPictureBox
             // 
             this.coverPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.coverPictureBox.Location = new System.Drawing.Point(139, 8);
+            this.coverPictureBox.Location = new System.Drawing.Point(142, 8);
             this.coverPictureBox.Name = "coverPictureBox";
             this.coverPictureBox.Size = new System.Drawing.Size(200, 200);
             this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +118,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(462, 41);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(468, 41);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
             // titleLabel
@@ -130,7 +131,7 @@
             this.titleLabel.Location = new System.Drawing.Point(0, 10);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(462, 21);
+            this.titleLabel.Size = new System.Drawing.Size(468, 21);
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "(book title)";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,7 +148,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(462, 27);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(468, 27);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // summaryLabel
@@ -160,7 +161,7 @@
             this.summaryLabel.Location = new System.Drawing.Point(0, 0);
             this.summaryLabel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.summaryLabel.Name = "summaryLabel";
-            this.summaryLabel.Size = new System.Drawing.Size(462, 17);
+            this.summaryLabel.Size = new System.Drawing.Size(468, 17);
             this.summaryLabel.TabIndex = 2;
             this.summaryLabel.Text = "(book summary)";
             this.summaryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,7 +185,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(462, 60);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(468, 60);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // authorLabel
@@ -197,7 +198,7 @@
             this.authorLabel.Location = new System.Drawing.Point(0, 30);
             this.authorLabel.Margin = new System.Windows.Forms.Padding(0);
             this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(153, 30);
+            this.authorLabel.Size = new System.Drawing.Size(155, 30);
             this.authorLabel.TabIndex = 2;
             this.authorLabel.Text = "(book author)";
             this.authorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,10 +210,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.publisherLabel.AutoSize = true;
             this.publisherLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.publisherLabel.Location = new System.Drawing.Point(153, 30);
+            this.publisherLabel.Location = new System.Drawing.Point(155, 30);
             this.publisherLabel.Margin = new System.Windows.Forms.Padding(0);
             this.publisherLabel.Name = "publisherLabel";
-            this.publisherLabel.Size = new System.Drawing.Size(154, 30);
+            this.publisherLabel.Size = new System.Drawing.Size(156, 30);
             this.publisherLabel.TabIndex = 2;
             this.publisherLabel.Text = "(book publisher)";
             this.publisherLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,7 +228,7 @@
             this.authorTextLabel.Location = new System.Drawing.Point(0, 0);
             this.authorTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.authorTextLabel.Name = "authorTextLabel";
-            this.authorTextLabel.Size = new System.Drawing.Size(153, 30);
+            this.authorTextLabel.Size = new System.Drawing.Size(155, 30);
             this.authorTextLabel.TabIndex = 2;
             this.authorTextLabel.Text = "Συγγραφέας";
             this.authorTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,10 +240,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.publisherTextLabel.AutoSize = true;
             this.publisherTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publisherTextLabel.Location = new System.Drawing.Point(153, 0);
+            this.publisherTextLabel.Location = new System.Drawing.Point(155, 0);
             this.publisherTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.publisherTextLabel.Name = "publisherTextLabel";
-            this.publisherTextLabel.Size = new System.Drawing.Size(154, 30);
+            this.publisherTextLabel.Size = new System.Drawing.Size(156, 30);
             this.publisherTextLabel.TabIndex = 2;
             this.publisherTextLabel.Text = "Εκδότης";
             this.publisherTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,10 +255,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.yearPublishedTextLabel.AutoSize = true;
             this.yearPublishedTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearPublishedTextLabel.Location = new System.Drawing.Point(307, 0);
+            this.yearPublishedTextLabel.Location = new System.Drawing.Point(311, 0);
             this.yearPublishedTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.yearPublishedTextLabel.Name = "yearPublishedTextLabel";
-            this.yearPublishedTextLabel.Size = new System.Drawing.Size(155, 30);
+            this.yearPublishedTextLabel.Size = new System.Drawing.Size(157, 30);
             this.yearPublishedTextLabel.TabIndex = 2;
             this.yearPublishedTextLabel.Text = "Έτος Έκδοσης";
             this.yearPublishedTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,10 +270,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.yearPublishedLabel.AutoSize = true;
             this.yearPublishedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.yearPublishedLabel.Location = new System.Drawing.Point(307, 30);
+            this.yearPublishedLabel.Location = new System.Drawing.Point(311, 30);
             this.yearPublishedLabel.Margin = new System.Windows.Forms.Padding(0);
             this.yearPublishedLabel.Name = "yearPublishedLabel";
-            this.yearPublishedLabel.Size = new System.Drawing.Size(155, 30);
+            this.yearPublishedLabel.Size = new System.Drawing.Size(157, 30);
             this.yearPublishedLabel.TabIndex = 2;
             this.yearPublishedLabel.Text = "(book year published)";
             this.yearPublishedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,7 +297,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(462, 60);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(468, 60);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // pagesTextLabel
@@ -306,10 +307,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pagesTextLabel.AutoSize = true;
             this.pagesTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pagesTextLabel.Location = new System.Drawing.Point(153, 0);
+            this.pagesTextLabel.Location = new System.Drawing.Point(155, 0);
             this.pagesTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.pagesTextLabel.Name = "pagesTextLabel";
-            this.pagesTextLabel.Size = new System.Drawing.Size(154, 30);
+            this.pagesTextLabel.Size = new System.Drawing.Size(156, 30);
             this.pagesTextLabel.TabIndex = 2;
             this.pagesTextLabel.Text = "Σελίδες";
             this.pagesTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -324,7 +325,7 @@
             this.categoryTextLabel.Location = new System.Drawing.Point(0, 0);
             this.categoryTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.categoryTextLabel.Name = "categoryTextLabel";
-            this.categoryTextLabel.Size = new System.Drawing.Size(153, 30);
+            this.categoryTextLabel.Size = new System.Drawing.Size(155, 30);
             this.categoryTextLabel.TabIndex = 2;
             this.categoryTextLabel.Text = "Κατηγορία";
             this.categoryTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -336,10 +337,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pagesLabel.AutoSize = true;
             this.pagesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.pagesLabel.Location = new System.Drawing.Point(153, 30);
+            this.pagesLabel.Location = new System.Drawing.Point(155, 30);
             this.pagesLabel.Margin = new System.Windows.Forms.Padding(0);
             this.pagesLabel.Name = "pagesLabel";
-            this.pagesLabel.Size = new System.Drawing.Size(154, 30);
+            this.pagesLabel.Size = new System.Drawing.Size(156, 30);
             this.pagesLabel.TabIndex = 2;
             this.pagesLabel.Text = "(book pages)";
             this.pagesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,7 +355,7 @@
             this.categoryLabel.Location = new System.Drawing.Point(0, 30);
             this.categoryLabel.Margin = new System.Windows.Forms.Padding(0);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(153, 30);
+            this.categoryLabel.Size = new System.Drawing.Size(155, 30);
             this.categoryLabel.TabIndex = 2;
             this.categoryLabel.Text = "(book category)";
             this.categoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -366,10 +367,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ISBNTextLabel.AutoSize = true;
             this.ISBNTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ISBNTextLabel.Location = new System.Drawing.Point(307, 0);
+            this.ISBNTextLabel.Location = new System.Drawing.Point(311, 0);
             this.ISBNTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.ISBNTextLabel.Name = "ISBNTextLabel";
-            this.ISBNTextLabel.Size = new System.Drawing.Size(155, 30);
+            this.ISBNTextLabel.Size = new System.Drawing.Size(157, 30);
             this.ISBNTextLabel.TabIndex = 2;
             this.ISBNTextLabel.Text = "ISBN";
             this.ISBNTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -381,10 +382,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ISBNLabel.AutoSize = true;
             this.ISBNLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.ISBNLabel.Location = new System.Drawing.Point(307, 30);
+            this.ISBNLabel.Location = new System.Drawing.Point(311, 30);
             this.ISBNLabel.Margin = new System.Windows.Forms.Padding(0);
             this.ISBNLabel.Name = "ISBNLabel";
-            this.ISBNLabel.Size = new System.Drawing.Size(155, 30);
+            this.ISBNLabel.Size = new System.Drawing.Size(157, 30);
             this.ISBNLabel.TabIndex = 2;
             this.ISBNLabel.Text = "(book ISBN)";
             this.ISBNLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,7 +409,7 @@
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(462, 60);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(468, 60);
             this.tableLayoutPanel6.TabIndex = 7;
             // 
             // basePriceTextLabel
@@ -421,7 +422,7 @@
             this.basePriceTextLabel.Location = new System.Drawing.Point(0, 0);
             this.basePriceTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.basePriceTextLabel.Name = "basePriceTextLabel";
-            this.basePriceTextLabel.Size = new System.Drawing.Size(153, 30);
+            this.basePriceTextLabel.Size = new System.Drawing.Size(155, 30);
             this.basePriceTextLabel.TabIndex = 2;
             this.basePriceTextLabel.Text = "Αρχική Τιμή";
             this.basePriceTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -433,10 +434,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.discountTextLabel.AutoSize = true;
             this.discountTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountTextLabel.Location = new System.Drawing.Point(153, 0);
+            this.discountTextLabel.Location = new System.Drawing.Point(155, 0);
             this.discountTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.discountTextLabel.Name = "discountTextLabel";
-            this.discountTextLabel.Size = new System.Drawing.Size(154, 30);
+            this.discountTextLabel.Size = new System.Drawing.Size(156, 30);
             this.discountTextLabel.TabIndex = 2;
             this.discountTextLabel.Text = "Έκπτωση";
             this.discountTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -448,10 +449,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.priceTextLabel.AutoSize = true;
             this.priceTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTextLabel.Location = new System.Drawing.Point(307, 0);
+            this.priceTextLabel.Location = new System.Drawing.Point(311, 0);
             this.priceTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.priceTextLabel.Name = "priceTextLabel";
-            this.priceTextLabel.Size = new System.Drawing.Size(155, 30);
+            this.priceTextLabel.Size = new System.Drawing.Size(157, 30);
             this.priceTextLabel.TabIndex = 2;
             this.priceTextLabel.Text = "Τελική Τιμή";
             this.priceTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -466,7 +467,7 @@
             this.basePriceLabel.Location = new System.Drawing.Point(0, 30);
             this.basePriceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.basePriceLabel.Name = "basePriceLabel";
-            this.basePriceLabel.Size = new System.Drawing.Size(153, 30);
+            this.basePriceLabel.Size = new System.Drawing.Size(155, 30);
             this.basePriceLabel.TabIndex = 2;
             this.basePriceLabel.Text = "(book base price)";
             this.basePriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -478,10 +479,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.discountLabel.AutoSize = true;
             this.discountLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountLabel.Location = new System.Drawing.Point(153, 30);
+            this.discountLabel.Location = new System.Drawing.Point(155, 30);
             this.discountLabel.Margin = new System.Windows.Forms.Padding(0);
             this.discountLabel.Name = "discountLabel";
-            this.discountLabel.Size = new System.Drawing.Size(154, 30);
+            this.discountLabel.Size = new System.Drawing.Size(156, 30);
             this.discountLabel.TabIndex = 2;
             this.discountLabel.Text = "(book discount)";
             this.discountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -493,10 +494,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLabel.Location = new System.Drawing.Point(307, 30);
+            this.priceLabel.Location = new System.Drawing.Point(311, 30);
             this.priceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(155, 30);
+            this.priceLabel.Size = new System.Drawing.Size(157, 30);
             this.priceLabel.TabIndex = 2;
             this.priceLabel.Text = "(book price)";
             this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -24,6 +24,25 @@ namespace eBookstore
 
         private void ShoppingCartForm_Load(object sender, EventArgs e)
         {
+            this.UpdateShoppingCartItemData();
+            this.UpdateItemsInCartLabel();
+            this.UpdateTotalCostLabel();
+        }
+
+        private void UpdateShoppingCartItemData()
+        {
+            this.shoppingCartItemBindingSource.DataSource = this._shoppingCart.Items;
+        }
+
+        private void UpdateItemsInCartLabel()
+        {
+            int count = this._shoppingCart.Count();
+            this.itemsInCartLabel.Text = $"{count} βιβλία προς παραγγελία";
+        }
+
+        private void UpdateTotalCostLabel()
+        {
+            this.totalCostLabel.Text = this._shoppingCart.GetTotalCostText();
         }
     }
 }

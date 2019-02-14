@@ -117,7 +117,7 @@ namespace eBookstore
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // Application.Exit();
         }
 
         private void shoppingCartButton_Click(object sender, EventArgs e)

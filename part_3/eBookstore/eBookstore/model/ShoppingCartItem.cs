@@ -10,6 +10,14 @@ namespace eBookstore.model
     {
         public Book Book { get; set; }
 
+        public string BookTitle { get; set; }
+
+        public string BookBasePriceText { get; set; }
+
+        public string BookDiscountText { get; set; }
+
+        public string BookPriceText { get; set; }
+
         public int Amount { get; set; }
     }
 }

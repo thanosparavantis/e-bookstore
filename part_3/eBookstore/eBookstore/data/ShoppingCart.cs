@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,10 @@ namespace eBookstore.data
             ShoppingCartItem shoppingCartItem = new ShoppingCartItem()
             {
                 Book = book,
+                BookTitle = book.Title,
+                BookBasePriceText = book.BasePriceText,
+                BookDiscountText = book.DiscountText,
+                BookPriceText = book.PriceText,
                 Amount = amount
             };
 
@@ -47,7 +52,10 @@ namespace eBookstore.data
 
         public int Count()
         {
-            return this.Items.Count();
+            int sum = 0;
+            this.Items.ForEach(item => sum += item.Amount);
+
+            return sum;
         }
 
         public bool Contains(Book book)
@@ -57,6 +65,19 @@ namespace eBookstore.data
                         select item;
 
             return query.Count() > 0;
+        }
+
+        public double GetTotalCost()
+        {
+            double cost = 0;
+            this.Items.ForEach(item => cost += (item.Book.Price * item.Amount));
+
+            return cost;
+        }
+
+        public string GetTotalCostText()
+        {
+            return this.GetTotalCost().ToString("C", new CultureInfo("en-FR")); ;
         }
     }
 }
