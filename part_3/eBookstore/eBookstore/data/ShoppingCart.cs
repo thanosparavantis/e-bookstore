@@ -50,12 +50,24 @@ namespace eBookstore.data
             this._shoppingCartUpdateEvent();
         }
 
+        public void RemoveAllBooks()
+        {
+            this.Items.Clear();
+
+            this._shoppingCartUpdateEvent();
+        }
+
         public int Count()
         {
             int sum = 0;
             this.Items.ForEach(item => sum += item.Amount);
 
             return sum;
+        }
+
+        public bool IsEmpty()
+        {
+            return this.Count() == 0;
         }
 
         public bool Contains(Book book)

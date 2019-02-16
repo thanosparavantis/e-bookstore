@@ -1,12 +1,5 @@
 ﻿using eBookstore.data;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eBookstore
@@ -24,9 +17,15 @@ namespace eBookstore
 
         private void ShoppingCartForm_Load(object sender, EventArgs e)
         {
+            this.UpdateComponents();
+        }
+
+        private void UpdateComponents()
+        {
             this.UpdateShoppingCartItemData();
             this.UpdateItemsInCartLabel();
             this.UpdateTotalCostLabel();
+            this.UpdateResetButton();
         }
 
         private void UpdateShoppingCartItemData()
@@ -43,6 +42,30 @@ namespace eBookstore
         private void UpdateTotalCostLabel()
         {
             this.totalCostLabel.Text = this._shoppingCart.GetTotalCostText();
+        }
+
+        private void UpdateResetButton()
+        {
+            this.resetButton.Enabled = !this._shoppingCart.IsEmpty();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            this._shoppingCart.RemoveAllBooks();
+            this.shoppingCartItemBindingSource.Clear();
+
+            this.UpdateComponents();
+
+            MessageBox.Show(
+                "Το καλάθι αγορών σας έχει αδιάσει.",
+                "Καλάθι Αγορών",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 }
