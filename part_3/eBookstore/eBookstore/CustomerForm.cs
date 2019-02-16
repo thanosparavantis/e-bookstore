@@ -109,28 +109,26 @@ namespace eBookstore
 
             string bookTitle = (string)this.bookDataGridView[1, e.RowIndex].Value;
             Book book = this._bookList.GetBookByTitle(bookTitle);
+            
+            this._shoppingCartForm?.Close();
 
             this._bookDetailForm?.Close();
             this._bookDetailForm = new BookDetailForm(book, this._shoppingCart);
-            this._bookDetailForm.Visible = true;
+            this._bookDetailForm.Show();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Application.Exit();
+            this.Close();
         }
 
         private void shoppingCartButton_Click(object sender, EventArgs e)
         {
-            if (this._shoppingCartForm == null || this._shoppingCartForm.IsDisposed)
-            {
-                this._shoppingCartForm = new ShoppingCartForm(this._shoppingCart);
-                this._shoppingCartForm.Visible = true;
-            }
-            else
-            {
-                this._shoppingCartForm.Focus();
-            }
+            this._bookDetailForm?.Close();
+
+            this._shoppingCartForm?.Close();
+            this._shoppingCartForm = new ShoppingCartForm(this._shoppingCart);
+            this._shoppingCartForm.Show();
         }
 
         private void UpdateShoppingCartButton()
@@ -144,6 +142,12 @@ namespace eBookstore
         public void OnShoppingCartUpdate()
         {
             this.UpdateShoppingCartButton();
+        }
+
+        private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this._bookDetailForm?.Close();
+            this._shoppingCartForm?.Close();
         }
     }
 }

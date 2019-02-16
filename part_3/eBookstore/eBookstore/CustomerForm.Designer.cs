@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,8 +43,8 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.booksLabel = new System.Windows.Forms.Label();
             this.userLabel = new System.Windows.Forms.Label();
-            this.bookDataGridView = new System.Windows.Forms.DataGridView();
             this.shoppingCartButton = new System.Windows.Forms.Button();
+            this.bookDataGridView = new System.Windows.Forms.DataGridView();
             this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.summaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -199,6 +199,20 @@
             this.userLabel.Text = "(user details)";
             this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // shoppingCartButton
+            // 
+            this.shoppingCartButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.shoppingCartButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shoppingCartButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.shoppingCartButton.Location = new System.Drawing.Point(679, 7);
+            this.shoppingCartButton.Margin = new System.Windows.Forms.Padding(0);
+            this.shoppingCartButton.Name = "shoppingCartButton";
+            this.shoppingCartButton.Size = new System.Drawing.Size(200, 30);
+            this.shoppingCartButton.TabIndex = 3;
+            this.shoppingCartButton.Text = "(shopping cart status)";
+            this.shoppingCartButton.UseVisualStyleBackColor = true;
+            this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
+            // 
             // bookDataGridView
             // 
             this.bookDataGridView.AllowUserToAddRows = false;
@@ -210,13 +224,13 @@
             this.bookDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.bookDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bookDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.bookDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.bookDataGridView.ColumnHeadersHeight = 30;
             this.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.bookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -230,14 +244,14 @@
             this.yearPublishedDataGridViewTextBoxColumn});
             this.bookDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bookDataGridView.DataSource = this.bookBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.bookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bookDataGridView.Location = new System.Drawing.Point(0, 45);
             this.bookDataGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -252,20 +266,6 @@
             this.bookDataGridView.TabIndex = 4;
             this.bookDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookDataGridView_CellMouseDoubleClick);
             this.bookDataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellMouseEnter);
-            // 
-            // shoppingCartButton
-            // 
-            this.shoppingCartButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.shoppingCartButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shoppingCartButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.shoppingCartButton.Location = new System.Drawing.Point(679, 7);
-            this.shoppingCartButton.Margin = new System.Windows.Forms.Padding(0);
-            this.shoppingCartButton.Name = "shoppingCartButton";
-            this.shoppingCartButton.Size = new System.Drawing.Size(200, 30);
-            this.shoppingCartButton.TabIndex = 3;
-            this.shoppingCartButton.Text = "(shopping cart status)";
-            this.shoppingCartButton.UseVisualStyleBackColor = true;
-            this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 
             // coverDataGridViewImageColumn
             // 
@@ -360,6 +360,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ηλεκτρονκιό Βιβλιοπωλείο";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CustomerForm_FormClosing);
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
