@@ -46,8 +46,9 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.newUserLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.signInGroupBox.SuspendLayout();
             this.utilsGroupBox.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -61,7 +62,7 @@
             this.loginButton.Location = new System.Drawing.Point(6, 119);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(122, 50);
-            this.loginButton.TabIndex = 1;
+            this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.toolTip.SetToolTip(this.loginButton, "Click to login");
             this.loginButton.UseVisualStyleBackColor = true;
@@ -71,6 +72,7 @@
             // 
             // signInGroupBox
             // 
+            this.signInGroupBox.Controls.Add(this.newUserLinkLabel);
             this.signInGroupBox.Controls.Add(this.passwordTextBox);
             this.signInGroupBox.Controls.Add(this.passwordLabel);
             this.signInGroupBox.Controls.Add(this.usernameTextBox);
@@ -79,7 +81,7 @@
             this.signInGroupBox.Controls.Add(this.exitButton);
             this.signInGroupBox.Location = new System.Drawing.Point(887, 27);
             this.signInGroupBox.Name = "signInGroupBox";
-            this.signInGroupBox.Size = new System.Drawing.Size(262, 180);
+            this.signInGroupBox.Size = new System.Drawing.Size(262, 200);
             this.signInGroupBox.TabIndex = 3;
             this.signInGroupBox.TabStop = false;
             this.signInGroupBox.Text = "Sign in";
@@ -91,7 +93,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(250, 24);
-            this.passwordTextBox.TabIndex = 7;
+            this.passwordTextBox.TabIndex = 2;
             // 
             // passwordLabel
             // 
@@ -109,7 +111,7 @@
             this.usernameTextBox.Location = new System.Drawing.Point(6, 41);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(250, 24);
-            this.usernameTextBox.TabIndex = 5;
+            this.usernameTextBox.TabIndex = 1;
             // 
             // usernameLabel
             // 
@@ -129,7 +131,7 @@
             this.exitButton.Location = new System.Drawing.Point(134, 119);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(122, 50);
-            this.exitButton.TabIndex = 3;
+            this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Exit";
             this.toolTip.SetToolTip(this.exitButton, "Click to exit");
             this.exitButton.UseVisualStyleBackColor = false;
@@ -141,7 +143,7 @@
             // 
             this.utilsGroupBox.Controls.Add(this.coffeShopButton);
             this.utilsGroupBox.Controls.Add(this.printerButton);
-            this.utilsGroupBox.Location = new System.Drawing.Point(887, 213);
+            this.utilsGroupBox.Location = new System.Drawing.Point(887, 233);
             this.utilsGroupBox.Name = "utilsGroupBox";
             this.utilsGroupBox.Size = new System.Drawing.Size(262, 80);
             this.utilsGroupBox.TabIndex = 4;
@@ -154,7 +156,7 @@
             this.coffeShopButton.Location = new System.Drawing.Point(6, 19);
             this.coffeShopButton.Name = "coffeShopButton";
             this.coffeShopButton.Size = new System.Drawing.Size(122, 50);
-            this.coffeShopButton.TabIndex = 1;
+            this.coffeShopButton.TabIndex = 5;
             this.coffeShopButton.Text = "Coffee Shop";
             this.toolTip.SetToolTip(this.coffeShopButton, "Click to open coffe shop");
             this.coffeShopButton.UseVisualStyleBackColor = true;
@@ -168,7 +170,7 @@
             this.printerButton.Location = new System.Drawing.Point(134, 19);
             this.printerButton.Name = "printerButton";
             this.printerButton.Size = new System.Drawing.Size(122, 50);
-            this.printerButton.TabIndex = 2;
+            this.printerButton.TabIndex = 6;
             this.printerButton.Text = "Printer/Scanner";
             this.toolTip.SetToolTip(this.printerButton, "Click to use printer/scanner");
             this.printerButton.UseVisualStyleBackColor = true;
@@ -221,7 +223,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mouseHoverToolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 302);
+            this.statusStrip.Location = new System.Drawing.Point(0, 321);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1160, 22);
             this.statusStrip.TabIndex = 6;
@@ -233,16 +235,6 @@
             this.mouseHoverToolStripStatusLabel.Size = new System.Drawing.Size(10, 17);
             this.mouseHoverToolStripStatusLabel.Text = ".";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::eBookstore.Properties.Resources.ebookstore_logo_v2;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(869, 266);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // toolTip
             // 
             this.toolTip.AutomaticDelay = 1000;
@@ -250,11 +242,33 @@
             this.toolTip.InitialDelay = 1000;
             this.toolTip.ReshowDelay = 500;
             // 
+            // newUserLinkLabel
+            // 
+            this.newUserLinkLabel.AutoSize = true;
+            this.newUserLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.newUserLinkLabel.Location = new System.Drawing.Point(7, 176);
+            this.newUserLinkLabel.Name = "newUserLinkLabel";
+            this.newUserLinkLabel.Size = new System.Drawing.Size(201, 15);
+            this.newUserLinkLabel.TabIndex = 8;
+            this.newUserLinkLabel.TabStop = true;
+            this.newUserLinkLabel.Text = "Don\'t have an account? Create one!";
+            this.newUserLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.newUserLinkLabel_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::eBookstore.Properties.Resources.ebookstore_logo_v2;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(869, 266);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 324);
+            this.ClientSize = new System.Drawing.Size(1160, 343);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.utilsGroupBox);
@@ -302,6 +316,7 @@
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.ToolStripStatusLabel mouseHoverToolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.LinkLabel newUserLinkLabel;
     }
 }
 

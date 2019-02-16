@@ -80,7 +80,7 @@
             this.item1Order.Location = new System.Drawing.Point(324, 35);
             this.item1Order.Name = "item1Order";
             this.item1Order.Size = new System.Drawing.Size(83, 77);
-            this.item1Order.TabIndex = 0;
+            this.item1Order.TabIndex = 3;
             this.item1Order.Text = "Order";
             this.toolTip.SetToolTip(this.item1Order, "Add item to the list");
             this.item1Order.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.exitToolStripMenuItem.Text = "Close";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -151,7 +151,7 @@
             this.item1Increase.Location = new System.Drawing.Point(242, 34);
             this.item1Increase.Name = "item1Increase";
             this.item1Increase.Size = new System.Drawing.Size(75, 23);
-            this.item1Increase.TabIndex = 7;
+            this.item1Increase.TabIndex = 1;
             this.item1Increase.Text = "+";
             this.toolTip.SetToolTip(this.item1Increase, "Increase amount");
             this.item1Increase.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             this.item1Decrease.Location = new System.Drawing.Point(243, 89);
             this.item1Decrease.Name = "item1Decrease";
             this.item1Decrease.Size = new System.Drawing.Size(75, 23);
-            this.item1Decrease.TabIndex = 8;
+            this.item1Decrease.TabIndex = 2;
             this.item1Decrease.Text = "-";
             this.toolTip.SetToolTip(this.item1Decrease, "Decrease amount");
             this.item1Decrease.UseVisualStyleBackColor = true;
@@ -197,7 +197,7 @@
             this.item2Decrease.Location = new System.Drawing.Point(243, 187);
             this.item2Decrease.Name = "item2Decrease";
             this.item2Decrease.Size = new System.Drawing.Size(75, 23);
-            this.item2Decrease.TabIndex = 12;
+            this.item2Decrease.TabIndex = 5;
             this.item2Decrease.Text = "-";
             this.toolTip.SetToolTip(this.item2Decrease, "Decrease amount");
             this.item2Decrease.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             this.item2Increase.Location = new System.Drawing.Point(242, 132);
             this.item2Increase.Name = "item2Increase";
             this.item2Increase.Size = new System.Drawing.Size(75, 23);
-            this.item2Increase.TabIndex = 11;
+            this.item2Increase.TabIndex = 4;
             this.item2Increase.Text = "+";
             this.toolTip.SetToolTip(this.item2Increase, "Increase amount");
             this.item2Increase.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.item2Order.Location = new System.Drawing.Point(324, 133);
             this.item2Order.Name = "item2Order";
             this.item2Order.Size = new System.Drawing.Size(83, 77);
-            this.item2Order.TabIndex = 10;
+            this.item2Order.TabIndex = 6;
             this.item2Order.Text = "Order";
             this.toolTip.SetToolTip(this.item2Order, "Add item to the list");
             this.item2Order.UseVisualStyleBackColor = true;
@@ -246,7 +246,7 @@
             this.item3Decrease.Location = new System.Drawing.Point(243, 284);
             this.item3Decrease.Name = "item3Decrease";
             this.item3Decrease.Size = new System.Drawing.Size(75, 23);
-            this.item3Decrease.TabIndex = 16;
+            this.item3Decrease.TabIndex = 8;
             this.item3Decrease.Text = "-";
             this.toolTip.SetToolTip(this.item3Decrease, "Decrease amount");
             this.item3Decrease.UseVisualStyleBackColor = true;
@@ -259,7 +259,7 @@
             this.item3Increase.Location = new System.Drawing.Point(242, 229);
             this.item3Increase.Name = "item3Increase";
             this.item3Increase.Size = new System.Drawing.Size(75, 23);
-            this.item3Increase.TabIndex = 15;
+            this.item3Increase.TabIndex = 7;
             this.item3Increase.Text = "+";
             this.toolTip.SetToolTip(this.item3Increase, "Increase amount");
             this.item3Increase.UseVisualStyleBackColor = true;
@@ -272,7 +272,7 @@
             this.item3Order.Location = new System.Drawing.Point(324, 230);
             this.item3Order.Name = "item3Order";
             this.item3Order.Size = new System.Drawing.Size(83, 77);
-            this.item3Order.TabIndex = 14;
+            this.item3Order.TabIndex = 9;
             this.item3Order.Text = "Order";
             this.toolTip.SetToolTip(this.item3Order, "Add item to the list");
             this.item3Order.UseVisualStyleBackColor = true;
@@ -289,7 +289,7 @@
             this.groupBox1.Location = new System.Drawing.Point(414, 34);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(251, 273);
-            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order";
             // 
@@ -298,7 +298,7 @@
             this.itemOrderDecrease.Location = new System.Drawing.Point(88, 244);
             this.itemOrderDecrease.Name = "itemOrderDecrease";
             this.itemOrderDecrease.Size = new System.Drawing.Size(75, 23);
-            this.itemOrderDecrease.TabIndex = 21;
+            this.itemOrderDecrease.TabIndex = 12;
             this.itemOrderDecrease.Text = "-";
             this.toolTip.SetToolTip(this.itemOrderDecrease, "Decrease amount of the selected item");
             this.itemOrderDecrease.UseVisualStyleBackColor = true;
@@ -311,7 +311,7 @@
             this.itemOrderIncrease.Location = new System.Drawing.Point(7, 244);
             this.itemOrderIncrease.Name = "itemOrderIncrease";
             this.itemOrderIncrease.Size = new System.Drawing.Size(75, 23);
-            this.itemOrderIncrease.TabIndex = 20;
+            this.itemOrderIncrease.TabIndex = 11;
             this.itemOrderIncrease.Text = "+";
             this.toolTip.SetToolTip(this.itemOrderIncrease, "Increase amount of the selected ittem");
             this.itemOrderIncrease.UseVisualStyleBackColor = true;
@@ -325,7 +325,7 @@
             this.removeItemButton.Location = new System.Drawing.Point(169, 244);
             this.removeItemButton.Name = "removeItemButton";
             this.removeItemButton.Size = new System.Drawing.Size(75, 23);
-            this.removeItemButton.TabIndex = 19;
+            this.removeItemButton.TabIndex = 13;
             this.removeItemButton.Text = "Remove";
             this.toolTip.SetToolTip(this.removeItemButton, "Remove selected item");
             this.removeItemButton.UseVisualStyleBackColor = true;

@@ -55,10 +55,11 @@
             this.abaoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nextButton = new System.Windows.Forms.Button();
             this.previousButton = new System.Windows.Forms.Button();
             this.playStopButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.songTitlteLabel = new System.Windows.Forms.Label();
             this.light5Indicator = new System.Windows.Forms.PictureBox();
             this.light4Indicator = new System.Windows.Forms.PictureBox();
@@ -66,19 +67,21 @@
             this.light2Indicator = new System.Windows.Forms.PictureBox();
             this.light1Indicator = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.lightGroupBox.SuspendLayout();
             this.climaGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.light5Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light4Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light3Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light2Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.light1Indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -122,7 +125,7 @@
             this.light5Button.Location = new System.Drawing.Point(6, 142);
             this.light5Button.Name = "light5Button";
             this.light5Button.Size = new System.Drawing.Size(91, 31);
-            this.light5Button.TabIndex = 13;
+            this.light5Button.TabIndex = 5;
             this.light5Button.Text = "Off";
             this.toolTip.SetToolTip(this.light5Button, "Turn on/off  light5");
             this.light5Button.UseVisualStyleBackColor = true;
@@ -146,7 +149,7 @@
             this.light4Button.Location = new System.Drawing.Point(102, 90);
             this.light4Button.Name = "light4Button";
             this.light4Button.Size = new System.Drawing.Size(91, 31);
-            this.light4Button.TabIndex = 10;
+            this.light4Button.TabIndex = 4;
             this.light4Button.Text = "Off";
             this.toolTip.SetToolTip(this.light4Button, "Turn on/off  light4");
             this.light4Button.UseVisualStyleBackColor = true;
@@ -170,7 +173,7 @@
             this.light3Button.Location = new System.Drawing.Point(6, 90);
             this.light3Button.Name = "light3Button";
             this.light3Button.Size = new System.Drawing.Size(91, 31);
-            this.light3Button.TabIndex = 7;
+            this.light3Button.TabIndex = 3;
             this.light3Button.Text = "Off";
             this.toolTip.SetToolTip(this.light3Button, "Turn on/off  light3");
             this.light3Button.UseVisualStyleBackColor = true;
@@ -194,7 +197,7 @@
             this.light2Button.Location = new System.Drawing.Point(102, 39);
             this.light2Button.Name = "light2Button";
             this.light2Button.Size = new System.Drawing.Size(91, 31);
-            this.light2Button.TabIndex = 4;
+            this.light2Button.TabIndex = 2;
             this.light2Button.Text = "Off";
             this.toolTip.SetToolTip(this.light2Button, "Turn on/off  light2");
             this.light2Button.UseVisualStyleBackColor = true;
@@ -257,7 +260,7 @@
             this.climaDecreaseButton.Location = new System.Drawing.Point(102, 110);
             this.climaDecreaseButton.Name = "climaDecreaseButton";
             this.climaDecreaseButton.Size = new System.Drawing.Size(91, 31);
-            this.climaDecreaseButton.TabIndex = 17;
+            this.climaDecreaseButton.TabIndex = 8;
             this.climaDecreaseButton.Text = "-";
             this.toolTip.SetToolTip(this.climaDecreaseButton, "Decrease temprature");
             this.climaDecreaseButton.UseVisualStyleBackColor = true;
@@ -271,7 +274,7 @@
             this.climaIncreaseButton.Location = new System.Drawing.Point(6, 110);
             this.climaIncreaseButton.Name = "climaIncreaseButton";
             this.climaIncreaseButton.Size = new System.Drawing.Size(91, 31);
-            this.climaIncreaseButton.TabIndex = 16;
+            this.climaIncreaseButton.TabIndex = 7;
             this.climaIncreaseButton.Text = "+";
             this.toolTip.SetToolTip(this.climaIncreaseButton, "Increase temprature");
             this.climaIncreaseButton.UseVisualStyleBackColor = true;
@@ -285,7 +288,7 @@
             this.climaButton.Location = new System.Drawing.Point(6, 73);
             this.climaButton.Name = "climaButton";
             this.climaButton.Size = new System.Drawing.Size(187, 31);
-            this.climaButton.TabIndex = 14;
+            this.climaButton.TabIndex = 6;
             this.climaButton.Text = "Off";
             this.toolTip.SetToolTip(this.climaButton, "Turn on/off  clima");
             this.climaButton.UseVisualStyleBackColor = true;
@@ -354,6 +357,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // toolTip
             // 
@@ -361,6 +365,49 @@
             this.toolTip.AutoPopDelay = 10000;
             this.toolTip.InitialDelay = 1000;
             this.toolTip.ReshowDelay = 500;
+            // 
+            // nextButton
+            // 
+            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.nextButton.Location = new System.Drawing.Point(102, 87);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(91, 31);
+            this.nextButton.TabIndex = 11;
+            this.nextButton.Text = "Next";
+            this.toolTip.SetToolTip(this.nextButton, "Next music track");
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            this.nextButton.MouseEnter += new System.EventHandler(this.nextButton_MouseEnter);
+            this.nextButton.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
+            // 
+            // previousButton
+            // 
+            this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.previousButton.Location = new System.Drawing.Point(6, 87);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(91, 31);
+            this.previousButton.TabIndex = 10;
+            this.previousButton.Text = "Previous";
+            this.toolTip.SetToolTip(this.previousButton, "Next music track");
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            this.previousButton.MouseEnter += new System.EventHandler(this.previousButton_MouseEnter);
+            this.previousButton.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
+            // 
+            // playStopButton
+            // 
+            this.playStopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.playStopButton.ForeColor = System.Drawing.Color.LimeGreen;
+            this.playStopButton.Location = new System.Drawing.Point(7, 54);
+            this.playStopButton.Name = "playStopButton";
+            this.playStopButton.Size = new System.Drawing.Size(187, 31);
+            this.playStopButton.TabIndex = 9;
+            this.playStopButton.Text = "Play";
+            this.toolTip.SetToolTip(this.playStopButton, "Play / Stop");
+            this.playStopButton.UseVisualStyleBackColor = true;
+            this.playStopButton.Click += new System.EventHandler(this.playStopButton_Click);
+            this.playStopButton.MouseEnter += new System.EventHandler(this.playStopButton_MouseEnter);
+            this.playStopButton.MouseLeave += new System.EventHandler(this.light1Button_MouseLeave);
             // 
             // groupBox1
             // 
@@ -376,42 +423,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Music Player";
             // 
-            // nextButton
+            // tableLayoutPanel1
             // 
-            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.nextButton.Location = new System.Drawing.Point(102, 87);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(91, 31);
-            this.nextButton.TabIndex = 17;
-            this.nextButton.Text = "Next";
-            this.toolTip.SetToolTip(this.nextButton, "Next song");
-            this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-            // 
-            // previousButton
-            // 
-            this.previousButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.previousButton.Location = new System.Drawing.Point(6, 87);
-            this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(91, 31);
-            this.previousButton.TabIndex = 16;
-            this.previousButton.Text = "Previous";
-            this.toolTip.SetToolTip(this.previousButton, "Previous song");
-            this.previousButton.UseVisualStyleBackColor = true;
-            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
-            // 
-            // playStopButton
-            // 
-            this.playStopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.playStopButton.ForeColor = System.Drawing.Color.LimeGreen;
-            this.playStopButton.Location = new System.Drawing.Point(7, 54);
-            this.playStopButton.Name = "playStopButton";
-            this.playStopButton.Size = new System.Drawing.Size(187, 31);
-            this.playStopButton.TabIndex = 14;
-            this.playStopButton.Text = "Play";
-            this.toolTip.SetToolTip(this.playStopButton, "Play / Stop");
-            this.playStopButton.UseVisualStyleBackColor = true;
-            this.playStopButton.Click += new System.EventHandler(this.playStopButton_Click);
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.songTitlteLabel, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 22);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(187, 26);
+            this.tableLayoutPanel1.TabIndex = 18;
             // 
             // songTitlteLabel
             // 
@@ -485,26 +510,44 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // tableLayoutPanel1
+            // label2
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.songTitlteLabel, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 22);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(187, 26);
-            this.tableLayoutPanel1.TabIndex = 18;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.Location = new System.Drawing.Point(862, 365);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 28);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "PC Area";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.Location = new System.Drawing.Point(787, 218);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 28);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Bookcases";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Open Sans SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.Location = new System.Drawing.Point(255, 285);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 28);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Study Area";
             // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 610);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.climaGroupBox);
             this.Controls.Add(this.light5Indicator);
@@ -532,13 +575,13 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.light5Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light4Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light3Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light2Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.light1Indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,5 +626,8 @@
         private System.Windows.Forms.Button playStopButton;
         private System.Windows.Forms.Label songTitlteLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

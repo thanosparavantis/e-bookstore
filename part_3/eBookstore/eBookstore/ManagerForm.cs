@@ -225,5 +225,25 @@ namespace eBookstore
             songTitlteLabel.Text = "study_music_" + musicTrack;
             player.PlayLooping();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Manager \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
+        }
+
+        private void playStopButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Play / Stop music player.";
+        }
+
+        private void previousButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Previous music track.";
+        }
+
+        private void nextButton_MouseEnter(object sender, EventArgs e)
+        {
+            mouseHoverToolStripStatusLabel.Text = "Next music track.";
+        }
     }
 }

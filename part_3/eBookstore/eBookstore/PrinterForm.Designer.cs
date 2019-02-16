@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,22 +53,13 @@
             this.noneOption = new System.Windows.Forms.RadioButton();
             this.emailOption = new System.Windows.Forms.RadioButton();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.modeGroupBox.SuspendLayout();
             this.saveGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::eBookstore.Properties.Resources.cannon_C_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(675, 209);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
@@ -96,7 +86,7 @@
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -137,7 +127,7 @@
             this.powerButton.Location = new System.Drawing.Point(12, 110);
             this.powerButton.Name = "powerButton";
             this.powerButton.Size = new System.Drawing.Size(48, 50);
-            this.powerButton.TabIndex = 3;
+            this.powerButton.TabIndex = 1;
             this.powerButton.Text = "Off";
             this.toolTip.SetToolTip(this.powerButton, "Turn on/off");
             this.powerButton.UseVisualStyleBackColor = true;
@@ -152,7 +142,7 @@
             this.resetButton.Location = new System.Drawing.Point(84, 110);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(48, 50);
-            this.resetButton.TabIndex = 4;
+            this.resetButton.TabIndex = 2;
             this.resetButton.Text = "Reset";
             this.toolTip.SetToolTip(this.resetButton, "Reset settings");
             this.resetButton.UseVisualStyleBackColor = true;
@@ -167,7 +157,7 @@
             this.increaceButton.Location = new System.Drawing.Point(485, 82);
             this.increaceButton.Name = "increaceButton";
             this.increaceButton.Size = new System.Drawing.Size(48, 50);
-            this.increaceButton.TabIndex = 5;
+            this.increaceButton.TabIndex = 3;
             this.increaceButton.Text = "+";
             this.toolTip.SetToolTip(this.increaceButton, "Increase number of pages");
             this.increaceButton.UseVisualStyleBackColor = true;
@@ -182,7 +172,7 @@
             this.decreaseButton.Location = new System.Drawing.Point(485, 138);
             this.decreaseButton.Name = "decreaseButton";
             this.decreaseButton.Size = new System.Drawing.Size(48, 50);
-            this.decreaseButton.TabIndex = 6;
+            this.decreaseButton.TabIndex = 4;
             this.decreaseButton.Text = "-";
             this.toolTip.SetToolTip(this.decreaseButton, "Decrease number of pages");
             this.decreaseButton.UseVisualStyleBackColor = true;
@@ -197,7 +187,7 @@
             this.blackWhiteButton.Location = new System.Drawing.Point(550, 82);
             this.blackWhiteButton.Name = "blackWhiteButton";
             this.blackWhiteButton.Size = new System.Drawing.Size(48, 50);
-            this.blackWhiteButton.TabIndex = 7;
+            this.blackWhiteButton.TabIndex = 5;
             this.blackWhiteButton.Text = "B/W";
             this.toolTip.SetToolTip(this.blackWhiteButton, "Create black n white copies/scans");
             this.blackWhiteButton.UseVisualStyleBackColor = true;
@@ -213,7 +203,7 @@
             this.ColorButton.Location = new System.Drawing.Point(550, 138);
             this.ColorButton.Name = "ColorButton";
             this.ColorButton.Size = new System.Drawing.Size(48, 50);
-            this.ColorButton.TabIndex = 8;
+            this.ColorButton.TabIndex = 6;
             this.ColorButton.Text = "Color";
             this.toolTip.SetToolTip(this.ColorButton, "Create colored copies/scans");
             this.ColorButton.UseVisualStyleBackColor = true;
@@ -228,7 +218,7 @@
             this.CancelButton.Location = new System.Drawing.Point(614, 110);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(48, 50);
-            this.CancelButton.TabIndex = 9;
+            this.CancelButton.TabIndex = 7;
             this.CancelButton.Text = "Cancel";
             this.toolTip.SetToolTip(this.CancelButton, "Cancel the current proccess");
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -326,7 +316,7 @@
             this.noneOption.Location = new System.Drawing.Point(7, 21);
             this.noneOption.Name = "noneOption";
             this.noneOption.Size = new System.Drawing.Size(51, 17);
-            this.noneOption.TabIndex = 1;
+            this.noneOption.TabIndex = 0;
             this.noneOption.TabStop = true;
             this.noneOption.Text = "None";
             this.noneOption.UseVisualStyleBackColor = true;
@@ -337,7 +327,7 @@
             this.emailOption.Location = new System.Drawing.Point(82, 21);
             this.emailOption.Name = "emailOption";
             this.emailOption.Size = new System.Drawing.Size(50, 17);
-            this.emailOption.TabIndex = 0;
+            this.emailOption.TabIndex = 1;
             this.emailOption.Text = "Email";
             this.emailOption.UseVisualStyleBackColor = true;
             // 
@@ -347,6 +337,16 @@
             this.toolTip.AutoPopDelay = 10000;
             this.toolTip.InitialDelay = 1000;
             this.toolTip.ReshowDelay = 500;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::eBookstore.Properties.Resources.cannon_C_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(675, 209);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // PrinterForm
             // 
@@ -375,7 +375,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Printer";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrinterForm_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -384,6 +383,7 @@
             this.modeGroupBox.PerformLayout();
             this.saveGroupBox.ResumeLayout(false);
             this.saveGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -21,6 +21,7 @@ namespace eBookstore
         private ManagerForm managerForm;
         private CustomerForm customerForm;
         private CoffeeForm coffeeForm;
+        private CreateAccountForm createAccountForm;
 
         public MainForm()
         {
@@ -68,7 +69,7 @@ namespace eBookstore
             {
                 usernameLabel.ForeColor = Color.Red;
                 passwordLabel.ForeColor = Color.Red;
-                MessageBox.Show("Usernane or password are wrong! Try again!");
+                MessageBox.Show("Usernane or password are wrong! Try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -132,6 +133,20 @@ namespace eBookstore
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void newUserLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (createAccountForm == null)
+                createAccountForm = new CreateAccountForm(userList);
+
+            usernameTextBox.Clear();
+            passwordTextBox.Clear();
+
+            this.Hide();
+            createAccountForm?.ShowDialog();
+            userList = createAccountForm.getUpdatedUserList();
+            this.Show();
         }
     }
 }
