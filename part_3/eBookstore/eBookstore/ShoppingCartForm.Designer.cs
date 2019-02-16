@@ -37,15 +37,15 @@
             this.itemsInCartLabel = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.shoppingCartItemDataGridView = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.purchaseButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookBasePriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookDiscountText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.closeButton = new System.Windows.Forms.Button();
-            this.resetButton = new System.Windows.Forms.Button();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountText = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -142,7 +142,7 @@
             this.BookBasePriceText,
             this.BookDiscountText,
             this.BookPriceText,
-            this.amountDataGridViewTextBoxColumn});
+            this.AmountText});
             this.shoppingCartItemDataGridView.DataSource = this.shoppingCartItemBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -168,49 +168,6 @@
             this.shoppingCartItemDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.shoppingCartItemDataGridView.Size = new System.Drawing.Size(674, 441);
             this.shoppingCartItemDataGridView.TabIndex = 1;
-            // 
-            // BookTitle
-            // 
-            this.BookTitle.DataPropertyName = "BookTitle";
-            this.BookTitle.HeaderText = "Τίτλος";
-            this.BookTitle.Name = "BookTitle";
-            this.BookTitle.Width = 69;
-            // 
-            // BookBasePriceText
-            // 
-            this.BookBasePriceText.DataPropertyName = "BookBasePriceText";
-            this.BookBasePriceText.HeaderText = "Αρχική Τιμή";
-            this.BookBasePriceText.Name = "BookBasePriceText";
-            this.BookBasePriceText.Width = 101;
-            // 
-            // BookDiscountText
-            // 
-            this.BookDiscountText.DataPropertyName = "BookDiscountText";
-            this.BookDiscountText.HeaderText = "Έκπτωση";
-            this.BookDiscountText.Name = "BookDiscountText";
-            this.BookDiscountText.Width = 86;
-            // 
-            // BookPriceText
-            // 
-            this.BookPriceText.DataPropertyName = "BookPriceText";
-            this.BookPriceText.HeaderText = "Τιμή";
-            this.BookPriceText.Name = "BookPriceText";
-            this.BookPriceText.Width = 57;
-            // 
-            // purchaseButton
-            // 
-            this.purchaseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.purchaseButton.AutoSize = true;
-            this.purchaseButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.purchaseButton.Location = new System.Drawing.Point(524, 0);
-            this.purchaseButton.Margin = new System.Windows.Forms.Padding(0);
-            this.purchaseButton.Name = "purchaseButton";
-            this.purchaseButton.Size = new System.Drawing.Size(150, 50);
-            this.purchaseButton.TabIndex = 2;
-            this.purchaseButton.Text = "Αγορά";
-            this.purchaseButton.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel3
             // 
@@ -246,6 +203,21 @@
             this.closeButton.Text = "Κλείσιμο";
             this.closeButton.UseVisualStyleBackColor = true;
             // 
+            // purchaseButton
+            // 
+            this.purchaseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.purchaseButton.AutoSize = true;
+            this.purchaseButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.purchaseButton.Location = new System.Drawing.Point(524, 0);
+            this.purchaseButton.Margin = new System.Windows.Forms.Padding(0);
+            this.purchaseButton.Name = "purchaseButton";
+            this.purchaseButton.Size = new System.Drawing.Size(150, 50);
+            this.purchaseButton.TabIndex = 2;
+            this.purchaseButton.Text = "Αγορά";
+            this.purchaseButton.UseVisualStyleBackColor = true;
+            // 
             // resetButton
             // 
             this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -260,13 +232,58 @@
             this.resetButton.Text = "Επαναφορά καλαθιού";
             this.resetButton.UseVisualStyleBackColor = true;
             // 
-            // amountDataGridViewTextBoxColumn
+            // BookTitle
             // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Ποσότητα";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.amountDataGridViewTextBoxColumn.Width = 92;
+            this.BookTitle.DataPropertyName = "BookTitle";
+            this.BookTitle.HeaderText = "Τίτλος";
+            this.BookTitle.Name = "BookTitle";
+            this.BookTitle.ReadOnly = true;
+            this.BookTitle.Width = 69;
+            // 
+            // BookBasePriceText
+            // 
+            this.BookBasePriceText.DataPropertyName = "BookBasePriceText";
+            this.BookBasePriceText.HeaderText = "Αρχική Τιμή";
+            this.BookBasePriceText.Name = "BookBasePriceText";
+            this.BookBasePriceText.ReadOnly = true;
+            this.BookBasePriceText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BookBasePriceText.Width = 101;
+            // 
+            // BookDiscountText
+            // 
+            this.BookDiscountText.DataPropertyName = "BookDiscountText";
+            this.BookDiscountText.HeaderText = "Έκπτωση";
+            this.BookDiscountText.Name = "BookDiscountText";
+            this.BookDiscountText.ReadOnly = true;
+            this.BookDiscountText.Width = 86;
+            // 
+            // BookPriceText
+            // 
+            this.BookPriceText.DataPropertyName = "BookPriceText";
+            this.BookPriceText.HeaderText = "Τιμή";
+            this.BookPriceText.Name = "BookPriceText";
+            this.BookPriceText.ReadOnly = true;
+            this.BookPriceText.Width = 57;
+            // 
+            // AmountText
+            // 
+            this.AmountText.DataPropertyName = "AmountText";
+            this.AmountText.HeaderText = "Ποσότητα";
+            this.AmountText.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.AmountText.Name = "AmountText";
+            this.AmountText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AmountText.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.AmountText.Width = 92;
             // 
             // shoppingCartItemBindingSource
             // 
@@ -306,14 +323,14 @@
         private System.Windows.Forms.Label totalCostLabel;
         private System.Windows.Forms.DataGridView shoppingCartItemDataGridView;
         private System.Windows.Forms.BindingSource shoppingCartItemBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookBasePriceText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookDiscountText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookPriceText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button purchaseButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookBasePriceText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookDiscountText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookPriceText;
+        private System.Windows.Forms.DataGridViewComboBoxColumn AmountText;
     }
 }

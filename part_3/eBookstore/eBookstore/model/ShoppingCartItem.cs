@@ -19,5 +19,18 @@ namespace eBookstore.model
         public string BookPriceText { get; set; }
 
         public int Amount { get; set; }
+
+        public string AmountText
+        {
+            get
+            {
+                return Amount.ToString();
+            }
+
+            set
+            {
+                this.Amount = int.Parse(value);
+            }
+        }
     }
 }
