@@ -22,6 +22,11 @@ namespace eBookstore.data
             this.Items = new List<ShoppingCartItem>();
         }
 
+        public void CallShoppingCartUpdateEvent()
+        {
+            this._shoppingCartUpdateEvent();
+        }
+
         public void AddBook(Book book, int amount = 1)
         {
             ShoppingCartItem shoppingCartItem = new ShoppingCartItem()
@@ -36,7 +41,7 @@ namespace eBookstore.data
 
             this.Items.Add(shoppingCartItem);
 
-            this._shoppingCartUpdateEvent();
+            this.CallShoppingCartUpdateEvent();
         }
 
         public void RemoveBook(Book book)
@@ -47,14 +52,14 @@ namespace eBookstore.data
 
             this.Items = query.ToList();
 
-            this._shoppingCartUpdateEvent();
+            this.CallShoppingCartUpdateEvent();
         }
 
         public void RemoveAllBooks()
         {
             this.Items.Clear();
 
-            this._shoppingCartUpdateEvent();
+            this.CallShoppingCartUpdateEvent();
         }
 
         public int Count()

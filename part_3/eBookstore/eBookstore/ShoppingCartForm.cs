@@ -67,5 +67,16 @@ namespace eBookstore
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
+
+        private void shoppingCartItemDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.RowIndex > -1)
+            {
+                DataGridViewCell cell = this.shoppingCartItemDataGridView[e.ColumnIndex, e.RowIndex];
+
+                this._shoppingCart.CallShoppingCartUpdateEvent();
+                this.UpdateComponents();
+            }
+        }
     }
 }
