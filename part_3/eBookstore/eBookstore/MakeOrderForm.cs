@@ -85,11 +85,6 @@ namespace eBookstore
             }
         }
 
-        private void MakeOrderForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
         private void creditCardNumberTextBox_TextChanged(object sender, EventArgs e)
         {
             this.UpdateSendButton();
@@ -102,7 +97,15 @@ namespace eBookstore
 
         private void sendButton_Click(object sender, EventArgs e)
         {
+            this._shoppingCart.RemoveAllBooks();
 
+            MessageBox.Show(
+                "Η παραγγελία τοποθετήθηκε με επιτυχία, οι αγορές των βιβλίων ολοκληρώθηκαν.",
+                "Καλάθι Αγορών",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+
+            this.Close();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

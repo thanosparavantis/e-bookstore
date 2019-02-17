@@ -41,7 +41,7 @@ namespace eBookstore.data
         public void RemoveBook(Book book)
         {
             var query = from ShoppingCartItem item in this.Items
-                        where !item.Book.Equals(book)
+                        where !item.Book.Matches(book.Title)
                         select item;
 
             this.Items = query.ToList();

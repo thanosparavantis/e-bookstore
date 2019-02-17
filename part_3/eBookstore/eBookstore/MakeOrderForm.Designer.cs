@@ -456,7 +456,6 @@
             this.Name = "MakeOrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ολοκλήρωση Αγοράς";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MakeOrderForm_FormClosing);
             this.Load += new System.EventHandler(this.MakeOrderForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

@@ -65,7 +65,7 @@ namespace eBookstore.model
                 || this.StringsMatch(this.Publisher, text);
         }
 
-        public bool StringsMatch(string key, string value)
+        private bool StringsMatch(string key, string value)
         {
             key = key.ToLower().Trim();
             value = value.ToLower().Trim();

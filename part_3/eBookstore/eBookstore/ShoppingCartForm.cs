@@ -104,5 +104,13 @@ namespace eBookstore
             this._shoppingCart.ShoppingCardUpdateEventHandlers -= this.OnShoppingCardUpdate;
             _makeOrderForm?.Close();
         }
+        
+        private void shoppingCartItemDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            ShoppingCartItem item = (ShoppingCartItem) e.Row.DataBoundItem;
+            this._shoppingCart.RemoveBook(item.Book);
+
+            e.Cancel = true;
+        }
     }
 }
