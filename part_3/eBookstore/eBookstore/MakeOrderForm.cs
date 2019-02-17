@@ -39,6 +39,7 @@ namespace eBookstore
             this.UpdateZipLabel();
             this.UpdateCityLabel();
             this.UpdatePhoneLabel();
+            this.UpdateSendButton();
         }
 
         private void UpdateUsernameLabel()
@@ -71,9 +72,32 @@ namespace eBookstore
             this.phoneLabel.Text = this._user.Phone;
         }
 
+        private void UpdateSendButton()
+        {
+            if (string.IsNullOrWhiteSpace(this.creditCardNumberTextBox.Text)
+                || string.IsNullOrWhiteSpace(this.cvvNumberTextBox.Text))
+            {
+                this.sendButton.Enabled = false;
+            }
+            else
+            {
+                this.sendButton.Enabled = true;
+            }
+        }
+
         private void MakeOrderForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 
+        }
+
+        private void creditCardNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.UpdateSendButton();
+        }
+
+        private void cvvNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.UpdateSendButton();
         }
 
         private void sendButton_Click(object sender, EventArgs e)

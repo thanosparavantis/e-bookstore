@@ -45,10 +45,10 @@
             this.phoneLabel = new System.Windows.Forms.Label();
             this.cardDetailsLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.creditCardNumberLabel = new System.Windows.Forms.Label();
+            this.creditCardNumberTextBox = new System.Windows.Forms.TextBox();
+            this.cvvNumberLabel = new System.Windows.Forms.Label();
+            this.cvvNumberTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.sendButton = new System.Windows.Forms.Button();
@@ -328,10 +328,10 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.creditCardNumberLabel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.creditCardNumberTextBox, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cvvNumberLabel, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cvvNumberTextBox, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 294);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
@@ -344,59 +344,61 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(374, 162);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // label1
+            // creditCardNumberLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.creditCardNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(374, 40);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Αριθμός Credit Card";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.creditCardNumberLabel.AutoSize = true;
+            this.creditCardNumberLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.creditCardNumberLabel.Location = new System.Drawing.Point(0, 0);
+            this.creditCardNumberLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.creditCardNumberLabel.Name = "creditCardNumberLabel";
+            this.creditCardNumberLabel.Size = new System.Drawing.Size(374, 40);
+            this.creditCardNumberLabel.TabIndex = 1;
+            this.creditCardNumberLabel.Text = "Αριθμός Credit Card";
+            this.creditCardNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // creditCardNumberTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.creditCardNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.textBox1.Location = new System.Drawing.Point(0, 40);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(374, 25);
-            this.textBox1.TabIndex = 2;
+            this.creditCardNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.creditCardNumberTextBox.Location = new System.Drawing.Point(0, 40);
+            this.creditCardNumberTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.creditCardNumberTextBox.Name = "creditCardNumberTextBox";
+            this.creditCardNumberTextBox.Size = new System.Drawing.Size(374, 25);
+            this.creditCardNumberTextBox.TabIndex = 2;
+            this.creditCardNumberTextBox.TextChanged += new System.EventHandler(this.creditCardNumberTextBox_TextChanged);
             // 
-            // label2
+            // cvvNumberLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cvvNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(0, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(374, 40);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Αριθμός CVV";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cvvNumberLabel.AutoSize = true;
+            this.cvvNumberLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cvvNumberLabel.Location = new System.Drawing.Point(0, 80);
+            this.cvvNumberLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.cvvNumberLabel.Name = "cvvNumberLabel";
+            this.cvvNumberLabel.Size = new System.Drawing.Size(374, 40);
+            this.cvvNumberLabel.TabIndex = 3;
+            this.cvvNumberLabel.Text = "Αριθμός CVV";
+            this.cvvNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // cvvNumberTextBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cvvNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.textBox2.Location = new System.Drawing.Point(0, 120);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(374, 25);
-            this.textBox2.TabIndex = 4;
+            this.cvvNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cvvNumberTextBox.Location = new System.Drawing.Point(0, 120);
+            this.cvvNumberTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.cvvNumberTextBox.Name = "cvvNumberTextBox";
+            this.cvvNumberTextBox.Size = new System.Drawing.Size(374, 25);
+            this.cvvNumberTextBox.TabIndex = 4;
+            this.cvvNumberTextBox.TextChanged += new System.EventHandler(this.cvvNumberTextBox_TextChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -486,10 +488,10 @@
         private System.Windows.Forms.Label userDetailsLabel;
         private System.Windows.Forms.Label cardDetailsLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox cvvNumberTextBox;
+        private System.Windows.Forms.Label creditCardNumberLabel;
+        private System.Windows.Forms.TextBox creditCardNumberTextBox;
+        private System.Windows.Forms.Label cvvNumberLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button sendButton;
