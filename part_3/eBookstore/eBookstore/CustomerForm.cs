@@ -27,8 +27,14 @@ namespace eBookstore
         private void CustomerForm_Load(object sender, EventArgs e)
         {
             this._bookList = new BookList();
-            this._shoppingCart = new ShoppingCart(
-                new ShoppingCartUpdateEvent(OnShoppingCartUpdate));
+            this._shoppingCart = new ShoppingCart();
+            this._shoppingCart.ShoppingCardUpdateEventHandlers += this.OnShoppingCartUpdate;
+
+            this.UpdateComponents();
+        }
+
+        private void UpdateComponents()
+        {
             this.UpdateBookData();
             this.UpdateBookLabels();
             this.UpdateUserLabel();

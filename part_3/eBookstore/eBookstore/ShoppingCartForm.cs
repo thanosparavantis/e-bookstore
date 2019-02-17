@@ -21,6 +21,7 @@ namespace eBookstore
 
         private void ShoppingCartForm_Load(object sender, EventArgs e)
         {
+            this._shoppingCart.ShoppingCardUpdateEventHandlers += this.OnShoppingCardUpdate;
             this.UpdateComponents();
         }
 
@@ -35,6 +36,7 @@ namespace eBookstore
 
         private void UpdateShoppingCartItemData()
         {
+            this.shoppingCartItemBindingSource.DataSource = null;
             this.shoppingCartItemBindingSource.DataSource = this._shoppingCart.Items;
         }
 
@@ -64,13 +66,15 @@ namespace eBookstore
             this.Close();
         }
 
+        public void OnShoppingCardUpdate()
+        {
+            this.UpdateComponents();
+        }
+
         private void resetButton_Click(object sender, EventArgs e)
         {
             this._shoppingCart.RemoveAllBooks();
-            this.shoppingCartItemBindingSource.Clear();
-
-            this.UpdateComponents();
-
+            
             MessageBox.Show(
                 "Το καλάθι αγορών σας έχει αδιάσει.",
                 "Καλάθι Αγορών",
@@ -84,8 +88,7 @@ namespace eBookstore
             {
                 DataGridViewCell cell = this.shoppingCartItemDataGridView[e.ColumnIndex, e.RowIndex];
 
-                this._shoppingCart.CallShoppingCartUpdateEvent();
-                this.UpdateComponents();
+                this._shoppingCart.ShoppingCardUpdateEventHandlers();
             }
         }
 
@@ -98,6 +101,7 @@ namespace eBookstore
 
         private void ShoppingCartForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this._shoppingCart.ShoppingCardUpdateEventHandlers -= this.OnShoppingCardUpdate;
             _makeOrderForm?.Close();
         }
     }

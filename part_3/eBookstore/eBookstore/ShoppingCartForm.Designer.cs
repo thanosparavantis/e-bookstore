@@ -41,17 +41,17 @@
             this.BookBasePriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookDiscountText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountText = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.closeButton = new System.Windows.Forms.Button();
             this.purchaseButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
-            this.AmountText = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -203,6 +203,30 @@
             this.BookPriceText.ReadOnly = true;
             this.BookPriceText.Width = 57;
             // 
+            // AmountText
+            // 
+            this.AmountText.DataPropertyName = "AmountText";
+            this.AmountText.HeaderText = "Ποσότητα";
+            this.AmountText.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.AmountText.Name = "AmountText";
+            this.AmountText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.AmountText.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.AmountText.Width = 92;
+            // 
+            // shoppingCartItemBindingSource
+            // 
+            this.shoppingCartItemBindingSource.DataSource = typeof(eBookstore.model.ShoppingCartItem);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 4;
@@ -269,30 +293,6 @@
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
-            // AmountText
-            // 
-            this.AmountText.DataPropertyName = "AmountText";
-            this.AmountText.HeaderText = "Ποσότητα";
-            this.AmountText.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.AmountText.Name = "AmountText";
-            this.AmountText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.AmountText.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.AmountText.Width = 92;
-            // 
-            // shoppingCartItemBindingSource
-            // 
-            this.shoppingCartItemBindingSource.DataSource = typeof(eBookstore.model.ShoppingCartItem);
-            // 
             // ShoppingCartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,9 +313,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
