@@ -37,14 +37,14 @@
             this.itemsInCartLabel = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.shoppingCartItemDataGridView = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.closeButton = new System.Windows.Forms.Button();
-            this.purchaseButton = new System.Windows.Forms.Button();
-            this.resetButton = new System.Windows.Forms.Button();
             this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookBasePriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookDiscountText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.purchaseButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.AmountText = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
@@ -170,6 +170,39 @@
             this.shoppingCartItemDataGridView.TabIndex = 1;
             this.shoppingCartItemDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.shoppingCartItemDataGridView_CellEndEdit);
             // 
+            // BookTitle
+            // 
+            this.BookTitle.DataPropertyName = "BookTitle";
+            this.BookTitle.HeaderText = "Τίτλος";
+            this.BookTitle.Name = "BookTitle";
+            this.BookTitle.ReadOnly = true;
+            this.BookTitle.Width = 69;
+            // 
+            // BookBasePriceText
+            // 
+            this.BookBasePriceText.DataPropertyName = "BookBasePriceText";
+            this.BookBasePriceText.HeaderText = "Αρχική Τιμή";
+            this.BookBasePriceText.Name = "BookBasePriceText";
+            this.BookBasePriceText.ReadOnly = true;
+            this.BookBasePriceText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BookBasePriceText.Width = 101;
+            // 
+            // BookDiscountText
+            // 
+            this.BookDiscountText.DataPropertyName = "BookDiscountText";
+            this.BookDiscountText.HeaderText = "Έκπτωση";
+            this.BookDiscountText.Name = "BookDiscountText";
+            this.BookDiscountText.ReadOnly = true;
+            this.BookDiscountText.Width = 86;
+            // 
+            // BookPriceText
+            // 
+            this.BookPriceText.DataPropertyName = "BookPriceText";
+            this.BookPriceText.HeaderText = "Τιμή";
+            this.BookPriceText.Name = "BookPriceText";
+            this.BookPriceText.ReadOnly = true;
+            this.BookPriceText.Width = 57;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 4;
@@ -219,6 +252,7 @@
             this.purchaseButton.TabIndex = 2;
             this.purchaseButton.Text = "Αγορά";
             this.purchaseButton.UseVisualStyleBackColor = true;
+            this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
             // 
             // resetButton
             // 
@@ -234,39 +268,6 @@
             this.resetButton.Text = "Επαναφορά καλαθιού";
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
-            // 
-            // BookTitle
-            // 
-            this.BookTitle.DataPropertyName = "BookTitle";
-            this.BookTitle.HeaderText = "Τίτλος";
-            this.BookTitle.Name = "BookTitle";
-            this.BookTitle.ReadOnly = true;
-            this.BookTitle.Width = 69;
-            // 
-            // BookBasePriceText
-            // 
-            this.BookBasePriceText.DataPropertyName = "BookBasePriceText";
-            this.BookBasePriceText.HeaderText = "Αρχική Τιμή";
-            this.BookBasePriceText.Name = "BookBasePriceText";
-            this.BookBasePriceText.ReadOnly = true;
-            this.BookBasePriceText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BookBasePriceText.Width = 101;
-            // 
-            // BookDiscountText
-            // 
-            this.BookDiscountText.DataPropertyName = "BookDiscountText";
-            this.BookDiscountText.HeaderText = "Έκπτωση";
-            this.BookDiscountText.Name = "BookDiscountText";
-            this.BookDiscountText.ReadOnly = true;
-            this.BookDiscountText.Width = 86;
-            // 
-            // BookPriceText
-            // 
-            this.BookPriceText.DataPropertyName = "BookPriceText";
-            this.BookPriceText.HeaderText = "Τιμή";
-            this.BookPriceText.Name = "BookPriceText";
-            this.BookPriceText.ReadOnly = true;
-            this.BookPriceText.Width = 57;
             // 
             // AmountText
             // 
@@ -306,6 +307,7 @@
             this.Name = "ShoppingCartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Καλάθι Αγορών";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ShoppingCartForm_FormClosing);
             this.Load += new System.EventHandler(this.ShoppingCartForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

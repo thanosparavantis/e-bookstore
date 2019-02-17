@@ -7,6 +7,7 @@ namespace eBookstore
     public partial class ShoppingCartForm : Form
     {
         private ShoppingCart _shoppingCart;
+        private MakeOrderForm _makeOrderForm;
 
         public ShoppingCartForm(ShoppingCart shoppingCart)
         {
@@ -26,6 +27,7 @@ namespace eBookstore
             this.UpdateItemsInCartLabel();
             this.UpdateTotalCostLabel();
             this.UpdateResetButton();
+            this.UpdatePurchaseButton();
         }
 
         private void UpdateShoppingCartItemData()
@@ -47,6 +49,11 @@ namespace eBookstore
         private void UpdateResetButton()
         {
             this.resetButton.Enabled = !this._shoppingCart.IsEmpty();
+        }
+
+        private void UpdatePurchaseButton()
+        {
+            this.purchaseButton.Enabled = !this._shoppingCart.IsEmpty();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -77,6 +84,18 @@ namespace eBookstore
                 this._shoppingCart.CallShoppingCartUpdateEvent();
                 this.UpdateComponents();
             }
+        }
+
+        private void purchaseButton_Click(object sender, EventArgs e)
+        {
+            _makeOrderForm?.Close();
+            _makeOrderForm = new MakeOrderForm();
+            _makeOrderForm.Show();
+        }
+
+        private void ShoppingCartForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _makeOrderForm?.Close();
         }
     }
 }
