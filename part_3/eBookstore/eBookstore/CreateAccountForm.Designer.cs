@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.newUserGroupBox = new System.Windows.Forms.GroupBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.zipTextBox = new System.Windows.Forms.TextBox();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.zipLabel = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.createButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.cityLabel = new System.Windows.Forms.Label();
-            this.cityTextBox = new System.Windows.Forms.TextBox();
-            this.zipLabel = new System.Windows.Forms.Label();
-            this.zipTextBox = new System.Windows.Forms.TextBox();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.phoneLabel = new System.Windows.Forms.Label();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -57,6 +57,7 @@
             // 
             this.newUserGroupBox.Controls.Add(this.phoneTextBox);
             this.newUserGroupBox.Controls.Add(this.phoneLabel);
+            this.newUserGroupBox.Controls.Add(this.cancelButton);
             this.newUserGroupBox.Controls.Add(this.zipTextBox);
             this.newUserGroupBox.Controls.Add(this.cityLabel);
             this.newUserGroupBox.Controls.Add(this.addressLabel);
@@ -65,7 +66,6 @@
             this.newUserGroupBox.Controls.Add(this.addressTextBox);
             this.newUserGroupBox.Controls.Add(this.emailTextBox);
             this.newUserGroupBox.Controls.Add(this.emailLabel);
-            this.newUserGroupBox.Controls.Add(this.cancelButton);
             this.newUserGroupBox.Controls.Add(this.passwordTextBox);
             this.newUserGroupBox.Controls.Add(this.passwordLabel);
             this.newUserGroupBox.Controls.Add(this.usernameTextBox);
@@ -77,6 +77,111 @@
             this.newUserGroupBox.TabIndex = 4;
             this.newUserGroupBox.TabStop = false;
             this.newUserGroupBox.Text = "New user";
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.phoneTextBox.Location = new System.Drawing.Point(6, 324);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(250, 24);
+            this.phoneTextBox.TabIndex = 7;
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.phoneLabel.Location = new System.Drawing.Point(6, 303);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(51, 18);
+            this.phoneLabel.TabIndex = 15;
+            this.phoneLabel.Text = "Phone";
+            // 
+            // zipTextBox
+            // 
+            this.zipTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.zipTextBox.Location = new System.Drawing.Point(6, 277);
+            this.zipTextBox.Name = "zipTextBox";
+            this.zipTextBox.Size = new System.Drawing.Size(250, 24);
+            this.zipTextBox.TabIndex = 6;
+            // 
+            // cityLabel
+            // 
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cityLabel.Location = new System.Drawing.Point(7, 209);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(33, 18);
+            this.cityLabel.TabIndex = 11;
+            this.cityLabel.Text = "City";
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.addressLabel.Location = new System.Drawing.Point(7, 163);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(62, 18);
+            this.addressLabel.TabIndex = 8;
+            this.addressLabel.Text = "Address";
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cityTextBox.Location = new System.Drawing.Point(7, 230);
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.Size = new System.Drawing.Size(250, 24);
+            this.cityTextBox.TabIndex = 5;
+            // 
+            // zipLabel
+            // 
+            this.zipLabel.AutoSize = true;
+            this.zipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.zipLabel.Location = new System.Drawing.Point(7, 256);
+            this.zipLabel.Name = "zipLabel";
+            this.zipLabel.Size = new System.Drawing.Size(28, 18);
+            this.zipLabel.TabIndex = 13;
+            this.zipLabel.Text = "Zip";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.addressTextBox.Location = new System.Drawing.Point(7, 183);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(250, 24);
+            this.addressTextBox.TabIndex = 4;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.emailTextBox.Location = new System.Drawing.Point(6, 136);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(250, 24);
+            this.emailTextBox.TabIndex = 3;
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.emailLabel.Location = new System.Drawing.Point(6, 115);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(45, 18);
+            this.emailLabel.TabIndex = 9;
+            this.emailLabel.Text = "Email";
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cancelButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.cancelButton.Location = new System.Drawing.Point(6, 354);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(122, 50);
+            this.cancelButton.TabIndex = 9;
+            this.cancelButton.Text = "Cancel";
+            this.toolTip.SetToolTip(this.cancelButton, "Cancel acount creation");
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.cancelButton.MouseEnter += new System.EventHandler(this.cancelButton_MouseEnter);
+            this.cancelButton.MouseLeave += new System.EventHandler(this.clearLabelStatusText);
             // 
             // passwordTextBox
             // 
@@ -119,7 +224,7 @@
             // 
             this.createButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.createButton.ForeColor = System.Drawing.Color.LimeGreen;
-            this.createButton.Location = new System.Drawing.Point(6, 354);
+            this.createButton.Location = new System.Drawing.Point(135, 354);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(122, 50);
             this.createButton.TabIndex = 8;
@@ -129,111 +234,6 @@
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
             this.createButton.MouseEnter += new System.EventHandler(this.createButton_MouseEnter);
             this.createButton.MouseLeave += new System.EventHandler(this.clearLabelStatusText);
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.cancelButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.cancelButton.Location = new System.Drawing.Point(134, 354);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(122, 50);
-            this.cancelButton.TabIndex = 9;
-            this.cancelButton.Text = "Cancel";
-            this.toolTip.SetToolTip(this.cancelButton, "Cancel acount creation");
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            this.cancelButton.MouseEnter += new System.EventHandler(this.cancelButton_MouseEnter);
-            this.cancelButton.MouseLeave += new System.EventHandler(this.clearLabelStatusText);
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.emailTextBox.Location = new System.Drawing.Point(6, 136);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(250, 24);
-            this.emailTextBox.TabIndex = 3;
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.emailLabel.Location = new System.Drawing.Point(6, 115);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(45, 18);
-            this.emailLabel.TabIndex = 9;
-            this.emailLabel.Text = "Email";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.addressTextBox.Location = new System.Drawing.Point(7, 183);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(250, 24);
-            this.addressTextBox.TabIndex = 4;
-            // 
-            // cityLabel
-            // 
-            this.cityLabel.AutoSize = true;
-            this.cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.cityLabel.Location = new System.Drawing.Point(7, 209);
-            this.cityLabel.Name = "cityLabel";
-            this.cityLabel.Size = new System.Drawing.Size(33, 18);
-            this.cityLabel.TabIndex = 11;
-            this.cityLabel.Text = "City";
-            // 
-            // cityTextBox
-            // 
-            this.cityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.cityTextBox.Location = new System.Drawing.Point(7, 230);
-            this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(250, 24);
-            this.cityTextBox.TabIndex = 5;
-            // 
-            // zipLabel
-            // 
-            this.zipLabel.AutoSize = true;
-            this.zipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.zipLabel.Location = new System.Drawing.Point(7, 256);
-            this.zipLabel.Name = "zipLabel";
-            this.zipLabel.Size = new System.Drawing.Size(28, 18);
-            this.zipLabel.TabIndex = 13;
-            this.zipLabel.Text = "Zip";
-            // 
-            // zipTextBox
-            // 
-            this.zipTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.zipTextBox.Location = new System.Drawing.Point(6, 277);
-            this.zipTextBox.Name = "zipTextBox";
-            this.zipTextBox.Size = new System.Drawing.Size(250, 24);
-            this.zipTextBox.TabIndex = 6;
-            // 
-            // addressLabel
-            // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.addressLabel.Location = new System.Drawing.Point(7, 163);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(62, 18);
-            this.addressLabel.TabIndex = 8;
-            this.addressLabel.Text = "Address";
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.phoneTextBox.Location = new System.Drawing.Point(6, 324);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(250, 24);
-            this.phoneTextBox.TabIndex = 7;
-            // 
-            // phoneLabel
-            // 
-            this.phoneLabel.AutoSize = true;
-            this.phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.phoneLabel.Location = new System.Drawing.Point(6, 303);
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(51, 18);
-            this.phoneLabel.TabIndex = 15;
-            this.phoneLabel.Text = "Phone";
             // 
             // statusStrip
             // 
