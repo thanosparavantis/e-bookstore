@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.userDetailsLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.usernameTextLabel = new System.Windows.Forms.Label();
             this.emailTextLabel = new System.Windows.Forms.Label();
@@ -42,16 +43,15 @@
             this.zipLabel = new System.Windows.Forms.Label();
             this.cityLabel = new System.Windows.Forms.Label();
             this.phoneLabel = new System.Windows.Forms.Label();
-            this.userDetailsLabel = new System.Windows.Forms.Label();
             this.cardDetailsLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.sendButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.sendButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -80,6 +80,22 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 511);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // userDetailsLabel
+            // 
+            this.userDetailsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userDetailsLabel.AutoSize = true;
+            this.userDetailsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userDetailsLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.userDetailsLabel.Location = new System.Drawing.Point(5, 5);
+            this.userDetailsLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.userDetailsLabel.Name = "userDetailsLabel";
+            this.userDetailsLabel.Size = new System.Drawing.Size(374, 40);
+            this.userDetailsLabel.TabIndex = 1;
+            this.userDetailsLabel.Text = "Στοιχεία Πελάτη";
+            this.userDetailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -292,22 +308,6 @@
             this.phoneLabel.Text = "(phone)";
             this.phoneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // userDetailsLabel
-            // 
-            this.userDetailsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userDetailsLabel.AutoSize = true;
-            this.userDetailsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userDetailsLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.userDetailsLabel.Location = new System.Drawing.Point(5, 5);
-            this.userDetailsLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.userDetailsLabel.Name = "userDetailsLabel";
-            this.userDetailsLabel.Size = new System.Drawing.Size(374, 40);
-            this.userDetailsLabel.TabIndex = 1;
-            this.userDetailsLabel.Text = "Στοιχεία Πελάτη";
-            this.userDetailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // cardDetailsLabel
             // 
             this.cardDetailsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -343,50 +343,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(374, 162);
             this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.cancelButton, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.sendButton, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(5, 456);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(374, 50);
-            this.tableLayoutPanel4.TabIndex = 4;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cancelButton.Location = new System.Drawing.Point(0, 0);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(185, 50);
-            this.cancelButton.TabIndex = 0;
-            this.cancelButton.Text = "Ακύρωση";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            // 
-            // sendButton
-            // 
-            this.sendButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sendButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.sendButton.Location = new System.Drawing.Point(189, 0);
-            this.sendButton.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(185, 50);
-            this.sendButton.TabIndex = 1;
-            this.sendButton.Text = "Ολοκλήρωση Παραγγελίας";
-            this.sendButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -441,6 +397,52 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(374, 25);
             this.textBox2.TabIndex = 4;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.cancelButton, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.sendButton, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(5, 456);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(374, 50);
+            this.tableLayoutPanel4.TabIndex = 4;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.cancelButton.Location = new System.Drawing.Point(0, 0);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(185, 50);
+            this.cancelButton.TabIndex = 0;
+            this.cancelButton.Text = "Ακύρωση";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // sendButton
+            // 
+            this.sendButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sendButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.sendButton.Location = new System.Drawing.Point(189, 0);
+            this.sendButton.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.sendButton.Name = "sendButton";
+            this.sendButton.Size = new System.Drawing.Size(185, 50);
+            this.sendButton.TabIndex = 1;
+            this.sendButton.Text = "Ολοκλήρωση Παραγγελίας";
+            this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // MakeOrderForm
             // 

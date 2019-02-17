@@ -162,5 +162,10 @@ namespace eBookstore
 
             this.UpdateShoppingCartButton();
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
