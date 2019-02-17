@@ -19,9 +19,9 @@ namespace eBookstore
 
         public CustomerForm(User user)
         {
-            this._user = user;
-
             InitializeComponent();
+
+            this._user = user;
         }
 
         private void CustomerForm_Load(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace eBookstore
             this._bookDetailForm?.Close();
 
             this._shoppingCartForm?.Close();
-            this._shoppingCartForm = new ShoppingCartForm(this._shoppingCart);
+            this._shoppingCartForm = new ShoppingCartForm(this._shoppingCart, this._user);
             this._shoppingCartForm.Show();
         }
 

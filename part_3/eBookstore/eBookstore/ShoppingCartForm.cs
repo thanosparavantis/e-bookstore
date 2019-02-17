@@ -1,4 +1,5 @@
 ﻿using eBookstore.data;
+using eBookstore.model;
 using System;
 using System.Windows.Forms;
 
@@ -8,12 +9,14 @@ namespace eBookstore
     {
         private ShoppingCart _shoppingCart;
         private MakeOrderForm _makeOrderForm;
+        private User _user;
 
-        public ShoppingCartForm(ShoppingCart shoppingCart)
+        public ShoppingCartForm(ShoppingCart shoppingCart, User user)
         {
-            this._shoppingCart = shoppingCart;
-
             InitializeComponent();
+
+            this._shoppingCart = shoppingCart;
+            this._user = user;
         }
 
         private void ShoppingCartForm_Load(object sender, EventArgs e)
@@ -89,7 +92,7 @@ namespace eBookstore
         private void purchaseButton_Click(object sender, EventArgs e)
         {
             _makeOrderForm?.Close();
-            _makeOrderForm = new MakeOrderForm();
+            _makeOrderForm = new MakeOrderForm(this._shoppingCart, this._user);
             _makeOrderForm.Show();
         }
 
