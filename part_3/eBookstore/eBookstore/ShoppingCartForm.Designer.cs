@@ -155,6 +155,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.shoppingCartItemDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.shoppingCartItemDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shoppingCartItemDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.shoppingCartItemDataGridView.Location = new System.Drawing.Point(5, 60);
             this.shoppingCartItemDataGridView.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.shoppingCartItemDataGridView.MultiSelect = false;

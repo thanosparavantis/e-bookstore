@@ -36,7 +36,6 @@ namespace eBookstore
 
         private void UpdateShoppingCartItemData()
         {
-            this.shoppingCartItemBindingSource.DataSource = null;
             this.shoppingCartItemBindingSource.DataSource = this._shoppingCart.Items;
         }
 
@@ -86,6 +85,7 @@ namespace eBookstore
             if (dialogResult == DialogResult.Cancel)
                 return;
 
+            this.shoppingCartItemBindingSource.Clear();
             this._shoppingCart.RemoveAllBooks();
         }
 
