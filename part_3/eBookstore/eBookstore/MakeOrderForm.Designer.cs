@@ -367,10 +367,12 @@
             this.creditCardNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.creditCardNumberTextBox.Location = new System.Drawing.Point(0, 40);
             this.creditCardNumberTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.creditCardNumberTextBox.MaxLength = 19;
             this.creditCardNumberTextBox.Name = "creditCardNumberTextBox";
             this.creditCardNumberTextBox.Size = new System.Drawing.Size(374, 25);
             this.creditCardNumberTextBox.TabIndex = 2;
             this.creditCardNumberTextBox.TextChanged += new System.EventHandler(this.creditCardNumberTextBox_TextChanged);
+            this.creditCardNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.creditCardNumberTextBox_KeyPress);
             // 
             // cvvNumberLabel
             // 
@@ -395,10 +397,12 @@
             this.cvvNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cvvNumberTextBox.Location = new System.Drawing.Point(0, 120);
             this.cvvNumberTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.cvvNumberTextBox.MaxLength = 3;
             this.cvvNumberTextBox.Name = "cvvNumberTextBox";
             this.cvvNumberTextBox.Size = new System.Drawing.Size(374, 25);
             this.cvvNumberTextBox.TabIndex = 4;
             this.cvvNumberTextBox.TextChanged += new System.EventHandler(this.cvvNumberTextBox_TextChanged);
+            this.cvvNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cvvNumberTextBox_KeyPress);
             // 
             // tableLayoutPanel4
             // 

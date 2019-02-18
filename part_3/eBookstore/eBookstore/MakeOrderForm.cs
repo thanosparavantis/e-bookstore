@@ -111,5 +111,26 @@ namespace eBookstore
         {
             this.Close();
         }
+
+        private void creditCardNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (this.IsNotNumeric(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cvvNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (this.IsNotNumeric(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool IsNotNumeric(char keyChar)
+        {
+            return !char.IsControl(keyChar) && !char.IsDigit(keyChar);
+        }
     }
 }
