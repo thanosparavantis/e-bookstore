@@ -108,13 +108,33 @@ namespace eBookstore
         private void bookDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex == -1)
-            {
                 return;
-            }
 
-            string bookTitle = (string)this.bookDataGridView[1, e.RowIndex].Value;
-            Book book = this._bookList.GetBookByTitle(bookTitle);
-            
+            object value = this.bookDataGridView[e.ColumnIndex, e.RowIndex].Value;
+
+            if (value is string && (string)value == "Details")
+                return;
+
+            Book book = (Book)this.bookDataGridView.Rows[e.RowIndex].DataBoundItem;
+            this.ClickBook(book);
+        }
+
+        private void bookDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == -1 || e.RowIndex == -1)
+                return;
+
+            object value = this.bookDataGridView[e.ColumnIndex, e.RowIndex].Value;
+
+            if (value is string && (string)value == "Details")
+            {
+                Book book = (Book)this.bookDataGridView.Rows[e.RowIndex].DataBoundItem;
+                this.ClickBook(book);
+            }
+        }
+
+        private void ClickBook(Book book)
+        {
             this._shoppingCartForm?.Close();
 
             this._bookDetailForm?.Close();
