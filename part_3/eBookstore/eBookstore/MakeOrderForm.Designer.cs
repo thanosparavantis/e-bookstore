@@ -169,7 +169,7 @@
             this.addressTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.addressTextLabel.Name = "addressTextLabel";
             this.addressTextLabel.Size = new System.Drawing.Size(187, 30);
-            this.addressTextLabel.TabIndex = 2;
+            this.addressTextLabel.TabIndex = 4;
             this.addressTextLabel.Text = "Address";
             this.addressTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -184,7 +184,7 @@
             this.zipTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.zipTextLabel.Name = "zipTextLabel";
             this.zipTextLabel.Size = new System.Drawing.Size(187, 30);
-            this.zipTextLabel.TabIndex = 3;
+            this.zipTextLabel.TabIndex = 5;
             this.zipTextLabel.Text = "ZIP Code";
             this.zipTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -199,7 +199,7 @@
             this.cityTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.cityTextLabel.Name = "cityTextLabel";
             this.cityTextLabel.Size = new System.Drawing.Size(187, 30);
-            this.cityTextLabel.TabIndex = 4;
+            this.cityTextLabel.TabIndex = 8;
             this.cityTextLabel.Text = "City";
             this.cityTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -214,7 +214,7 @@
             this.phoneTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.phoneTextLabel.Name = "phoneTextLabel";
             this.phoneTextLabel.Size = new System.Drawing.Size(187, 30);
-            this.phoneTextLabel.TabIndex = 5;
+            this.phoneTextLabel.TabIndex = 9;
             this.phoneTextLabel.Text = "Phone";
             this.phoneTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -229,7 +229,7 @@
             this.usernameLabel.Margin = new System.Windows.Forms.Padding(0);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(187, 30);
-            this.usernameLabel.TabIndex = 6;
+            this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "(username)";
             this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -244,7 +244,7 @@
             this.emailLabel.Margin = new System.Windows.Forms.Padding(0);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(187, 30);
-            this.emailLabel.TabIndex = 7;
+            this.emailLabel.TabIndex = 3;
             this.emailLabel.Text = "(email)";
             this.emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -259,7 +259,7 @@
             this.addressLabel.Margin = new System.Windows.Forms.Padding(0);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(187, 30);
-            this.addressLabel.TabIndex = 8;
+            this.addressLabel.TabIndex = 6;
             this.addressLabel.Text = "(address)";
             this.addressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -274,7 +274,7 @@
             this.zipLabel.Margin = new System.Windows.Forms.Padding(0);
             this.zipLabel.Name = "zipLabel";
             this.zipLabel.Size = new System.Drawing.Size(187, 30);
-            this.zipLabel.TabIndex = 9;
+            this.zipLabel.TabIndex = 7;
             this.zipLabel.Text = "(zip)";
             this.zipLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

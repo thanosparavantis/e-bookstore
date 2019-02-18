@@ -93,7 +93,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(474, 484);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // coverPictureBox
             // 
@@ -117,7 +117,7 @@
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.Size = new System.Drawing.Size(468, 41);
-            this.tableLayoutPanel5.TabIndex = 6;
+            this.tableLayoutPanel5.TabIndex = 0;
             // 
             // titleLabel
             // 
@@ -147,7 +147,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(468, 27);
-            this.tableLayoutPanel4.TabIndex = 5;
+            this.tableLayoutPanel4.TabIndex = 1;
             // 
             // summaryLabel
             // 
@@ -171,11 +171,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel2.Controls.Add(this.authorLabel, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.publisherLabel, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.authorTextLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.publisherTextLabel, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.yearPublishedTextLabel, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.authorLabel, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.publisherLabel, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.yearPublishedLabel, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 289);
@@ -184,7 +184,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(468, 60);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // authorLabel
             // 
@@ -197,7 +197,7 @@
             this.authorLabel.Margin = new System.Windows.Forms.Padding(0);
             this.authorLabel.Name = "authorLabel";
             this.authorLabel.Size = new System.Drawing.Size(155, 30);
-            this.authorLabel.TabIndex = 2;
+            this.authorLabel.TabIndex = 4;
             this.authorLabel.Text = "(book author)";
             this.authorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -212,7 +212,7 @@
             this.publisherLabel.Margin = new System.Windows.Forms.Padding(0);
             this.publisherLabel.Name = "publisherLabel";
             this.publisherLabel.Size = new System.Drawing.Size(156, 30);
-            this.publisherLabel.TabIndex = 2;
+            this.publisherLabel.TabIndex = 5;
             this.publisherLabel.Text = "(book publisher)";
             this.publisherLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -227,7 +227,7 @@
             this.authorTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.authorTextLabel.Name = "authorTextLabel";
             this.authorTextLabel.Size = new System.Drawing.Size(155, 30);
-            this.authorTextLabel.TabIndex = 2;
+            this.authorTextLabel.TabIndex = 0;
             this.authorTextLabel.Text = "Author";
             this.authorTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -242,7 +242,7 @@
             this.publisherTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.publisherTextLabel.Name = "publisherTextLabel";
             this.publisherTextLabel.Size = new System.Drawing.Size(156, 30);
-            this.publisherTextLabel.TabIndex = 2;
+            this.publisherTextLabel.TabIndex = 1;
             this.publisherTextLabel.Text = "Publisher";
             this.publisherTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -272,7 +272,7 @@
             this.yearPublishedLabel.Margin = new System.Windows.Forms.Padding(0);
             this.yearPublishedLabel.Name = "yearPublishedLabel";
             this.yearPublishedLabel.Size = new System.Drawing.Size(157, 30);
-            this.yearPublishedLabel.TabIndex = 2;
+            this.yearPublishedLabel.TabIndex = 1;
             this.yearPublishedLabel.Text = "(book year published)";
             this.yearPublishedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -283,11 +283,11 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel3.Controls.Add(this.pagesTextLabel, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.categoryTextLabel, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pagesLabel, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.categoryLabel, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.pagesTextLabel, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ISBNTextLabel, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.categoryLabel, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.pagesLabel, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.ISBNLabel, 2, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 355);
@@ -296,7 +296,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(468, 60);
-            this.tableLayoutPanel3.TabIndex = 4;
+            this.tableLayoutPanel3.TabIndex = 3;
             // 
             // pagesTextLabel
             // 
@@ -309,7 +309,7 @@
             this.pagesTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.pagesTextLabel.Name = "pagesTextLabel";
             this.pagesTextLabel.Size = new System.Drawing.Size(156, 30);
-            this.pagesTextLabel.TabIndex = 2;
+            this.pagesTextLabel.TabIndex = 1;
             this.pagesTextLabel.Text = "Pages";
             this.pagesTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -324,7 +324,7 @@
             this.categoryTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.categoryTextLabel.Name = "categoryTextLabel";
             this.categoryTextLabel.Size = new System.Drawing.Size(155, 30);
-            this.categoryTextLabel.TabIndex = 2;
+            this.categoryTextLabel.TabIndex = 0;
             this.categoryTextLabel.Text = "Category";
             this.categoryTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -339,7 +339,7 @@
             this.pagesLabel.Margin = new System.Windows.Forms.Padding(0);
             this.pagesLabel.Name = "pagesLabel";
             this.pagesLabel.Size = new System.Drawing.Size(156, 30);
-            this.pagesLabel.TabIndex = 2;
+            this.pagesLabel.TabIndex = 4;
             this.pagesLabel.Text = "(book pages)";
             this.pagesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -354,7 +354,7 @@
             this.categoryLabel.Margin = new System.Windows.Forms.Padding(0);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.Size = new System.Drawing.Size(155, 30);
-            this.categoryLabel.TabIndex = 2;
+            this.categoryLabel.TabIndex = 3;
             this.categoryLabel.Text = "(book category)";
             this.categoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -384,7 +384,7 @@
             this.ISBNLabel.Margin = new System.Windows.Forms.Padding(0);
             this.ISBNLabel.Name = "ISBNLabel";
             this.ISBNLabel.Size = new System.Drawing.Size(157, 30);
-            this.ISBNLabel.TabIndex = 2;
+            this.ISBNLabel.TabIndex = 5;
             this.ISBNLabel.Text = "(book ISBN)";
             this.ISBNLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -408,7 +408,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(468, 60);
-            this.tableLayoutPanel6.TabIndex = 7;
+            this.tableLayoutPanel6.TabIndex = 4;
             // 
             // basePriceTextLabel
             // 
@@ -421,7 +421,7 @@
             this.basePriceTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.basePriceTextLabel.Name = "basePriceTextLabel";
             this.basePriceTextLabel.Size = new System.Drawing.Size(155, 30);
-            this.basePriceTextLabel.TabIndex = 2;
+            this.basePriceTextLabel.TabIndex = 0;
             this.basePriceTextLabel.Text = "Start Price";
             this.basePriceTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -436,7 +436,7 @@
             this.discountTextLabel.Margin = new System.Windows.Forms.Padding(0);
             this.discountTextLabel.Name = "discountTextLabel";
             this.discountTextLabel.Size = new System.Drawing.Size(156, 30);
-            this.discountTextLabel.TabIndex = 2;
+            this.discountTextLabel.TabIndex = 1;
             this.discountTextLabel.Text = "Έκπτωση";
             this.discountTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -466,7 +466,7 @@
             this.basePriceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.basePriceLabel.Name = "basePriceLabel";
             this.basePriceLabel.Size = new System.Drawing.Size(155, 30);
-            this.basePriceLabel.TabIndex = 2;
+            this.basePriceLabel.TabIndex = 3;
             this.basePriceLabel.Text = "(book base price)";
             this.basePriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -481,7 +481,7 @@
             this.discountLabel.Margin = new System.Windows.Forms.Padding(0);
             this.discountLabel.Name = "discountLabel";
             this.discountLabel.Size = new System.Drawing.Size(156, 30);
-            this.discountLabel.TabIndex = 2;
+            this.discountLabel.TabIndex = 4;
             this.discountLabel.Text = "(book discount)";
             this.discountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -496,7 +496,7 @@
             this.priceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(157, 30);
-            this.priceLabel.TabIndex = 2;
+            this.priceLabel.TabIndex = 5;
             this.priceLabel.Text = "(book price)";
             this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -528,15 +528,15 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel7.Size = new System.Drawing.Size(484, 761);
-            this.tableLayoutPanel7.TabIndex = 2;
+            this.tableLayoutPanel7.TabIndex = 0;
             // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.shoppingCartButton, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.cancelButton, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.shoppingCartButton, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(5, 706);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -544,7 +544,7 @@
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(474, 50);
-            this.tableLayoutPanel8.TabIndex = 2;
+            this.tableLayoutPanel8.TabIndex = 1;
             // 
             // cancelButton
             // 
@@ -555,7 +555,7 @@
             this.cancelButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(235, 50);
-            this.cancelButton.TabIndex = 1;
+            this.cancelButton.TabIndex = 0;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);

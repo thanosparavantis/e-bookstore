@@ -72,7 +72,7 @@
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.Size = new System.Drawing.Size(884, 24);
-            this.mainMenuStrip.TabIndex = 0;
+            this.mainMenuStrip.TabIndex = 1;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
             // optionsToolStripMenuItem
@@ -110,7 +110,7 @@
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(884, 22);
             this.statusStrip.SizingGrip = false;
-            this.statusStrip.TabIndex = 1;
+            this.statusStrip.TabIndex = 0;
             this.statusStrip.Text = "statusStrip1";
             // 
             // booksToolStripStatusLabel
@@ -143,8 +143,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel2.Controls.Add(this.searchTextBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.booksLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.searchTextBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.userLabel, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.shoppingCartButton, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -155,7 +155,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(884, 45);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // searchTextBox
             // 
@@ -265,7 +265,7 @@
             this.bookDataGridView.RowTemplate.Height = 350;
             this.bookDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bookDataGridView.Size = new System.Drawing.Size(884, 570);
-            this.bookDataGridView.TabIndex = 4;
+            this.bookDataGridView.TabIndex = 0;
             this.bookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellContentClick);
             this.bookDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookDataGridView_CellMouseDoubleClick);
             this.bookDataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellMouseEnter);
@@ -369,8 +369,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.mainMenuStrip);
+            this.Controls.Add(this.statusStrip);
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(700, 600);
             this.Name = "CustomerForm";

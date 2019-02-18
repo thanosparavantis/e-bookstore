@@ -37,22 +37,22 @@
             this.itemsInCartLabel = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.shoppingCartItemDataGridView = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.closeButton = new System.Windows.Forms.Button();
-            this.purchaseButton = new System.Windows.Forms.Button();
-            this.resetButton = new System.Windows.Forms.Button();
             this.bookTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookBasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookDiscountTextDataGridViewTextColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookPriceTextDataGridVieTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.removeDataGridViewButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.amountDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.removeDataGridViewButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.purchaseButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -177,72 +177,6 @@
             this.shoppingCartItemDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.shoppingCartItemDataGridView_CellEndEdit);
             this.shoppingCartItemDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.shoppingCartItemDataGridView_UserDeletingRow);
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.closeButton, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.purchaseButton, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.resetButton, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 506);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(674, 50);
-            this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // closeButton
-            // 
-            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.AutoSize = true;
-            this.closeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(370, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(150, 50);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.Text = "Cancel";
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // purchaseButton
-            // 
-            this.purchaseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.purchaseButton.AutoSize = true;
-            this.purchaseButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.purchaseButton.Location = new System.Drawing.Point(524, 0);
-            this.purchaseButton.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.purchaseButton.Name = "purchaseButton";
-            this.purchaseButton.Size = new System.Drawing.Size(150, 50);
-            this.purchaseButton.TabIndex = 2;
-            this.purchaseButton.Text = "Purchase";
-            this.purchaseButton.UseVisualStyleBackColor = true;
-            this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
-            // 
-            // resetButton
-            // 
-            this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.resetButton.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.resetButton.Location = new System.Drawing.Point(0, 0);
-            this.resetButton.Margin = new System.Windows.Forms.Padding(0);
-            this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(200, 50);
-            this.resetButton.TabIndex = 2;
-            this.resetButton.Text = "Clear shopping cart";
-            this.resetButton.UseVisualStyleBackColor = true;
-            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
-            // 
             // bookTitleDataGridViewTextBoxColumn
             // 
             this.bookTitleDataGridViewTextBoxColumn.DataPropertyName = "BookTitle";
@@ -276,14 +210,6 @@
             this.bookPriceTextDataGridVieTextBoxColumn.ReadOnly = true;
             this.bookPriceTextDataGridVieTextBoxColumn.Width = 61;
             // 
-            // removeDataGridViewButtonColumn
-            // 
-            this.removeDataGridViewButtonColumn.HeaderText = "Action";
-            this.removeDataGridViewButtonColumn.Name = "removeDataGridViewButtonColumn";
-            this.removeDataGridViewButtonColumn.Text = "Remove";
-            this.removeDataGridViewButtonColumn.UseColumnTextForButtonValue = true;
-            this.removeDataGridViewButtonColumn.Width = 50;
-            // 
             // amountDataGridViewComboBoxColumn
             // 
             this.amountDataGridViewComboBoxColumn.DataPropertyName = "AmountText";
@@ -304,9 +230,83 @@
             this.amountDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.amountDataGridViewComboBoxColumn.Width = 81;
             // 
+            // removeDataGridViewButtonColumn
+            // 
+            this.removeDataGridViewButtonColumn.HeaderText = "Action";
+            this.removeDataGridViewButtonColumn.Name = "removeDataGridViewButtonColumn";
+            this.removeDataGridViewButtonColumn.Text = "Remove";
+            this.removeDataGridViewButtonColumn.UseColumnTextForButtonValue = true;
+            this.removeDataGridViewButtonColumn.Width = 50;
+            // 
             // shoppingCartItemBindingSource
             // 
             this.shoppingCartItemBindingSource.DataSource = typeof(eBookstore.model.ShoppingCartItem);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel3.Controls.Add(this.closeButton, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.purchaseButton, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.resetButton, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 506);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(674, 50);
+            this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.AutoSize = true;
+            this.closeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.Location = new System.Drawing.Point(370, 0);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(150, 50);
+            this.closeButton.TabIndex = 1;
+            this.closeButton.Text = "Cancel";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // purchaseButton
+            // 
+            this.purchaseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.purchaseButton.AutoSize = true;
+            this.purchaseButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.purchaseButton.Location = new System.Drawing.Point(524, 0);
+            this.purchaseButton.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.purchaseButton.Name = "purchaseButton";
+            this.purchaseButton.Size = new System.Drawing.Size(150, 50);
+            this.purchaseButton.TabIndex = 2;
+            this.purchaseButton.Text = "Purchase";
+            this.purchaseButton.UseVisualStyleBackColor = true;
+            this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
+            // 
+            // resetButton
+            // 
+            this.resetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.resetButton.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.resetButton.Location = new System.Drawing.Point(0, 0);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(0);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(200, 50);
+            this.resetButton.TabIndex = 0;
+            this.resetButton.Text = "Clear shopping cart";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // ShoppingCartForm
             // 
@@ -328,9 +328,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
