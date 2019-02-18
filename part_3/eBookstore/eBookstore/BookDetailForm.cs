@@ -127,12 +127,12 @@ namespace eBookstore
         {
             if (this._shoppingCart.Contains(this._book))
             {
-                this.shoppingCartButton.Text = "Αφαίρεση από το καλάθι αγορών";
+                this.shoppingCartButton.Text = "Remove from shopping cart";
                 this.shoppingCartButton.ForeColor = Color.Firebrick;
             }
             else
             {
-                this.shoppingCartButton.Text = "Προσθήκη στο καλάθι αγορών";
+                this.shoppingCartButton.Text = "Add to shopping cart";
                 this.shoppingCartButton.ForeColor = Color.DarkGreen;
             }
         }
@@ -144,7 +144,7 @@ namespace eBookstore
                 this._shoppingCart.RemoveBook(this._book);
 
                 MessageBox.Show(
-                    "Το βιβλίο αφαιρέθηκε από το καλάθι αγορών σας.",
+                    "The book has been removed from your shopping cart.",
                     this._book.Title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -154,7 +154,7 @@ namespace eBookstore
                 this._shoppingCart.AddBook(this._book);
 
                 MessageBox.Show(
-                    "Το βιβλίο προστέθηκε στο καλάθι αγορών σας.",
+                    "The book has been added to your shopping cart.",
                     this._book.Title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);

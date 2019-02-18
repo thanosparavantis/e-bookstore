@@ -272,16 +272,16 @@
             this.coverDataGridViewImageColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.coverDataGridViewImageColumn.DataPropertyName = "Cover";
             this.coverDataGridViewImageColumn.Frozen = true;
-            this.coverDataGridViewImageColumn.HeaderText = "Εξώφυλλο";
+            this.coverDataGridViewImageColumn.HeaderText = "Cover";
             this.coverDataGridViewImageColumn.Name = "coverDataGridViewImageColumn";
             this.coverDataGridViewImageColumn.ReadOnly = true;
-            this.coverDataGridViewImageColumn.Width = 74;
+            this.coverDataGridViewImageColumn.Width = 48;
             // 
             // titleDataGridViewTextBoxColumn
             // 
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
             this.titleDataGridViewTextBoxColumn.Frozen = true;
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Τίτλος";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
             this.titleDataGridViewTextBoxColumn.MinimumWidth = 200;
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
             this.titleDataGridViewTextBoxColumn.ReadOnly = true;
@@ -291,7 +291,7 @@
             // 
             this.summaryDataGridViewTextBoxColumn.DataPropertyName = "Summary";
             this.summaryDataGridViewTextBoxColumn.Frozen = true;
-            this.summaryDataGridViewTextBoxColumn.HeaderText = "Περίληψη";
+            this.summaryDataGridViewTextBoxColumn.HeaderText = "Summary";
             this.summaryDataGridViewTextBoxColumn.MinimumWidth = 400;
             this.summaryDataGridViewTextBoxColumn.Name = "summaryDataGridViewTextBoxColumn";
             this.summaryDataGridViewTextBoxColumn.ReadOnly = true;
@@ -301,46 +301,46 @@
             // 
             this.discountTextDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.discountTextDataGridViewTextBoxColumn.DataPropertyName = "DiscountText";
-            this.discountTextDataGridViewTextBoxColumn.HeaderText = "Έκπτωση";
+            this.discountTextDataGridViewTextBoxColumn.HeaderText = "Discount";
             this.discountTextDataGridViewTextBoxColumn.Name = "discountTextDataGridViewTextBoxColumn";
             this.discountTextDataGridViewTextBoxColumn.ReadOnly = true;
-            this.discountTextDataGridViewTextBoxColumn.Width = 86;
+            this.discountTextDataGridViewTextBoxColumn.Width = 83;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
             this.categoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Κατηγορία";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
             this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryDataGridViewTextBoxColumn.Width = 96;
+            this.categoryDataGridViewTextBoxColumn.Width = 86;
             // 
             // authorDataGridViewTextBoxColumn
             // 
             this.authorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
-            this.authorDataGridViewTextBoxColumn.HeaderText = "Συγγραφέας";
+            this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
             this.authorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.authorDataGridViewTextBoxColumn.Width = 106;
+            this.authorDataGridViewTextBoxColumn.Width = 72;
             // 
             // publisherDataGridViewTextBoxColumn
             // 
             this.publisherDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.publisherDataGridViewTextBoxColumn.DataPropertyName = "Publisher";
-            this.publisherDataGridViewTextBoxColumn.HeaderText = "Εκδότης";
+            this.publisherDataGridViewTextBoxColumn.HeaderText = "Publisher";
             this.publisherDataGridViewTextBoxColumn.Name = "publisherDataGridViewTextBoxColumn";
             this.publisherDataGridViewTextBoxColumn.ReadOnly = true;
-            this.publisherDataGridViewTextBoxColumn.Width = 82;
+            this.publisherDataGridViewTextBoxColumn.Width = 86;
             // 
             // yearPublishedDataGridViewTextBoxColumn
             // 
             this.yearPublishedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.yearPublishedDataGridViewTextBoxColumn.DataPropertyName = "YearPublished";
-            this.yearPublishedDataGridViewTextBoxColumn.HeaderText = "Έτος Έκδοσης";
+            this.yearPublishedDataGridViewTextBoxColumn.HeaderText = "Year Published";
             this.yearPublishedDataGridViewTextBoxColumn.Name = "yearPublishedDataGridViewTextBoxColumn";
             this.yearPublishedDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearPublishedDataGridViewTextBoxColumn.Width = 114;
+            this.yearPublishedDataGridViewTextBoxColumn.Width = 118;
             // 
             // bookBindingSource
             // 
@@ -358,7 +358,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 600);
             this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ηλεκτρονκιό Βιβλιοπωλείο";
+            this.Text = "E-Bookstore";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CustomerForm_FormClosing);
             this.Load += new System.EventHandler(this.CustomerForm_Load);

@@ -16,7 +16,6 @@ namespace eBookstore
     {
         private ShoppingCart _shoppingCart;
         private User _user;
-        private ShoppingCartForm _shoppingCartForm;
 
         public MakeOrderForm(ShoppingCart shoppingCart, User user)
         {
@@ -100,8 +99,8 @@ namespace eBookstore
             this._shoppingCart.RemoveAllBooks();
 
             MessageBox.Show(
-                "Η παραγγελία τοποθετήθηκε με επιτυχία, οι αγορές των βιβλίων ολοκληρώθηκαν.",
-                "Καλάθι Αγορών",
+                "Your order has been submitted successfully, the books will be delivered in the next few days. Thank you for choosing us!",
+                "Purchase Completed",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 

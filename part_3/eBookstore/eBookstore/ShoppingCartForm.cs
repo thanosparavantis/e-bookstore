@@ -43,7 +43,7 @@ namespace eBookstore
         private void UpdateItemsInCartLabel()
         {
             int count = this._shoppingCart.Count();
-            this.itemsInCartLabel.Text = $"{count} βιβλία προς παραγγελία";
+            this.itemsInCartLabel.Text = $"{count} books selected";
         }
 
         private void UpdateTotalCostLabel()
@@ -76,8 +76,8 @@ namespace eBookstore
             this._shoppingCart.RemoveAllBooks();
             
             MessageBox.Show(
-                "Το καλάθι αγορών σας έχει αδιάσει.",
-                "Καλάθι Αγορών",
+                "Your shopping cart has been cleared.",
+                "Shopping Cart",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }

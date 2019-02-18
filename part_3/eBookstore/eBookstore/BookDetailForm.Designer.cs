@@ -228,7 +228,7 @@
             this.authorTextLabel.Name = "authorTextLabel";
             this.authorTextLabel.Size = new System.Drawing.Size(155, 30);
             this.authorTextLabel.TabIndex = 2;
-            this.authorTextLabel.Text = "Συγγραφέας";
+            this.authorTextLabel.Text = "Author";
             this.authorTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // publisherTextLabel
@@ -243,7 +243,7 @@
             this.publisherTextLabel.Name = "publisherTextLabel";
             this.publisherTextLabel.Size = new System.Drawing.Size(156, 30);
             this.publisherTextLabel.TabIndex = 2;
-            this.publisherTextLabel.Text = "Εκδότης";
+            this.publisherTextLabel.Text = "Publisher";
             this.publisherTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // yearPublishedTextLabel
@@ -258,7 +258,7 @@
             this.yearPublishedTextLabel.Name = "yearPublishedTextLabel";
             this.yearPublishedTextLabel.Size = new System.Drawing.Size(157, 30);
             this.yearPublishedTextLabel.TabIndex = 2;
-            this.yearPublishedTextLabel.Text = "Έτος Έκδοσης";
+            this.yearPublishedTextLabel.Text = "Year Published";
             this.yearPublishedTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // yearPublishedLabel
@@ -310,7 +310,7 @@
             this.pagesTextLabel.Name = "pagesTextLabel";
             this.pagesTextLabel.Size = new System.Drawing.Size(156, 30);
             this.pagesTextLabel.TabIndex = 2;
-            this.pagesTextLabel.Text = "Σελίδες";
+            this.pagesTextLabel.Text = "Pages";
             this.pagesTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // categoryTextLabel
@@ -325,7 +325,7 @@
             this.categoryTextLabel.Name = "categoryTextLabel";
             this.categoryTextLabel.Size = new System.Drawing.Size(155, 30);
             this.categoryTextLabel.TabIndex = 2;
-            this.categoryTextLabel.Text = "Κατηγορία";
+            this.categoryTextLabel.Text = "Category";
             this.categoryTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pagesLabel
@@ -422,7 +422,7 @@
             this.basePriceTextLabel.Name = "basePriceTextLabel";
             this.basePriceTextLabel.Size = new System.Drawing.Size(155, 30);
             this.basePriceTextLabel.TabIndex = 2;
-            this.basePriceTextLabel.Text = "Αρχική Τιμή";
+            this.basePriceTextLabel.Text = "Start Price";
             this.basePriceTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // discountTextLabel
@@ -452,7 +452,7 @@
             this.priceTextLabel.Name = "priceTextLabel";
             this.priceTextLabel.Size = new System.Drawing.Size(157, 30);
             this.priceTextLabel.TabIndex = 2;
-            this.priceTextLabel.Text = "Τελική Τιμή";
+            this.priceTextLabel.Text = "Price";
             this.priceTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // basePriceLabel
@@ -556,7 +556,7 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(235, 50);
             this.cancelButton.TabIndex = 1;
-            this.cancelButton.Text = "Ακύρωση";
+            this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 

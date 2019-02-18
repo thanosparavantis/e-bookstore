@@ -94,7 +94,7 @@
             this.userDetailsLabel.Name = "userDetailsLabel";
             this.userDetailsLabel.Size = new System.Drawing.Size(374, 40);
             this.userDetailsLabel.TabIndex = 1;
-            this.userDetailsLabel.Text = "Στοιχεία Πελάτη";
+            this.userDetailsLabel.Text = "Customer Details";
             this.userDetailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
@@ -140,7 +140,7 @@
             this.usernameTextLabel.Name = "usernameTextLabel";
             this.usernameTextLabel.Size = new System.Drawing.Size(187, 30);
             this.usernameTextLabel.TabIndex = 0;
-            this.usernameTextLabel.Text = "Ψευδώνυμο";
+            this.usernameTextLabel.Text = "Username";
             this.usernameTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // emailTextLabel
@@ -170,7 +170,7 @@
             this.addressTextLabel.Name = "addressTextLabel";
             this.addressTextLabel.Size = new System.Drawing.Size(187, 30);
             this.addressTextLabel.TabIndex = 2;
-            this.addressTextLabel.Text = "Διεύθυνση";
+            this.addressTextLabel.Text = "Address";
             this.addressTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // zipTextLabel
@@ -185,7 +185,7 @@
             this.zipTextLabel.Name = "zipTextLabel";
             this.zipTextLabel.Size = new System.Drawing.Size(187, 30);
             this.zipTextLabel.TabIndex = 3;
-            this.zipTextLabel.Text = "Ταχυδρομικός Κώδικας";
+            this.zipTextLabel.Text = "ZIP Code";
             this.zipTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cityTextLabel
@@ -200,7 +200,7 @@
             this.cityTextLabel.Name = "cityTextLabel";
             this.cityTextLabel.Size = new System.Drawing.Size(187, 30);
             this.cityTextLabel.TabIndex = 4;
-            this.cityTextLabel.Text = "Πόλη";
+            this.cityTextLabel.Text = "City";
             this.cityTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // phoneTextLabel
@@ -215,7 +215,7 @@
             this.phoneTextLabel.Name = "phoneTextLabel";
             this.phoneTextLabel.Size = new System.Drawing.Size(187, 30);
             this.phoneTextLabel.TabIndex = 5;
-            this.phoneTextLabel.Text = "Τηλέφωνο";
+            this.phoneTextLabel.Text = "Phone";
             this.phoneTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // usernameLabel
@@ -321,7 +321,7 @@
             this.cardDetailsLabel.Name = "cardDetailsLabel";
             this.cardDetailsLabel.Size = new System.Drawing.Size(374, 40);
             this.cardDetailsLabel.TabIndex = 2;
-            this.cardDetailsLabel.Text = "Στοιχεία Κάρτας";
+            this.cardDetailsLabel.Text = "Card Details";
             this.cardDetailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
@@ -356,7 +356,7 @@
             this.creditCardNumberLabel.Name = "creditCardNumberLabel";
             this.creditCardNumberLabel.Size = new System.Drawing.Size(374, 40);
             this.creditCardNumberLabel.TabIndex = 1;
-            this.creditCardNumberLabel.Text = "Αριθμός Credit Card";
+            this.creditCardNumberLabel.Text = "Credit Card Number";
             this.creditCardNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // creditCardNumberTextBox
@@ -384,7 +384,7 @@
             this.cvvNumberLabel.Name = "cvvNumberLabel";
             this.cvvNumberLabel.Size = new System.Drawing.Size(374, 40);
             this.cvvNumberLabel.TabIndex = 3;
-            this.cvvNumberLabel.Text = "Αριθμός CVV";
+            this.cvvNumberLabel.Text = "CVV Number";
             this.cvvNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cvvNumberTextBox
@@ -427,7 +427,7 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(185, 50);
             this.cancelButton.TabIndex = 0;
-            this.cancelButton.Text = "Ακύρωση";
+            this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -442,7 +442,7 @@
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(185, 50);
             this.sendButton.TabIndex = 1;
-            this.sendButton.Text = "Ολοκλήρωση Παραγγελίας";
+            this.sendButton.Text = "Send";
             this.sendButton.UseVisualStyleBackColor = true;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
@@ -455,7 +455,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MakeOrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ολοκλήρωση Αγοράς";
+            this.Text = "Complete Purchase";
             this.Load += new System.EventHandler(this.MakeOrderForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

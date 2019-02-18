@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using static eBookstore.data.ShoppingCart;
 
 namespace eBookstore
 {
@@ -50,7 +49,7 @@ namespace eBookstore
         private void UpdateBookLabels()
         {
             int amount = this.bookBindingSource.Count;
-            string suffix = amount > 1 ? "Βιβλία" : "Βιβλίο";
+            string suffix = amount > 1 ? "Books" : "Book";
 
             string text = $"{amount} {suffix}";
             this.booksLabel.Text = text;
@@ -140,8 +139,8 @@ namespace eBookstore
         private void UpdateShoppingCartButton()
         {
             int itemAmount = this._shoppingCart.Count();
-            string text = $"({itemAmount}) Καλάθι Αγορών";
-            string textEmpty = "Καλάθι Αγορών";
+            string text = $"({itemAmount}) Shopping Cart";
+            string textEmpty = "Shopping Cart";
             this.shoppingCartButton.Text = itemAmount > 0 ? text : textEmpty;
         }
 
