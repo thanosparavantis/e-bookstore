@@ -37,21 +37,22 @@
             this.itemsInCartLabel = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
             this.shoppingCartItemDataGridView = new System.Windows.Forms.DataGridView();
-            this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookBasePriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookDiscountText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookPriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountText = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.closeButton = new System.Windows.Forms.Button();
             this.purchaseButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
+            this.bookTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookDiscountTextDataGridViewTextColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookPriceTextDataGridVieTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.removeDataGridViewButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.amountDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -138,18 +139,19 @@
             this.shoppingCartItemDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.shoppingCartItemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.shoppingCartItemDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BookTitle,
-            this.BookBasePriceText,
-            this.BookDiscountText,
-            this.BookPriceText,
-            this.AmountText});
+            this.bookTitleDataGridViewTextBoxColumn,
+            this.bookBasePriceDataGridViewTextBoxColumn,
+            this.bookDiscountTextDataGridViewTextColumn,
+            this.bookPriceTextDataGridVieTextBoxColumn,
+            this.amountDataGridViewComboBoxColumn,
+            this.removeDataGridViewButtonColumn});
             this.shoppingCartItemDataGridView.DataSource = this.shoppingCartItemBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.shoppingCartItemDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.shoppingCartItemDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -165,68 +167,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.shoppingCartItemDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.shoppingCartItemDataGridView.RowHeadersVisible = false;
+            this.shoppingCartItemDataGridView.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5);
             this.shoppingCartItemDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.shoppingCartItemDataGridView.Size = new System.Drawing.Size(674, 441);
             this.shoppingCartItemDataGridView.TabIndex = 1;
+            this.shoppingCartItemDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.shoppingCartItemDataGridView_CellContentClick);
             this.shoppingCartItemDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.shoppingCartItemDataGridView_CellEndEdit);
             this.shoppingCartItemDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.shoppingCartItemDataGridView_UserDeletingRow);
-            // 
-            // BookTitle
-            // 
-            this.BookTitle.DataPropertyName = "BookTitle";
-            this.BookTitle.HeaderText = "Title";
-            this.BookTitle.Name = "BookTitle";
-            this.BookTitle.ReadOnly = true;
-            this.BookTitle.Width = 57;
-            // 
-            // BookBasePriceText
-            // 
-            this.BookBasePriceText.DataPropertyName = "BookBasePriceText";
-            this.BookBasePriceText.HeaderText = "Start Price";
-            this.BookBasePriceText.Name = "BookBasePriceText";
-            this.BookBasePriceText.ReadOnly = true;
-            this.BookBasePriceText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BookBasePriceText.Width = 92;
-            // 
-            // BookDiscountText
-            // 
-            this.BookDiscountText.DataPropertyName = "BookDiscountText";
-            this.BookDiscountText.HeaderText = "Discount";
-            this.BookDiscountText.Name = "BookDiscountText";
-            this.BookDiscountText.ReadOnly = true;
-            this.BookDiscountText.Width = 83;
-            // 
-            // BookPriceText
-            // 
-            this.BookPriceText.DataPropertyName = "BookPriceText";
-            this.BookPriceText.HeaderText = "Price";
-            this.BookPriceText.Name = "BookPriceText";
-            this.BookPriceText.ReadOnly = true;
-            this.BookPriceText.Width = 61;
-            // 
-            // AmountText
-            // 
-            this.AmountText.DataPropertyName = "AmountText";
-            this.AmountText.HeaderText = "Quantity";
-            this.AmountText.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.AmountText.Name = "AmountText";
-            this.AmountText.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.AmountText.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.AmountText.Width = 81;
-            // 
-            // shoppingCartItemBindingSource
-            // 
-            this.shoppingCartItemBindingSource.DataSource = typeof(eBookstore.model.ShoppingCartItem);
             // 
             // tableLayoutPanel3
             // 
@@ -254,8 +202,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.AutoSize = true;
             this.closeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(374, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(0);
+            this.closeButton.Location = new System.Drawing.Point(370, 0);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(150, 50);
             this.closeButton.TabIndex = 2;
@@ -271,7 +219,7 @@
             this.purchaseButton.AutoSize = true;
             this.purchaseButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.purchaseButton.Location = new System.Drawing.Point(524, 0);
-            this.purchaseButton.Margin = new System.Windows.Forms.Padding(0);
+            this.purchaseButton.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.purchaseButton.Name = "purchaseButton";
             this.purchaseButton.Size = new System.Drawing.Size(150, 50);
             this.purchaseButton.TabIndex = 2;
@@ -294,6 +242,71 @@
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
+            // bookTitleDataGridViewTextBoxColumn
+            // 
+            this.bookTitleDataGridViewTextBoxColumn.DataPropertyName = "BookTitle";
+            this.bookTitleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.bookTitleDataGridViewTextBoxColumn.Name = "bookTitleDataGridViewTextBoxColumn";
+            this.bookTitleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookTitleDataGridViewTextBoxColumn.Width = 57;
+            // 
+            // bookBasePriceDataGridViewTextBoxColumn
+            // 
+            this.bookBasePriceDataGridViewTextBoxColumn.DataPropertyName = "BookBasePriceText";
+            this.bookBasePriceDataGridViewTextBoxColumn.HeaderText = "Start Price";
+            this.bookBasePriceDataGridViewTextBoxColumn.Name = "bookBasePriceDataGridViewTextBoxColumn";
+            this.bookBasePriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.bookBasePriceDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.bookBasePriceDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // bookDiscountTextDataGridViewTextColumn
+            // 
+            this.bookDiscountTextDataGridViewTextColumn.DataPropertyName = "BookDiscountText";
+            this.bookDiscountTextDataGridViewTextColumn.HeaderText = "Discount";
+            this.bookDiscountTextDataGridViewTextColumn.Name = "bookDiscountTextDataGridViewTextColumn";
+            this.bookDiscountTextDataGridViewTextColumn.ReadOnly = true;
+            this.bookDiscountTextDataGridViewTextColumn.Width = 83;
+            // 
+            // bookPriceTextDataGridVieTextBoxColumn
+            // 
+            this.bookPriceTextDataGridVieTextBoxColumn.DataPropertyName = "BookPriceText";
+            this.bookPriceTextDataGridVieTextBoxColumn.HeaderText = "Price";
+            this.bookPriceTextDataGridVieTextBoxColumn.Name = "bookPriceTextDataGridVieTextBoxColumn";
+            this.bookPriceTextDataGridVieTextBoxColumn.ReadOnly = true;
+            this.bookPriceTextDataGridVieTextBoxColumn.Width = 61;
+            // 
+            // removeDataGridViewButtonColumn
+            // 
+            this.removeDataGridViewButtonColumn.HeaderText = "Action";
+            this.removeDataGridViewButtonColumn.Name = "removeDataGridViewButtonColumn";
+            this.removeDataGridViewButtonColumn.Text = "Remove";
+            this.removeDataGridViewButtonColumn.UseColumnTextForButtonValue = true;
+            this.removeDataGridViewButtonColumn.Width = 50;
+            // 
+            // amountDataGridViewComboBoxColumn
+            // 
+            this.amountDataGridViewComboBoxColumn.DataPropertyName = "AmountText";
+            this.amountDataGridViewComboBoxColumn.HeaderText = "Quantity";
+            this.amountDataGridViewComboBoxColumn.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.amountDataGridViewComboBoxColumn.Name = "amountDataGridViewComboBoxColumn";
+            this.amountDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.amountDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.amountDataGridViewComboBoxColumn.Width = 81;
+            // 
+            // shoppingCartItemBindingSource
+            // 
+            this.shoppingCartItemBindingSource.DataSource = typeof(eBookstore.model.ShoppingCartItem);
+            // 
             // ShoppingCartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,9 +327,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,10 +346,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button resetButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookBasePriceText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookDiscountText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookPriceText;
-        private System.Windows.Forms.DataGridViewComboBoxColumn AmountText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookBasePriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookDiscountTextDataGridViewTextColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookPriceTextDataGridVieTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn amountDataGridViewComboBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn removeDataGridViewButtonColumn;
     }
 }

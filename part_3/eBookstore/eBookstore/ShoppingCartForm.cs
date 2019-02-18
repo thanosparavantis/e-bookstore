@@ -43,7 +43,8 @@ namespace eBookstore
         private void UpdateItemsInCartLabel()
         {
             int count = this._shoppingCart.Count();
-            this.itemsInCartLabel.Text = $"{count} books selected";
+            string text = count > 1 ? $"{count} books selected" : $"{count} book selected";
+            this.itemsInCartLabel.Text = text;
         }
 
         private void UpdateTotalCostLabel()
@@ -73,13 +74,26 @@ namespace eBookstore
 
         private void resetButton_Click(object sender, EventArgs e)
         {
+            int count = this._shoppingCart.Count();
+            string title = count > 1 ? $"Remove {count} books" : $"Remove {count} book";
+
+            DialogResult dialogResult = MessageBox.Show(
+                "Are you sure you want remove all items from your shopping cart?",
+                title,
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Cancel)
+                return;
+
             this._shoppingCart.RemoveAllBooks();
-            
-            MessageBox.Show(
-                "Your shopping cart has been cleared.",
-                "Shopping Cart",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+        }
+
+        private void purchaseButton_Click(object sender, EventArgs e)
+        {
+            _makeOrderForm?.Close();
+            _makeOrderForm = new MakeOrderForm(this._shoppingCart, this._user);
+            _makeOrderForm.Show();
         }
 
         private void shoppingCartItemDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -92,13 +106,6 @@ namespace eBookstore
             }
         }
 
-        private void purchaseButton_Click(object sender, EventArgs e)
-        {
-            _makeOrderForm?.Close();
-            _makeOrderForm = new MakeOrderForm(this._shoppingCart, this._user);
-            _makeOrderForm.Show();
-        }
-
         private void ShoppingCartForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             this._shoppingCart.ShoppingCardUpdateEventHandlers -= this.OnShoppingCardUpdate;
@@ -108,9 +115,36 @@ namespace eBookstore
         private void shoppingCartItemDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             ShoppingCartItem item = (ShoppingCartItem) e.Row.DataBoundItem;
-            this._shoppingCart.RemoveBook(item.Book);
+
+            this.RemoveBook(item.Book);
 
             e.Cancel = true;
+        }
+
+        private void shoppingCartItemDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            object value = this.shoppingCartItemDataGridView[e.ColumnIndex, e.RowIndex].Value;
+
+            if (value is string && (string)value == "Remove")
+            {
+                ShoppingCartItem item = (ShoppingCartItem)this.shoppingCartItemDataGridView.Rows[e.RowIndex].DataBoundItem;
+
+                this.RemoveBook(item.Book);
+            }
+        }
+
+        private void RemoveBook(Book book)
+        {
+            DialogResult dialogResult = MessageBox.Show(
+                "Are you sure you want to remove this book from your shopping cart?",
+                book.Title,
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Cancel)
+                return;
+
+            this._shoppingCart.RemoveBook(book);
         }
     }
 }
