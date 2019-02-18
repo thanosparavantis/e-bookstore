@@ -9,17 +9,21 @@ namespace eBookstore
     {
         private ShoppingCart _shoppingCart;
         private User _user;
+        private ShoppingCartForm _shoppingCartForm;
 
-        public MakeOrderForm(ShoppingCart shoppingCart, User user)
+        public MakeOrderForm(ShoppingCart shoppingCart, User user, ShoppingCartForm shoppingCartForm)
         {
             InitializeComponent();
 
             this._shoppingCart = shoppingCart;
             this._user = user;
+            this._shoppingCartForm = shoppingCartForm;
         }
 
         private void MakeOrderForm_Load(object sender, EventArgs e)
         {
+            this._shoppingCartForm.Enabled = false;
+
             this.UpdateComponents();
         }
 
@@ -124,6 +128,11 @@ namespace eBookstore
         private bool IsNotNumeric(char keyChar)
         {
             return !char.IsControl(keyChar) && !char.IsDigit(keyChar);
+        }
+
+        private void MakeOrderForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this._shoppingCartForm.Enabled = true;
         }
     }
 }

@@ -22,6 +22,7 @@ namespace eBookstore
         private void ShoppingCartForm_Load(object sender, EventArgs e)
         {
             this._shoppingCart.ShoppingCardUpdateEventHandlers += this.OnShoppingCardUpdate;
+
             this.UpdateComponents();
         }
 
@@ -36,6 +37,7 @@ namespace eBookstore
 
         private void UpdateShoppingCartItemData()
         {
+            this.shoppingCartItemBindingSource.DataSource = null;
             this.shoppingCartItemBindingSource.DataSource = this._shoppingCart.Items;
         }
 
@@ -85,14 +87,13 @@ namespace eBookstore
             if (dialogResult == DialogResult.Cancel)
                 return;
 
-            this.shoppingCartItemBindingSource.Clear();
             this._shoppingCart.RemoveAllBooks();
         }
 
         private void purchaseButton_Click(object sender, EventArgs e)
         {
             _makeOrderForm?.Close();
-            _makeOrderForm = new MakeOrderForm(this._shoppingCart, this._user);
+            _makeOrderForm = new MakeOrderForm(this._shoppingCart, this._user, this);
             _makeOrderForm.Show();
         }
 
