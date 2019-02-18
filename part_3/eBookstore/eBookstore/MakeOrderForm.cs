@@ -7,9 +7,17 @@ namespace eBookstore
 {
     public partial class MakeOrderForm : Form
     {
+        // --------------------------------------------
+        // Properties
+        // --------------------------------------------
+
         private ShoppingCart _shoppingCart;
         private User _user;
         private ShoppingCartForm _shoppingCartForm;
+
+        // --------------------------------------------
+        // Initialization
+        // --------------------------------------------
 
         public MakeOrderForm(ShoppingCart shoppingCart, User user, ShoppingCartForm shoppingCartForm)
         {
@@ -26,6 +34,10 @@ namespace eBookstore
 
             this.UpdateComponents();
         }
+
+        // --------------------------------------------
+        // Component Updates
+        // --------------------------------------------
 
         private void UpdateComponents()
         {
@@ -68,18 +80,9 @@ namespace eBookstore
             this.phoneLabel.Text = this._user.Phone;
         }
 
-        private void UpdateSendButton()
-        {
-            if (string.IsNullOrWhiteSpace(this.creditCardNumberTextBox.Text)
-                || string.IsNullOrWhiteSpace(this.cvvNumberTextBox.Text))
-            {
-                this.sendButton.Enabled = false;
-            }
-            else
-            {
-                this.sendButton.Enabled = true;
-            }
-        }
+        // --------------------------------------------
+        // Event Listeners
+        // --------------------------------------------
 
         private void creditCardNumberTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -125,14 +128,38 @@ namespace eBookstore
             }
         }
 
+        private void MakeOrderForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this._shoppingCartForm.Enabled = true;
+        }
+
+        private void MakeOrderForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.E) this.Close();
+        }
+
+        // --------------------------------------------
+        // Methods
+        // --------------------------------------------
+
         private bool IsNotNumeric(char keyChar)
         {
             return !char.IsControl(keyChar) && !char.IsDigit(keyChar);
         }
 
-        private void MakeOrderForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void UpdateSendButton()
         {
-            this._shoppingCartForm.Enabled = true;
+            if (string.IsNullOrWhiteSpace(this.creditCardNumberTextBox.Text)
+                || string.IsNullOrWhiteSpace(this.cvvNumberTextBox.Text)
+                || this.creditCardNumberTextBox.Text.Length != this.creditCardNumberTextBox.MaxLength
+                || this.cvvNumberTextBox.Text.Length != this.cvvNumberTextBox.MaxLength)
+            {
+                this.sendButton.Enabled = false;
+            }
+            else
+            {
+                this.sendButton.Enabled = true;
+            }
         }
     }
 }

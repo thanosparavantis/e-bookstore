@@ -35,18 +35,18 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.summaryLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.authorLabel = new System.Windows.Forms.Label();
-            this.publisherLabel = new System.Windows.Forms.Label();
             this.authorTextLabel = new System.Windows.Forms.Label();
             this.publisherTextLabel = new System.Windows.Forms.Label();
             this.yearPublishedTextLabel = new System.Windows.Forms.Label();
+            this.authorLabel = new System.Windows.Forms.Label();
+            this.publisherLabel = new System.Windows.Forms.Label();
             this.yearPublishedLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pagesTextLabel = new System.Windows.Forms.Label();
             this.categoryTextLabel = new System.Windows.Forms.Label();
-            this.pagesLabel = new System.Windows.Forms.Label();
-            this.categoryLabel = new System.Windows.Forms.Label();
+            this.pagesTextLabel = new System.Windows.Forms.Label();
             this.ISBNTextLabel = new System.Windows.Forms.Label();
+            this.categoryLabel = new System.Windows.Forms.Label();
+            this.pagesLabel = new System.Windows.Forms.Label();
             this.ISBNLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.basePriceTextLabel = new System.Windows.Forms.Label();
@@ -186,36 +186,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(468, 60);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // authorLabel
-            // 
-            this.authorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.authorLabel.AutoSize = true;
-            this.authorLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.authorLabel.Location = new System.Drawing.Point(0, 30);
-            this.authorLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(155, 30);
-            this.authorLabel.TabIndex = 4;
-            this.authorLabel.Text = "(book author)";
-            this.authorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // publisherLabel
-            // 
-            this.publisherLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.publisherLabel.AutoSize = true;
-            this.publisherLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.publisherLabel.Location = new System.Drawing.Point(155, 30);
-            this.publisherLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.publisherLabel.Name = "publisherLabel";
-            this.publisherLabel.Size = new System.Drawing.Size(156, 30);
-            this.publisherLabel.TabIndex = 5;
-            this.publisherLabel.Text = "(book publisher)";
-            this.publisherLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // authorTextLabel
             // 
             this.authorTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -261,6 +231,36 @@
             this.yearPublishedTextLabel.Text = "Year Published";
             this.yearPublishedTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // authorLabel
+            // 
+            this.authorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.authorLabel.AutoSize = true;
+            this.authorLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.authorLabel.Location = new System.Drawing.Point(0, 30);
+            this.authorLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.authorLabel.Name = "authorLabel";
+            this.authorLabel.Size = new System.Drawing.Size(155, 30);
+            this.authorLabel.TabIndex = 4;
+            this.authorLabel.Text = "(book author)";
+            this.authorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // publisherLabel
+            // 
+            this.publisherLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.publisherLabel.AutoSize = true;
+            this.publisherLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.publisherLabel.Location = new System.Drawing.Point(155, 30);
+            this.publisherLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.publisherLabel.Name = "publisherLabel";
+            this.publisherLabel.Size = new System.Drawing.Size(156, 30);
+            this.publisherLabel.TabIndex = 5;
+            this.publisherLabel.Text = "(book publisher)";
+            this.publisherLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // yearPublishedLabel
             // 
             this.yearPublishedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -298,21 +298,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(468, 60);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // pagesTextLabel
-            // 
-            this.pagesTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pagesTextLabel.AutoSize = true;
-            this.pagesTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pagesTextLabel.Location = new System.Drawing.Point(155, 0);
-            this.pagesTextLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.pagesTextLabel.Name = "pagesTextLabel";
-            this.pagesTextLabel.Size = new System.Drawing.Size(156, 30);
-            this.pagesTextLabel.TabIndex = 1;
-            this.pagesTextLabel.Text = "Pages";
-            this.pagesTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // categoryTextLabel
             // 
             this.categoryTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -328,20 +313,35 @@
             this.categoryTextLabel.Text = "Category";
             this.categoryTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pagesLabel
+            // pagesTextLabel
             // 
-            this.pagesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pagesTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pagesLabel.AutoSize = true;
-            this.pagesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.pagesLabel.Location = new System.Drawing.Point(155, 30);
-            this.pagesLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.pagesLabel.Name = "pagesLabel";
-            this.pagesLabel.Size = new System.Drawing.Size(156, 30);
-            this.pagesLabel.TabIndex = 4;
-            this.pagesLabel.Text = "(book pages)";
-            this.pagesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pagesTextLabel.AutoSize = true;
+            this.pagesTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pagesTextLabel.Location = new System.Drawing.Point(155, 0);
+            this.pagesTextLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.pagesTextLabel.Name = "pagesTextLabel";
+            this.pagesTextLabel.Size = new System.Drawing.Size(156, 30);
+            this.pagesTextLabel.TabIndex = 1;
+            this.pagesTextLabel.Text = "Pages";
+            this.pagesTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ISBNTextLabel
+            // 
+            this.ISBNTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ISBNTextLabel.AutoSize = true;
+            this.ISBNTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNTextLabel.Location = new System.Drawing.Point(311, 0);
+            this.ISBNTextLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.ISBNTextLabel.Name = "ISBNTextLabel";
+            this.ISBNTextLabel.Size = new System.Drawing.Size(157, 30);
+            this.ISBNTextLabel.TabIndex = 2;
+            this.ISBNTextLabel.Text = "ISBN";
+            this.ISBNTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // categoryLabel
             // 
@@ -358,20 +358,20 @@
             this.categoryLabel.Text = "(book category)";
             this.categoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ISBNTextLabel
+            // pagesLabel
             // 
-            this.ISBNTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pagesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ISBNTextLabel.AutoSize = true;
-            this.ISBNTextLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ISBNTextLabel.Location = new System.Drawing.Point(311, 0);
-            this.ISBNTextLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.ISBNTextLabel.Name = "ISBNTextLabel";
-            this.ISBNTextLabel.Size = new System.Drawing.Size(157, 30);
-            this.ISBNTextLabel.TabIndex = 2;
-            this.ISBNTextLabel.Text = "ISBN";
-            this.ISBNTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pagesLabel.AutoSize = true;
+            this.pagesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.pagesLabel.Location = new System.Drawing.Point(155, 30);
+            this.pagesLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.pagesLabel.Name = "pagesLabel";
+            this.pagesLabel.Size = new System.Drawing.Size(156, 30);
+            this.pagesLabel.TabIndex = 4;
+            this.pagesLabel.Text = "(book pages)";
+            this.pagesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ISBNLabel
             // 
@@ -509,7 +509,7 @@
             this.shoppingCartButton.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.shoppingCartButton.Name = "shoppingCartButton";
             this.shoppingCartButton.Size = new System.Drawing.Size(235, 50);
-            this.shoppingCartButton.TabIndex = 1;
+            this.shoppingCartButton.TabIndex = 0;
             this.shoppingCartButton.Text = "(shopping cart status)";
             this.shoppingCartButton.UseVisualStyleBackColor = true;
             this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
@@ -548,6 +548,7 @@
             // 
             // cancelButton
             // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cancelButton.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -555,16 +556,18 @@
             this.cancelButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(235, 50);
-            this.cancelButton.TabIndex = 0;
+            this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // BookDetailForm
             // 
+            this.AcceptButton = this.shoppingCartButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(484, 761);
             this.Controls.Add(this.tableLayoutPanel7);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);

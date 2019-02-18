@@ -452,16 +452,20 @@
             // 
             // MakeOrderForm
             // 
+            this.AcceptButton = this.sendButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(384, 511);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.KeyPreview = true;
             this.Name = "MakeOrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Complete Purchase";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MakeOrderForm_FormClosing);
             this.Load += new System.EventHandler(this.MakeOrderForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MakeOrderForm_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -9,15 +9,23 @@ namespace eBookstore
 {
     public partial class BookDetailForm : Form
     {
+        // --------------------------------------------
+        // Properties
+        // --------------------------------------------
+
         private Book _book;
         private ShoppingCart _shoppingCart;
 
+        // --------------------------------------------
+        // Initialization
+        // --------------------------------------------
+
         public BookDetailForm(Book book, ShoppingCart shoppingCart)
         {
+            InitializeComponent();
+
             this._book = book;
             this._shoppingCart = shoppingCart;
-
-            InitializeComponent();
         }
 
         private void BookDetailForm_Load(object sender, EventArgs e)
@@ -38,13 +46,9 @@ namespace eBookstore
             this.UpdateShoppingCartButton();
         }
 
-        private void BookDetailForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Close();
-            }
-        }
+        // --------------------------------------------
+        // Component Updates
+        // --------------------------------------------
 
         private void UpdateForm()
         {
@@ -137,6 +141,10 @@ namespace eBookstore
             }
         }
 
+        // --------------------------------------------
+        // Event Listeners
+        // --------------------------------------------
+
         private void shoppingCartButton_Click(object sender, EventArgs e)
         {
             if (this._shoppingCart.Contains(this._book))
@@ -166,6 +174,11 @@ namespace eBookstore
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BookDetailForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.E) this.Close();
         }
     }
 }

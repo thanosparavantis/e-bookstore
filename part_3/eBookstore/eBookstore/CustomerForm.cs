@@ -10,11 +10,19 @@ namespace eBookstore
 {
     public partial class CustomerForm : Form
     {
+        // --------------------------------------------
+        // Properties
+        // --------------------------------------------
+
         private BookList _bookList;
         private User _user;
         private ShoppingCart _shoppingCart;
         private BookDetailForm _bookDetailForm;
         private ShoppingCartForm _shoppingCartForm;
+
+        // --------------------------------------------
+        // Initialization
+        // --------------------------------------------
 
         public CustomerForm(User user)
         {
@@ -31,6 +39,10 @@ namespace eBookstore
 
             this.UpdateComponents();
         }
+
+        // --------------------------------------------
+        // Component Updates
+        // --------------------------------------------
 
         private void UpdateComponents()
         {
@@ -74,22 +86,19 @@ namespace eBookstore
             this.searchTextBox.AutoCompleteCustomSource = this._bookList.AutoCompleteTerms;
         }
 
+        // --------------------------------------------
+        // Event Listeners
+        // --------------------------------------------
+
+        public void OnShoppingCartUpdate()
+        {
+            this.UpdateShoppingCartButton();
+        }
+
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
             string text = this.searchTextBox.Text;
             this.SearchBooks(text);
-        }
-
-        private void SearchBooks(string text)
-        {
-            var query = from Book book in this._bookList.Data
-                        where book.Matches(text)
-                        select book;
-
-            List<Book> result = query.ToList();
-
-            this.bookBindingSource.DataSource = query.Count() > 0 ? result : null;
-            this.UpdateBookLabels();
         }
 
         private void bookDataGridView_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -133,15 +142,6 @@ namespace eBookstore
             }
         }
 
-        private void ClickBook(Book book)
-        {
-            this._shoppingCartForm?.Close();
-
-            this._bookDetailForm?.Close();
-            this._bookDetailForm = new BookDetailForm(book, this._shoppingCart);
-            this._bookDetailForm.Show();
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -156,6 +156,31 @@ namespace eBookstore
             this._shoppingCartForm.Show();
         }
 
+        private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this._bookDetailForm?.Close();
+            this._shoppingCartForm?.Close();
+        }
+
+        private void CustomerForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.E)
+            {
+                this.Close();
+            }
+            else if (e.KeyCode == Keys.Enter && this.bookDataGridView.SelectedRows.Count > 0)
+            {
+                e.Handled = true;
+
+                Book book = (Book) this.bookDataGridView.SelectedRows[0].DataBoundItem;
+                this.ClickBook(book);
+            }
+        }
+
+        // --------------------------------------------
+        // Methods
+        // --------------------------------------------
+
         private void UpdateShoppingCartButton()
         {
             int itemAmount = this._shoppingCart.Count();
@@ -164,15 +189,25 @@ namespace eBookstore
             this.shoppingCartButton.Text = itemAmount > 0 ? text : textEmpty;
         }
 
-        public void OnShoppingCartUpdate()
+        private void SearchBooks(string text)
         {
-            this.UpdateShoppingCartButton();
+            var query = from Book book in this._bookList.Data
+                        where book.Matches(text)
+                        select book;
+
+            List<Book> result = query.ToList();
+
+            this.bookBindingSource.DataSource = query.Count() > 0 ? result : null;
+            this.UpdateBookLabels();
         }
 
-        private void CustomerForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void ClickBook(Book book)
         {
-            this._bookDetailForm?.Close();
             this._shoppingCartForm?.Close();
+
+            this._bookDetailForm?.Close();
+            this._bookDetailForm = new BookDetailForm(book, this._shoppingCart);
+            this._bookDetailForm.Show();
         }
     }
 }

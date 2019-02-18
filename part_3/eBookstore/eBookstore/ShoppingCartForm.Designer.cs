@@ -41,18 +41,18 @@
             this.bookBasePriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookDiscountTextDataGridViewTextColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookPriceTextDataGridVieTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.removeDataGridViewButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.closeButton = new System.Windows.Forms.Button();
             this.purchaseButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
+            this.amountDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -88,7 +88,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(668, 44);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // itemsInCartLabel
             // 
@@ -210,26 +210,6 @@
             this.bookPriceTextDataGridVieTextBoxColumn.ReadOnly = true;
             this.bookPriceTextDataGridVieTextBoxColumn.Width = 61;
             // 
-            // amountDataGridViewComboBoxColumn
-            // 
-            this.amountDataGridViewComboBoxColumn.DataPropertyName = "AmountText";
-            this.amountDataGridViewComboBoxColumn.HeaderText = "Quantity";
-            this.amountDataGridViewComboBoxColumn.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.amountDataGridViewComboBoxColumn.Name = "amountDataGridViewComboBoxColumn";
-            this.amountDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.amountDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.amountDataGridViewComboBoxColumn.Width = 81;
-            // 
             // removeDataGridViewButtonColumn
             // 
             this.removeDataGridViewButtonColumn.HeaderText = "Action";
@@ -237,10 +217,6 @@
             this.removeDataGridViewButtonColumn.Text = "Remove";
             this.removeDataGridViewButtonColumn.UseColumnTextForButtonValue = true;
             this.removeDataGridViewButtonColumn.Width = 50;
-            // 
-            // shoppingCartItemBindingSource
-            // 
-            this.shoppingCartItemBindingSource.DataSource = typeof(eBookstore.model.ShoppingCartItem);
             // 
             // tableLayoutPanel3
             // 
@@ -259,7 +235,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.Size = new System.Drawing.Size(674, 50);
-            this.tableLayoutPanel3.TabIndex = 3;
+            this.tableLayoutPanel3.TabIndex = 0;
             // 
             // closeButton
             // 
@@ -267,6 +243,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.AutoSize = true;
+            this.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.closeButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.Location = new System.Drawing.Point(370, 0);
             this.closeButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
@@ -288,7 +265,7 @@
             this.purchaseButton.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
             this.purchaseButton.Name = "purchaseButton";
             this.purchaseButton.Size = new System.Drawing.Size(150, 50);
-            this.purchaseButton.TabIndex = 2;
+            this.purchaseButton.TabIndex = 0;
             this.purchaseButton.Text = "Purchase";
             this.purchaseButton.UseVisualStyleBackColor = true;
             this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
@@ -303,18 +280,45 @@
             this.resetButton.Margin = new System.Windows.Forms.Padding(0);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(200, 50);
-            this.resetButton.TabIndex = 0;
+            this.resetButton.TabIndex = 2;
             this.resetButton.Text = "Clear shopping cart";
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
+            // amountDataGridViewComboBoxColumn
+            // 
+            this.amountDataGridViewComboBoxColumn.DataPropertyName = "AmountText";
+            this.amountDataGridViewComboBoxColumn.HeaderText = "Quantity";
+            this.amountDataGridViewComboBoxColumn.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.amountDataGridViewComboBoxColumn.Name = "amountDataGridViewComboBoxColumn";
+            this.amountDataGridViewComboBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.amountDataGridViewComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.amountDataGridViewComboBoxColumn.Width = 81;
+            // 
+            // shoppingCartItemBindingSource
+            // 
+            this.shoppingCartItemBindingSource.DataSource = typeof(eBookstore.model.ShoppingCartItem);
+            // 
             // ShoppingCartForm
             // 
+            this.AcceptButton = this.purchaseButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.closeButton;
             this.ClientSize = new System.Drawing.Size(684, 561);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 600);
             this.MinimizeBox = false;
@@ -324,13 +328,14 @@
             this.Text = "Shopping Cart";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ShoppingCartForm_FormClosing);
             this.Load += new System.EventHandler(this.ShoppingCartForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ShoppingCartForm_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartItemBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

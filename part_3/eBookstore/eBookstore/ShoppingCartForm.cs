@@ -7,9 +7,17 @@ namespace eBookstore
 {
     public partial class ShoppingCartForm : Form
     {
+        // --------------------------------------------
+        // Properties
+        // --------------------------------------------
+
         private ShoppingCart _shoppingCart;
         private MakeOrderForm _makeOrderForm;
         private User _user;
+
+        // --------------------------------------------
+        // Initialization
+        // --------------------------------------------
 
         public ShoppingCartForm(ShoppingCart shoppingCart, User user)
         {
@@ -25,6 +33,10 @@ namespace eBookstore
 
             this.UpdateComponents();
         }
+
+        // --------------------------------------------
+        // Component Updates
+        // --------------------------------------------
 
         private void UpdateComponents()
         {
@@ -63,14 +75,18 @@ namespace eBookstore
             this.purchaseButton.Enabled = !this._shoppingCart.IsEmpty();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        // --------------------------------------------
+        // Event Listeners
+        // --------------------------------------------
 
         public void OnShoppingCardUpdate()
         {
             this.UpdateComponents();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -133,6 +149,15 @@ namespace eBookstore
                 this.RemoveBook(item.Book);
             }
         }
+
+        private void ShoppingCartForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.E) this.Close();
+        }
+
+        // --------------------------------------------
+        // Methods
+        // --------------------------------------------
 
         private void RemoveBook(Book book)
         {
