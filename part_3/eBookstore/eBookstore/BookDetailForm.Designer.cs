@@ -437,7 +437,7 @@
             this.discountTextLabel.Name = "discountTextLabel";
             this.discountTextLabel.Size = new System.Drawing.Size(156, 30);
             this.discountTextLabel.TabIndex = 1;
-            this.discountTextLabel.Text = "Έκπτωση";
+            this.discountTextLabel.Text = "Discount";
             this.discountTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // priceTextLabel

@@ -45,15 +45,15 @@
             this.userLabel = new System.Windows.Forms.Label();
             this.shoppingCartButton = new System.Windows.Forms.Button();
             this.bookDataGridView = new System.Windows.Forms.DataGridView();
+            this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BasePriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiscountText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detailsButton = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detailsButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -101,6 +101,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -270,6 +271,26 @@
             this.bookDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookDataGridView_CellMouseDoubleClick);
             this.bookDataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellMouseEnter);
             // 
+            // coverDataGridViewImageColumn
+            // 
+            this.coverDataGridViewImageColumn.DataPropertyName = "Cover";
+            this.coverDataGridViewImageColumn.Frozen = true;
+            this.coverDataGridViewImageColumn.HeaderText = "Cover";
+            this.coverDataGridViewImageColumn.MinimumWidth = 350;
+            this.coverDataGridViewImageColumn.Name = "coverDataGridViewImageColumn";
+            this.coverDataGridViewImageColumn.ReadOnly = true;
+            this.coverDataGridViewImageColumn.Width = 350;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.Frozen = true;
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.titleDataGridViewTextBoxColumn.Width = 200;
+            // 
             // BasePriceText
             // 
             this.BasePriceText.DataPropertyName = "BasePriceText";
@@ -296,38 +317,6 @@
             this.PriceText.MinimumWidth = 100;
             this.PriceText.Name = "PriceText";
             this.PriceText.ReadOnly = true;
-            // 
-            // detailsButton
-            // 
-            this.detailsButton.FillWeight = 300F;
-            this.detailsButton.Frozen = true;
-            this.detailsButton.HeaderText = "Details";
-            this.detailsButton.MinimumWidth = 150;
-            this.detailsButton.Name = "detailsButton";
-            this.detailsButton.ReadOnly = true;
-            this.detailsButton.Text = "Details";
-            this.detailsButton.UseColumnTextForButtonValue = true;
-            this.detailsButton.Width = 150;
-            // 
-            // coverDataGridViewImageColumn
-            // 
-            this.coverDataGridViewImageColumn.DataPropertyName = "Cover";
-            this.coverDataGridViewImageColumn.Frozen = true;
-            this.coverDataGridViewImageColumn.HeaderText = "Cover";
-            this.coverDataGridViewImageColumn.MinimumWidth = 350;
-            this.coverDataGridViewImageColumn.Name = "coverDataGridViewImageColumn";
-            this.coverDataGridViewImageColumn.ReadOnly = true;
-            this.coverDataGridViewImageColumn.Width = 350;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.Frozen = true;
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.titleDataGridViewTextBoxColumn.Width = 200;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
@@ -358,6 +347,18 @@
             this.publisherDataGridViewTextBoxColumn.Name = "publisherDataGridViewTextBoxColumn";
             this.publisherDataGridViewTextBoxColumn.ReadOnly = true;
             this.publisherDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // detailsButton
+            // 
+            this.detailsButton.FillWeight = 300F;
+            this.detailsButton.Frozen = true;
+            this.detailsButton.HeaderText = "Details";
+            this.detailsButton.MinimumWidth = 150;
+            this.detailsButton.Name = "detailsButton";
+            this.detailsButton.ReadOnly = true;
+            this.detailsButton.Text = "Details";
+            this.detailsButton.UseColumnTextForButtonValue = true;
+            this.detailsButton.Width = 150;
             // 
             // bookBindingSource
             // 

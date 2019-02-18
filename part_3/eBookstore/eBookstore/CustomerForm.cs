@@ -177,6 +177,11 @@ namespace eBookstore
             }
         }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("eBookStore - UI/UX 2018-19 \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
+        }
+
         // --------------------------------------------
         // Methods
         // --------------------------------------------
@@ -209,5 +214,7 @@ namespace eBookstore
             this._bookDetailForm = new BookDetailForm(book, this._shoppingCart);
             this._bookDetailForm.Show();
         }
+
+
     }
 }
