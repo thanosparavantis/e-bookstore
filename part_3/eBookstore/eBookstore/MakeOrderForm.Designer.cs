@@ -425,6 +425,7 @@
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cancelButton.Location = new System.Drawing.Point(0, 0);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);

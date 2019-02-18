@@ -30,6 +30,15 @@ namespace eBookstore
 
         private void BookDetailForm_Load(object sender, EventArgs e)
         {
+            this.UpdateComponents();
+        }
+
+        // --------------------------------------------
+        // Component Updates
+        // --------------------------------------------
+
+        private void UpdateComponents()
+        {
             this.UpdateForm();
             this.UpdateCoverPictureBox();
             this.UpdateTitleLabel();
@@ -45,10 +54,6 @@ namespace eBookstore
             this.UpdatePriceLabel();
             this.UpdateShoppingCartButton();
         }
-
-        // --------------------------------------------
-        // Component Updates
-        // --------------------------------------------
 
         private void UpdateForm()
         {

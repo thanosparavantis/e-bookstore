@@ -29,7 +29,7 @@ namespace eBookstore
 
         private void ShoppingCartForm_Load(object sender, EventArgs e)
         {
-            this._shoppingCart.ShoppingCardUpdateEventHandlers += this.OnShoppingCardUpdate;
+            this._shoppingCart.ShoppingCartUpdateEventHandlers += this.OnShoppingCardUpdate;
 
             this.UpdateComponents();
         }
@@ -119,13 +119,13 @@ namespace eBookstore
             {
                 DataGridViewCell cell = this.shoppingCartItemDataGridView[e.ColumnIndex, e.RowIndex];
 
-                this._shoppingCart.ShoppingCardUpdateEventHandlers();
+                this._shoppingCart.ShoppingCartUpdateEventHandlers();
             }
         }
 
         private void ShoppingCartForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this._shoppingCart.ShoppingCardUpdateEventHandlers -= this.OnShoppingCardUpdate;
+            this._shoppingCart.ShoppingCartUpdateEventHandlers -= this.OnShoppingCardUpdate;
             _makeOrderForm?.Close();
         }
         

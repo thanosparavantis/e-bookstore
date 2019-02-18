@@ -12,7 +12,7 @@ namespace eBookstore.data
     public sealed class ShoppingCart
     {
         public delegate void ShoppingCartUpdateEvent();
-        public ShoppingCartUpdateEvent ShoppingCardUpdateEventHandlers;
+        public ShoppingCartUpdateEvent ShoppingCartUpdateEventHandlers;
 
         public List<ShoppingCartItem> Items { get; set; }
 
@@ -35,7 +35,7 @@ namespace eBookstore.data
 
             this.Items.Add(shoppingCartItem);
 
-            this.ShoppingCardUpdateEventHandlers();
+            this.ShoppingCartUpdateEventHandlers();
         }
 
         public void RemoveBook(Book book)
@@ -46,14 +46,14 @@ namespace eBookstore.data
 
             this.Items = query.ToList();
 
-            this.ShoppingCardUpdateEventHandlers();
+            this.ShoppingCartUpdateEventHandlers();
         }
 
         public void RemoveAllBooks()
         {
             this.Items.Clear();
 
-            this.ShoppingCardUpdateEventHandlers();
+            this.ShoppingCartUpdateEventHandlers();
         }
 
         public int Count()

@@ -188,16 +188,5 @@ namespace eBookstore.data
             this.AutoCompleteTerms.AddRange(authors.ToArray());
             this.AutoCompleteTerms.AddRange(publishers.ToArray());
         }
-
-        public Book GetBookByTitle(string title)
-        {
-            var query = from Book book in this.Data
-                        where book.Title.Equals(title)
-                        select book;
-
-            Book result = query.First();
-
-            return result;
-        }
     }
 }

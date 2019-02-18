@@ -35,7 +35,7 @@ namespace eBookstore
         {
             this._bookList = new BookList();
             this._shoppingCart = new ShoppingCart();
-            this._shoppingCart.ShoppingCardUpdateEventHandlers += this.OnShoppingCartUpdate;
+            this._shoppingCart.ShoppingCartUpdateEventHandlers += this.OnShoppingCartUpdate;
 
             this.UpdateComponents();
         }
@@ -214,7 +214,5 @@ namespace eBookstore
             this._bookDetailForm = new BookDetailForm(book, this._shoppingCart);
             this._bookDetailForm.Show();
         }
-
-
     }
 }
