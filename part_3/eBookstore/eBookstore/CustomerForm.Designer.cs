@@ -45,15 +45,16 @@
             this.userLabel = new System.Windows.Forms.Label();
             this.shoppingCartButton = new System.Windows.Forms.Button();
             this.bookDataGridView = new System.Windows.Forms.DataGridView();
-            this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BasePriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiscountText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detailsButton = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.coverDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detailsButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -71,7 +72,7 @@
             this.aboutToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(884, 24);
+            this.mainMenuStrip.Size = new System.Drawing.Size(1459, 24);
             this.mainMenuStrip.TabIndex = 1;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -86,7 +87,8 @@
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.logoutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.logoutToolStripMenuItem.Text = "Log Out";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -107,9 +109,9 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.booksToolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 639);
+            this.statusStrip.Location = new System.Drawing.Point(0, 794);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(884, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1459, 22);
             this.statusStrip.SizingGrip = false;
             this.statusStrip.TabIndex = 0;
             this.statusStrip.Text = "statusStrip1";
@@ -134,7 +136,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(884, 615);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1459, 770);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -155,7 +157,7 @@
             this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(884, 45);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1459, 45);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // booksLabel
@@ -182,7 +184,7 @@
             this.searchTextBox.Location = new System.Drawing.Point(305, 10);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(219, 25);
+            this.searchTextBox.Size = new System.Drawing.Size(794, 25);
             this.searchTextBox.TabIndex = 1;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
@@ -193,7 +195,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userLabel.AutoSize = true;
             this.userLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.userLabel.Location = new System.Drawing.Point(529, 5);
+            this.userLabel.Location = new System.Drawing.Point(1104, 5);
             this.userLabel.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(145, 35);
@@ -206,12 +208,13 @@
             this.shoppingCartButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.shoppingCartButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shoppingCartButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.shoppingCartButton.Location = new System.Drawing.Point(679, 7);
+            this.shoppingCartButton.Location = new System.Drawing.Point(1254, 7);
             this.shoppingCartButton.Margin = new System.Windows.Forms.Padding(0);
             this.shoppingCartButton.Name = "shoppingCartButton";
             this.shoppingCartButton.Size = new System.Drawing.Size(200, 30);
             this.shoppingCartButton.TabIndex = 3;
             this.shoppingCartButton.Text = "(shopping cart status)";
+            this.toolTip1.SetToolTip(this.shoppingCartButton, "Open shopping cart");
             this.shoppingCartButton.UseVisualStyleBackColor = true;
             this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 
@@ -265,31 +268,11 @@
             this.bookDataGridView.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(10);
             this.bookDataGridView.RowTemplate.Height = 350;
             this.bookDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bookDataGridView.Size = new System.Drawing.Size(884, 570);
+            this.bookDataGridView.Size = new System.Drawing.Size(1459, 725);
             this.bookDataGridView.TabIndex = 0;
             this.bookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellContentClick);
             this.bookDataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.bookDataGridView_CellMouseDoubleClick);
             this.bookDataGridView.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellMouseEnter);
-            // 
-            // coverDataGridViewImageColumn
-            // 
-            this.coverDataGridViewImageColumn.DataPropertyName = "Cover";
-            this.coverDataGridViewImageColumn.Frozen = true;
-            this.coverDataGridViewImageColumn.HeaderText = "Cover";
-            this.coverDataGridViewImageColumn.MinimumWidth = 350;
-            this.coverDataGridViewImageColumn.Name = "coverDataGridViewImageColumn";
-            this.coverDataGridViewImageColumn.ReadOnly = true;
-            this.coverDataGridViewImageColumn.Width = 350;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.Frozen = true;
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.titleDataGridViewTextBoxColumn.MinimumWidth = 200;
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.titleDataGridViewTextBoxColumn.Width = 200;
             // 
             // BasePriceText
             // 
@@ -317,6 +300,38 @@
             this.PriceText.MinimumWidth = 100;
             this.PriceText.Name = "PriceText";
             this.PriceText.ReadOnly = true;
+            // 
+            // detailsButton
+            // 
+            this.detailsButton.FillWeight = 300F;
+            this.detailsButton.Frozen = true;
+            this.detailsButton.HeaderText = "Details";
+            this.detailsButton.MinimumWidth = 150;
+            this.detailsButton.Name = "detailsButton";
+            this.detailsButton.ReadOnly = true;
+            this.detailsButton.Text = "Details";
+            this.detailsButton.UseColumnTextForButtonValue = true;
+            this.detailsButton.Width = 150;
+            // 
+            // coverDataGridViewImageColumn
+            // 
+            this.coverDataGridViewImageColumn.DataPropertyName = "Cover";
+            this.coverDataGridViewImageColumn.Frozen = true;
+            this.coverDataGridViewImageColumn.HeaderText = "Cover";
+            this.coverDataGridViewImageColumn.MinimumWidth = 350;
+            this.coverDataGridViewImageColumn.Name = "coverDataGridViewImageColumn";
+            this.coverDataGridViewImageColumn.ReadOnly = true;
+            this.coverDataGridViewImageColumn.Width = 350;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.Frozen = true;
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.MinimumWidth = 200;
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.titleDataGridViewTextBoxColumn.Width = 200;
             // 
             // categoryDataGridViewTextBoxColumn
             // 
@@ -348,18 +363,6 @@
             this.publisherDataGridViewTextBoxColumn.ReadOnly = true;
             this.publisherDataGridViewTextBoxColumn.Width = 150;
             // 
-            // detailsButton
-            // 
-            this.detailsButton.FillWeight = 300F;
-            this.detailsButton.Frozen = true;
-            this.detailsButton.HeaderText = "Details";
-            this.detailsButton.MinimumWidth = 150;
-            this.detailsButton.Name = "detailsButton";
-            this.detailsButton.ReadOnly = true;
-            this.detailsButton.Text = "Details";
-            this.detailsButton.UseColumnTextForButtonValue = true;
-            this.detailsButton.Width = 150;
-            // 
             // bookBindingSource
             // 
             this.bookBindingSource.DataSource = typeof(eBookstore.model.Book);
@@ -368,7 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 661);
+            this.ClientSize = new System.Drawing.Size(1459, 816);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.mainMenuStrip);
             this.Controls.Add(this.statusStrip);
@@ -378,7 +381,6 @@
             this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Bookstore";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CustomerForm_FormClosing);
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CustomerForm_KeyDown);
@@ -422,5 +424,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn publisherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn detailsButton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

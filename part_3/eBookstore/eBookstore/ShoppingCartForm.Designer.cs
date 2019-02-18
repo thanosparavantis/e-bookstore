@@ -46,6 +46,7 @@
             this.closeButton = new System.Windows.Forms.Button();
             this.purchaseButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.amountDataGridViewComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.shoppingCartItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
@@ -251,6 +252,7 @@
             this.closeButton.Size = new System.Drawing.Size(150, 50);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.closeButton, "Close shopping cart");
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
@@ -267,6 +269,7 @@
             this.purchaseButton.Size = new System.Drawing.Size(150, 50);
             this.purchaseButton.TabIndex = 0;
             this.purchaseButton.Text = "Purchase";
+            this.toolTip1.SetToolTip(this.purchaseButton, "Complete Purchase");
             this.purchaseButton.UseVisualStyleBackColor = true;
             this.purchaseButton.Click += new System.EventHandler(this.purchaseButton_Click);
             // 
@@ -276,12 +279,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.resetButton.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.resetButton.ForeColor = System.Drawing.Color.DarkRed;
             this.resetButton.Location = new System.Drawing.Point(0, 0);
             this.resetButton.Margin = new System.Windows.Forms.Padding(0);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(200, 50);
             this.resetButton.TabIndex = 2;
             this.resetButton.Text = "Clear shopping cart";
+            this.toolTip1.SetToolTip(this.resetButton, "Remove all items form cart");
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
@@ -358,5 +363,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bookPriceTextDataGridVieTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn amountDataGridViewComboBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn removeDataGridViewButtonColumn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

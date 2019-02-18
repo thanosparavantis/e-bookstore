@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.coverPictureBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,6 +60,7 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -511,6 +513,7 @@
             this.shoppingCartButton.Size = new System.Drawing.Size(235, 50);
             this.shoppingCartButton.TabIndex = 0;
             this.shoppingCartButton.Text = "(shopping cart status)";
+            this.toolTip1.SetToolTip(this.shoppingCartButton, "Add / Remove this book in shopping cart");
             this.shoppingCartButton.UseVisualStyleBackColor = true;
             this.shoppingCartButton.Click += new System.EventHandler(this.shoppingCartButton_Click);
             // 
@@ -558,6 +561,7 @@
             this.cancelButton.Size = new System.Drawing.Size(235, 50);
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "Cancel";
+            this.toolTip1.SetToolTip(this.cancelButton, "Close book details");
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
@@ -635,5 +639,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

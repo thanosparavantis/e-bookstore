@@ -180,6 +180,15 @@ namespace eBookstore
             if (e.KeyCode == Keys.Subtract && e.Control)
                 climaDecreaseButton.PerformClick();
 
+            if (e.KeyCode == Keys.P && e.Control)
+                playStopButton.PerformClick();
+
+            if (e.KeyCode == Keys.OemPeriod && e.Control)
+                nextButton.PerformClick();
+
+            if (e.KeyCode == Keys.Oemcomma && e.Control)
+                previousButton.PerformClick();
+
             // if (e.KeyCode == Keys.H && e.Control)
             // Open help
         }
