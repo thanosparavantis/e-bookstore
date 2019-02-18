@@ -80,6 +80,21 @@ namespace eBookstore
             this.phoneLabel.Text = this._user.Phone;
         }
 
+        private void UpdateSendButton()
+        {
+            if (string.IsNullOrWhiteSpace(this.creditCardNumberTextBox.Text)
+                || string.IsNullOrWhiteSpace(this.cvvNumberTextBox.Text)
+                || this.creditCardNumberTextBox.Text.Length != this.creditCardNumberTextBox.MaxLength
+                || this.cvvNumberTextBox.Text.Length != this.cvvNumberTextBox.MaxLength)
+            {
+                this.sendButton.Enabled = false;
+            }
+            else
+            {
+                this.sendButton.Enabled = true;
+            }
+        }
+
         // --------------------------------------------
         // Event Listeners
         // --------------------------------------------
@@ -145,21 +160,6 @@ namespace eBookstore
         private bool IsNotNumeric(char keyChar)
         {
             return !char.IsControl(keyChar) && !char.IsDigit(keyChar);
-        }
-
-        private void UpdateSendButton()
-        {
-            if (string.IsNullOrWhiteSpace(this.creditCardNumberTextBox.Text)
-                || string.IsNullOrWhiteSpace(this.cvvNumberTextBox.Text)
-                || this.creditCardNumberTextBox.Text.Length != this.creditCardNumberTextBox.MaxLength
-                || this.cvvNumberTextBox.Text.Length != this.cvvNumberTextBox.MaxLength)
-            {
-                this.sendButton.Enabled = false;
-            }
-            else
-            {
-                this.sendButton.Enabled = true;
-            }
         }
     }
 }
