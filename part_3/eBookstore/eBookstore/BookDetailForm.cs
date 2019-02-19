@@ -184,6 +184,9 @@ namespace eBookstore
         private void BookDetailForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.E) this.Close();
+
+            if (e.KeyCode == Keys.F1)
+                System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_book_info.chm");
         }
     }
 }

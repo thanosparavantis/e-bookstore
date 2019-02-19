@@ -351,6 +351,7 @@
             this.abaoutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.abaoutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.abaoutToolStripMenuItem.Text = "Help";
+            this.abaoutToolStripMenuItem.Click += new System.EventHandler(this.abaoutToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

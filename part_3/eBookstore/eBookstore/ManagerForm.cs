@@ -189,8 +189,8 @@ namespace eBookstore
             if (e.KeyCode == Keys.Oemcomma && e.Control)
                 previousButton.PerformClick();
 
-            // if (e.KeyCode == Keys.H && e.Control)
-            // Open help
+            if (e.KeyCode == Keys.F1)
+                System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_management.chm");
         }
 
         private void playStopButton_Click(object sender, EventArgs e)
@@ -237,7 +237,7 @@ namespace eBookstore
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Manager \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
+            MessageBox.Show("eBookStore - UI/UX 2018-19 \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
         }
 
         private void playStopButton_MouseEnter(object sender, EventArgs e)
@@ -253,6 +253,11 @@ namespace eBookstore
         private void nextButton_MouseEnter(object sender, EventArgs e)
         {
             mouseHoverToolStripStatusLabel.Text = "Next music track.";
+        }
+
+        private void abaoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_management.chm");
         }
     }
 }

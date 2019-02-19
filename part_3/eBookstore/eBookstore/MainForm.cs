@@ -126,8 +126,8 @@ namespace eBookstore
             if (e.KeyCode == Keys.E && e.Control)
                 Application.Exit();
 
-           // if (e.KeyCode == Keys.H && e.Control)
-                // Open help  
+            if (e.KeyCode == Keys.F1)
+                helpToolStripMenuItem.PerformClick();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -147,6 +147,11 @@ namespace eBookstore
             createAccountForm?.ShowDialog();
             userList = createAccountForm.getUpdatedUserList();
             this.Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_main_form.chm");
         }
     }
 }

@@ -228,7 +228,7 @@ namespace eBookstore
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coffee shop \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
+            MessageBox.Show("eBookStore - UI/UX 2018-19 \np16036 - Ioannidis Panagiotis \np16112 - Paravantis Athanasios", "About");
         }
 
         private void CoffeeForm_KeyDown(object sender, KeyEventArgs e)
@@ -245,14 +245,20 @@ namespace eBookstore
             if (e.KeyCode == Keys.R && e.Control)
                 removeItemButton.PerformClick();
 
-            // if (e.KeyCode == Keys.H && e.Control)
-            // Open help
+            if (e.KeyCode == Keys.F1)
+                System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_coffee_shop.chm");
 
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_coffee_shop.chm");
+
         }
     }
 }

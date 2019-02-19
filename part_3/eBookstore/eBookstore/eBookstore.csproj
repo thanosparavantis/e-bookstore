@@ -145,6 +145,7 @@
     <EmbeddedResource Include="ShoppingCartForm.resx">
       <DependentUpon>ShoppingCartForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="help\help_files\eBookStore_main_form.chm" />
     <None Include="Properties\DataSources\eBookstore.model.Book.datasource" />
     <None Include="Properties\DataSources\eBookstore.model.ShoppingCartItem.datasource" />
     <None Include="Properties\Settings.settings">

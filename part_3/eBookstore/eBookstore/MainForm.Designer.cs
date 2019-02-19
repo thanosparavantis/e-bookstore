@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.loginButton = new System.Windows.Forms.Button();
             this.signInGroupBox = new System.Windows.Forms.GroupBox();
+            this.newUserLinkLabel = new System.Windows.Forms.LinkLabel();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.mouseHoverToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.newUserLinkLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.signInGroupBox.SuspendLayout();
             this.utilsGroupBox.SuspendLayout();
@@ -85,6 +85,18 @@
             this.signInGroupBox.TabIndex = 3;
             this.signInGroupBox.TabStop = false;
             this.signInGroupBox.Text = "Sign in";
+            // 
+            // newUserLinkLabel
+            // 
+            this.newUserLinkLabel.AutoSize = true;
+            this.newUserLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.newUserLinkLabel.Location = new System.Drawing.Point(7, 176);
+            this.newUserLinkLabel.Name = "newUserLinkLabel";
+            this.newUserLinkLabel.Size = new System.Drawing.Size(201, 15);
+            this.newUserLinkLabel.TabIndex = 8;
+            this.newUserLinkLabel.TabStop = true;
+            this.newUserLinkLabel.Text = "Don\'t have an account? Create one!";
+            this.newUserLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.newUserLinkLabel_LinkClicked);
             // 
             // passwordTextBox
             // 
@@ -211,6 +223,7 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -241,18 +254,6 @@
             this.toolTip.AutoPopDelay = 10000;
             this.toolTip.InitialDelay = 1000;
             this.toolTip.ReshowDelay = 500;
-            // 
-            // newUserLinkLabel
-            // 
-            this.newUserLinkLabel.AutoSize = true;
-            this.newUserLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.newUserLinkLabel.Location = new System.Drawing.Point(7, 176);
-            this.newUserLinkLabel.Name = "newUserLinkLabel";
-            this.newUserLinkLabel.Size = new System.Drawing.Size(201, 15);
-            this.newUserLinkLabel.TabIndex = 8;
-            this.newUserLinkLabel.TabStop = true;
-            this.newUserLinkLabel.Text = "Don\'t have an account? Create one!";
-            this.newUserLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.newUserLinkLabel_LinkClicked);
             // 
             // pictureBox1
             // 

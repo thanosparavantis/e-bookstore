@@ -175,6 +175,9 @@ namespace eBookstore
                 Book book = (Book) this.bookDataGridView.SelectedRows[0].DataBoundItem;
                 this.ClickBook(book);
             }
+
+            if (e.KeyCode == Keys.F1)
+                System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_book_list.chm");
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -213,6 +216,11 @@ namespace eBookstore
             this._bookDetailForm?.Close();
             this._bookDetailForm = new BookDetailForm(book, this._shoppingCart);
             this._bookDetailForm.Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_book_list.chm");
         }
     }
 }

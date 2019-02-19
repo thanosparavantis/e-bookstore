@@ -153,6 +153,9 @@ namespace eBookstore
         private void ShoppingCartForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.E) this.Close();
+
+            if (e.KeyCode == Keys.F1)
+                System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_shopping_cart.chm");
         }
 
         // --------------------------------------------

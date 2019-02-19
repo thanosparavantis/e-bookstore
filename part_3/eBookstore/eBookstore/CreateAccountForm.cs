@@ -149,6 +149,9 @@ namespace eBookstore
         {
             if (e.KeyCode == Keys.E && e.Control)
                 this.Hide();
+
+            if (e.KeyCode == Keys.F1)
+                System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_create_new_user.chm");
         }
     }
 }

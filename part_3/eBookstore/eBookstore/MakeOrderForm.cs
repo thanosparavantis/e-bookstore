@@ -151,6 +151,10 @@ namespace eBookstore
         private void MakeOrderForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.E) this.Close();
+
+            if (e.KeyCode == Keys.F1)
+                System.Windows.Forms.Help.ShowHelp(this, "./help_files/eBookStore_complete_purchase.chm");
+
         }
 
         // --------------------------------------------
