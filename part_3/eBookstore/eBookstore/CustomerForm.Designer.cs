@@ -56,6 +56,7 @@
             this.detailsButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -69,7 +70,8 @@
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.aToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.Size = new System.Drawing.Size(1459, 24);
@@ -368,6 +370,12 @@
             // 
             this.bookBindingSource.DataSource = typeof(eBookstore.model.Book);
             // 
+            // aToolStripMenuItem
+            // 
+            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(25, 20);
+            this.aToolStripMenuItem.Text = "a";
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,5 +434,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn publisherDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn detailsButton;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
     }
 }
