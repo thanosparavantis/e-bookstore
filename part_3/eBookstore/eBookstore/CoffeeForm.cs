@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,12 @@ namespace eBookstore
 {
     public partial class CoffeeForm : Form
     {
+
+        CultureInfo culture;
         public CoffeeForm()
         {
             InitializeComponent();
+            culture = CultureInfo.CreateSpecificCulture("eu-ES");
         }
 
         private void item1Order_Click(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace eBookstore
                 }
             }
 
-            totalCostLabel.Text = totalCost.ToString("f");
+            totalCostLabel.Text = totalCost.ToString("f", this.culture);
 
         }
 
