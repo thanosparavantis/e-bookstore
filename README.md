@@ -1,5 +1,5 @@
 # E-Bookstore
-An e-bookstore application in C# that was developed as a group project for a university assignment.
+A group project in C# that was developed for a university assignment on the subject of Human Interaction with Computers.
 
 **Features:**
 - Authentication system with simple login and registration for employees and customers.
