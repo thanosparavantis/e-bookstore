@@ -4,5 +4,5 @@ A C# application that was developed as a university assignment for the subject o
 **Group members involved in this project:**  
 Ioannidis Panagiotis, Paravantis Athanasios
 
-**Browse through related projects on thanosparavantis.com:**  
-https://www.thanosparavantis.com/projects/e-bookstore
+**Browse through related projects on thanos.dev:**  
+https://thanos.dev/projects/e-bookstore
